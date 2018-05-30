@@ -1,0 +1,12 @@
+.ui-progressbar { height:2em; text-align: left; overflow: hidden; }
+.ui-progressbar .ui-progressbar-value {margin: -1px; height:100%; }
+.TDataGrid{position:absolute; }
+
+.ui-jqgrid-pager{
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.ui-jqgrid .ui-pg-input,.ui-jqgrid .ui-pg-selbox,.ui-jqgrid .ui-jqgrid-view,.ui-jqgrid .ui-jqgrid-pager,.ui-jqgrid .loading,.ui-jqdialog,.ui-jqgrid .ui-jqgrid-view button {
+  font-size: 12px
+}
