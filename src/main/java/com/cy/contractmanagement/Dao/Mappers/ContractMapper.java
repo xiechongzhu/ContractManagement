@@ -1,18 +1,19 @@
 package com.cy.contractmanagement.Dao.Mappers;
 
 import com.cy.contractmanagement.Dao.Contract.ContractInfo;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import com.cy.contractmanagement.Dao.Mappers.SqlProvider.ContractProvider;
+import org.apache.ibatis.annotations.*;
 
 import java.util.Date;
 import java.util.List;
 
 @Mapper
 public interface ContractMapper {
-    @Select("select * from contract_info")
-    List<ContractInfo> findContract();
+    @SelectProvider(type = ContractProvider.class, method = "findContract")
+    List<ContractInfo> findContract(@Param("number") String number, @Param("name") String name,
+                                    @Param("status") int status, @Param("classification") int classification,
+                                    @Param("leader") String leader, @Param("startDate") String startDate,
+                                    @Param("endDate") String endDate, @Param("isDelay") int isDelay);
 
     @Insert("insert into contract_info(number, name, status, classification, leader," +
             "money, needInvoice, filingTime, cdNumber, requirementTimePlan, requirementTimeReal," +
@@ -23,7 +24,7 @@ public interface ContractMapper {
             "#{requirementPayMoney}, #{designTimePlan}, #{designTimeReal}, #{designPayMoney}, #{testTimePlan}," +
             "#{testTimeReal}, #{testPayMoney}, #{acceptanceTimePlan}, #{acceptanceTimeReal}, #{acceptancePayMoney}," +
             "#{isDelay})")
-    int insertContract(@Param("number") int number, @Param("name") String name,
+    int insertContract(@Param("number") String number, @Param("name") String name,
                        @Param("status") int status, @Param("classification") int classification,
                        @Param("leader") String leader, @Param("money") float money,
                        @Param("needInvoice") int needInvoice, @Param("filingTime") Date filingTime,

@@ -1,5 +1,7 @@
 package com.cy.contractmanagement.Dao.Contract;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 public class ContractInfo {
@@ -103,18 +105,27 @@ public class ContractInfo {
     private String leader;              //负责人
     private float money;                //合同金额(万元)
     private int needInvoice;            //是否提供发票
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date filingTime;            //归档交付时间
     private String cdNumber;            //刻盘编号
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date requirementTimePlan;   //需求阶段合同计划评审时间
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date requirementTimeReal;   //需求阶段实际评审时间
     private float requirementPayMoney;  //需求阶段结束付款(万元)
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date designTimePlan;        //设计阶段合同计划评审时间
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date designTimeReal;        //设计阶段实际评审时间
     private float designPayMoney;       //设计阶段结束付款(万元)
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date testTimePlan;          //测试阶段合同计划评审时间
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date testTimeReal;          //测试阶段实际评审时间
     private float testPayMoney;         //测试阶段结束付款(万元)
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date acceptanceTimePlan;    //验收阶段合同计划评审时间
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date acceptanceTimeReal;    //验收阶段实际评审时间
     private float acceptancePayMoney;   //验收阶段结束付款(万元)
     private int isDelay;                //是否延期
