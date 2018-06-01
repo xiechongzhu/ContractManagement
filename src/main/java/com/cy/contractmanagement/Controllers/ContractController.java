@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import javax.websocket.server.PathParam;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -22,11 +23,13 @@ public class ContractController {
     @Autowired
     ContractMapper contractMapper;
 
+    /* URL重定向 */
     @GetMapping("")
     public String GetContractHtml() {
         return "contract";
     }
 
+    /* 添加新合同 */
     @PostMapping("/add")
     @ResponseBody
     public void addContract(@RequestParam("number") String number,
@@ -69,6 +72,7 @@ public class ContractController {
                 dateAcceptanceTimeReal, acceptancePayMoney, isDelay);
     }
 
+    /* 获取所有合同信息 */
     @GetMapping("/get")
     @ResponseBody
     public Map<String, Object> findContract(@RequestParam("rows") int rows,
@@ -85,5 +89,57 @@ public class ContractController {
         List<ContractInfo> contractList = contractMapper.findContract(number, name, status, classification,
                 leader, startDate, endDate, isDelay);
         return JqGridResultBuilder.builde(rows, page, pageInfo.getTotal(), contractList);
+    }
+
+    /* 获取单个合同信息 */
+    @GetMapping("/get/{id}")
+    @ResponseBody
+    public ContractInfo getSingleContract(@PathVariable("id") int id) {
+        ContractInfo contractInfo = contractMapper.getSingleCOntract(id);
+        return contractInfo;
+    }
+
+    /* 修改合同信息 */
+    @PostMapping("/modify/{id}")
+    @ResponseBody
+    public void modifyContract(@PathVariable("id") int id,
+                               @RequestParam("number") String number,
+                               @RequestParam("name") String name,
+                               @RequestParam("status") int status,
+                               @RequestParam("classification") int classification,
+                               @RequestParam("leader") String leader,
+                               @RequestParam("money") float money,
+                               @RequestParam("needInvoice") int needInvoice,
+                               @RequestParam("filingTime") String filingTime,
+                               @RequestParam("cdNumber") String cdNumber,
+                               @RequestParam("requirementTimePlan") String requirementTimePlan,
+                               @RequestParam("requirementTimeReal") String requirementTimeReal,
+                               @RequestParam("requirementPayMoney") float requirementPayMoney,
+                               @RequestParam("designTimePlan") String designTimePlan,
+                               @RequestParam("designTimeReal") String designTimeReal,
+                               @RequestParam("designPayMoney") float designPayMoney,
+                               @RequestParam("testTimePlan") String testTimePlan,
+                               @RequestParam("testTimeReal") String testTimeReal,
+                               @RequestParam("testPayMoney") float testPayMoney,
+                               @RequestParam("acceptanceTimePlan") String acceptanceTimePlan,
+                               @RequestParam("acceptanceTimeReal") String acceptanceTimeReal,
+                               @RequestParam("acceptancePayMoney") float acceptancePayMoney,
+                               @RequestParam("isDelay") int isDelay
+    ) throws Exception {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Date dateFilingTime = sdf.parse(filingTime);
+        Date dateRequirementTimePlan = sdf.parse(requirementTimePlan);
+        Date dateRequirementTimeReal = sdf.parse(requirementTimeReal);
+        Date dateDesignTimePlan = sdf.parse(designTimePlan);
+        Date dateDesignTimeReal = sdf.parse(designTimeReal);
+        Date dateTestTimePlan = sdf.parse(testTimePlan);
+        Date dateTestTimeReal = sdf.parse(testTimeReal);
+        Date dateAcceptanceTimePlan = sdf.parse(acceptanceTimePlan);
+        Date dateAcceptanceTimeReal = sdf.parse(acceptanceTimeReal);
+        contractMapper.modifyContract(id, number, name, status, classification,
+                leader, money, needInvoice, dateFilingTime, cdNumber, dateRequirementTimePlan,
+                dateRequirementTimeReal, requirementPayMoney, dateDesignTimePlan, dateDesignTimeReal,
+                designPayMoney, dateTestTimePlan, dateTestTimeReal, testPayMoney, dateAcceptanceTimePlan,
+                dateAcceptanceTimeReal, acceptancePayMoney, isDelay);
     }
 }

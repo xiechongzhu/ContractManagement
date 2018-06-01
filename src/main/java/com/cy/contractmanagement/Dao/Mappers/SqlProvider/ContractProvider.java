@@ -4,11 +4,6 @@ import org.apache.ibatis.jdbc.SQL;
 
 import java.util.Map;
 
-import static org.apache.ibatis.jdbc.SelectBuilder.SELECT;
-import static org.apache.ibatis.jdbc.SelectBuilder.WHERE;
-import static org.apache.ibatis.jdbc.SqlBuilder.SET;
-import static org.apache.ibatis.jdbc.SqlBuilder.UPDATE;
-
 public class ContractProvider {
     public String findContract(Map<String, Object> map){
         String number = (String)map.get("number");

@@ -5,14 +5,17 @@
         colModel:[
             {label:'合同编号', name:'number', index:'number', width:80, sortable:false},
             {label:'合同名称', name:'name', index:'name', width:80, sortable:false},
-            {label:'执行状态', name:'status', index:'status', width:80, sortable:false, formatter:function(x, v, r){
-                switch (r['status']) {
-                    case 0:return "正常";
-                    case 1:return "超期";
-                    case 2:return "已验收";
+            {label:'合同状态', name:'status', index:'status', width:80, sortable:false,
+                formatter:function(x, v, r){
+                    switch (r['status']) {
+                        case 0:return '正常';
+                        case 1:return '超期';
+                        case 2:return '已验收';
+                    }
                 }
-                }},
-            {label:'密级', name:'classification', index:'classification', width:80, sortable:false, formatter:function(x, v, r){
+            },
+            {label:'密级', name:'classification', index:'classification', width:80, sortable:false,
+                formatter:function(x, v, r){
                 switch (r['classification']) {
                     case 0:return "非密";
                     case 1:return "秘密";
@@ -20,7 +23,8 @@
                 }},
             {label:'负责人', name:'leader', index:'leader', width:80, sortable:false},
             {label:'金额(万元)', name:'money', index:'money', width:80, sortable:false},
-            {label:'是否提供发票', name:'needInvoice', index:'needInvoice', width:80, sortable:false, formatter:function(x, v, r){
+            {label:'是否提供发票', name:'needInvoice', index:'needInvoice', width:80, sortable:false,
+                formatter:function(x, v, r){
                 switch (r['needInvoice']){
                     case 0:return "否";
                     case 1:return "是";
@@ -49,11 +53,13 @@
             {label:'评审时间', name:'acceptanceTimeReal', index:'acceptanceTimeReal', width:80, sortable:false,
                 formatter:"date",formatoptions: {srcformat:'ISO8601Long',newformat:'Y-m-d'}},
             {label:'付款金额(万元)', name:'acceptancePayMoney', index:'acceptancePayMoney', width:80, sortable:false},
-            {label:'未付金额(万元)', width:80, sortable:false, formatter:function(v, x, r){
+            {label:'未付金额(万元)', width:80, sortable:false,
+                formatter:function(v, x, r){
                 return r['money'] - r['requirementPayMoney'] - r['designPayMoney']
                     - r['testPayMoney'] - r['acceptancePayMoney'];
                 }},
-            {label:'是否延期', name:'isDelay', index:'isDelay', width:80, sortable:false, formatter:function(x, v, r){
+            {label:'是否延期', name:'isDelay', index:'isDelay', width:80, sortable:false,
+                formatter:function(x, v, r){
                 switch (r['isDelay']) {
                     case 0:return "否";
                     case 1:return "是";
@@ -70,7 +76,7 @@
         viewrecords: true,
         pager: '#page1_jDataGrid1_pager',
         ondblClickRow: function(id){
-            modify_item()
+            modify_item();
         }
     });
     jQuery('#page1_jDataGrid1_table').jqGrid('setGroupHeaders',
@@ -156,7 +162,7 @@ function add_item() {
     $('#item_dialog').dialog({
         modal: true,
         resizable:false,
-        title: '添加新合同',
+        title: '添加合同',
         width: 900
     });
 }
@@ -165,7 +171,27 @@ function modify_item() {
     if(id == null) {
     	return;
 	}
-	alert('你选中了:' + id);
+	$.ajax({
+        url:'/contract/get/' + id,
+        type:'get',
+        processData: false,
+        contentType: false,
+        async: false,
+        success: function (data) {
+            set_pop_dialog_value(data);
+            $('#item_dialog').attr('method', 'modify');
+            $('#item_dialog').attr('contract_id', id);
+            $('#item_dialog').dialog({
+                modal: true,
+                resizable:false,
+                title: '修改合同',
+                width: 900
+            });
+        },
+        error: function () {
+            messagebox('信息', '从服务器获取数据失败', 'error');
+        }
+    });
 }
 
 function search_item() {
@@ -173,8 +199,16 @@ function search_item() {
 }
 
 function pop_okClick() {
-    var addItemInfo = get_pop_dialog_value();
-    console.log(addItemInfo);
+    var method = $('#item_dialog').attr('method');
+    var id = $('#item_dialog').attr('contract_id');
+    if(method == 'add') {
+        ajax_add_contract();
+    } else {
+        ajax_modify_contract(id);
+    }
+}
+
+function build_form_data(addItemInfo) {
     var formData = new FormData;
     formData.append('number', addItemInfo.number);
     formData.append('name', addItemInfo.name);
@@ -198,6 +232,12 @@ function pop_okClick() {
     formData.append('acceptanceTimeReal', addItemInfo.acceptanceTimeReal);
     formData.append('acceptancePayMoney', addItemInfo.acceptancePayMoney);
     formData.append('isDelay', addItemInfo.isDelay);
+    return formData;
+}
+
+function ajax_add_contract() {
+    var addItemInfo = get_pop_dialog_value();
+    var formData = build_form_data(addItemInfo);
     $.ajax({
         url: "/contract/add",
         type: "post",
@@ -206,15 +246,36 @@ function pop_okClick() {
         contentType: false,
         async: false,
         success: function () {
-            alert("成功");
-            $("#AddUserdialog").dialog('close');
-            window.location.reload();
+            messagebox('信息', '添加新合同信息成功', 'info', function () {
+                window.location.reload();
+            });
         },
         error: function () {
-            alert("失败");
-            $("#AddUserdialog").dialog('close');
+            messagebox('信息', '添加新合同信息失败', 'error');
         }
-    })
+    });
+}
+
+function ajax_modify_contract(id) {
+    var newValue = get_pop_dialog_value();
+    var formData =build_form_data(newValue);
+    $.ajax({
+        url: "/contract/modify/" + id,
+        type: "post",
+        data: formData,
+        processData: false,
+        contentType: false,
+        async: false,
+        success: function () {
+            messagebox('信息', '合同信息修改成功', 'info',function () {
+                window.location.reload();
+                //$('#page1_jDataGrid1_table').jqGrid('setRowData', id, newValue);
+            })
+        },
+        error: function () {
+            messagebox('信息', '合同信息修改失败', 'error');
+        }
+    });
 }
 
 function findContracts() {
@@ -244,6 +305,7 @@ function pop_cancelClick() {
 }
 
 function set_pop_dialog_value(value) {
+    console.log(value);
     $('#number_input').val(value.number);
     $('#name_input').val(value.name);
     $('#status_select').val(value.status);
