@@ -9,6 +9,9 @@ import java.util.List;
 
 @Mapper
 public interface ContractMapper {
+    @Select("select * from contract_info")
+    List<ContractInfo> getAllContracts();
+
     @SelectProvider(type = ContractProvider.class, method = "findContract")
     List<ContractInfo> findContract(@Param("number") String number, @Param("name") String name,
                                     @Param("status") int status, @Param("classification") int classification,

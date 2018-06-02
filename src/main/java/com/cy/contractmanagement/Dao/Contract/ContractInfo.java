@@ -3,8 +3,35 @@ package com.cy.contractmanagement.Dao.Contract;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ContractInfo {
+    private static Map<Integer, String> statusDescMap;
+    private static Map<Integer, String> classificationDescMap;
+    private static Map<Integer, String> needInvoiceDescMap;
+    private static Map<Integer, String> isDelayDescMap;
+
+    static {
+        if(statusDescMap == null) {
+            statusDescMap = new HashMap<Integer, String>();
+            statusDescMap.put(0, "正常");
+            statusDescMap.put(1, "超期");
+            statusDescMap.put(2, "已验收");
+        }
+        if(classificationDescMap == null) {
+            classificationDescMap = new HashMap<Integer, String>();
+            classificationDescMap.put(0, "非密");
+            classificationDescMap.put(1, "秘密");
+        }
+        if(needInvoiceDescMap == null) {
+            needInvoiceDescMap = new HashMap<Integer, String>();
+            needInvoiceDescMap.put(0, "否");
+            needInvoiceDescMap.put(1, "是");
+        }
+        isDelayDescMap = needInvoiceDescMap;
+    }
+
     public int getId() {
         return id;
     }
@@ -95,6 +122,22 @@ public class ContractInfo {
 
     public int getIsDelay() {
         return isDelay;
+    }
+
+    public String getStatusText() {
+        return statusDescMap.get(status);
+    }
+
+    public String getClassificationText() {
+        return classificationDescMap.get(classification);
+    }
+
+    public String getNeedInvoiceText() {
+        return needInvoiceDescMap.get(needInvoice);
+    }
+
+    public String getIsDelayText() {
+        return isDelayDescMap.get(isDelay);
     }
 
     private int id;                     //数据库id,自增长

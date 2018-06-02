@@ -247,7 +247,8 @@ function ajax_add_contract() {
         async: false,
         success: function () {
             messagebox('信息', '添加新合同信息成功', 'info', function () {
-                window.location.reload();
+                $('#page1_jDataGrid1_table').trigger('reloadGrid');
+                $('#item_dialog').dialog('close');
             });
         },
         error: function () {
@@ -268,8 +269,8 @@ function ajax_modify_contract(id) {
         async: false,
         success: function () {
             messagebox('信息', '合同信息修改成功', 'info',function () {
-                window.location.reload();
-                //$('#page1_jDataGrid1_table').jqGrid('setRowData', id, newValue);
+                $('#page1_jDataGrid1_table').trigger('reloadGrid');
+                $('#item_dialog').dialog('close');
             })
         },
         error: function () {
@@ -355,4 +356,8 @@ function get_pop_dialog_value() {
         acceptancePayMoney : $('#acceptancePayMoney_input').val()=='' ? 0:$('#acceptancePayMoney_input').val(),
         isDelay : $('#isDelay_select').val()
     };
+}
+
+function export_excel() {
+    window.location.href = "/contract/export";
 }

@@ -2,11 +2,17 @@ package com.cy.contractmanagement.Controllers;
 
 import com.cy.contractmanagement.Dao.Contract.ContractInfo;
 import com.cy.contractmanagement.Dao.Mappers.ContractMapper;
+import com.cy.contractmanagement.Excel.ContractExcelOperator;
 import com.cy.contractmanagement.Utiliy.JqGridResultBuilder;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.io.InputStreamResource;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,7 +29,10 @@ public class ContractController {
     @Autowired
     ContractMapper contractMapper;
 
-    /* URL重定向 */
+    @Autowired
+    ContractExcelOperator contractExcelOperator;
+
+    /* 返回页面 */
     @GetMapping("")
     public String GetContractHtml() {
         return "contract";
@@ -141,5 +150,23 @@ public class ContractController {
                 dateRequirementTimeReal, requirementPayMoney, dateDesignTimePlan, dateDesignTimeReal,
                 designPayMoney, dateTestTimePlan, dateTestTimeReal, testPayMoney, dateAcceptanceTimePlan,
                 dateAcceptanceTimeReal, acceptancePayMoney, isDelay);
+    }
+
+    @GetMapping("/export")
+    public ResponseEntity exportToExcel() throws Exception {
+        String excelFile = contractExcelOperator.exportExcelFile();
+        FileSystemResource resource = new FileSystemResource(excelFile);
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Cache-Control", "no-cache, no-store, must-revalidate");
+        headers.add("Content-Disposition", "attachment; filename=contracts.xls");
+        headers.add("Pragma", "no-cache");
+        headers.add("Expires", "0");
+
+        return ResponseEntity
+                .ok()
+                .headers(headers)
+                .contentLength(resource.contentLength())
+                .contentType(MediaType.parseMediaType("application/octet-stream"))
+                .body(new InputStreamResource(resource.getInputStream()));
     }
 }
