@@ -25,11 +25,13 @@ public class ExcelImport {
                         ArrayList<String> rowData = new ArrayList<>();
                         for (int columnNum = 0; columnNum < colCount; columnNum++) {
                             HSSFCell cell = hssfRow.getCell(columnNum);
-                            //rowData.add(cell == null ? "" : cell.getcellval);
                             if (cell == null) {
                                 rowData.add("");
                             } else {
                                 switch (cell.getCellTypeEnum()) {
+                                    case _NONE:
+                                        rowData.add("");
+                                        break;
                                     case NUMERIC:
                                         rowData.add(String.valueOf(cell.getNumericCellValue()));
                                         break;
@@ -39,8 +41,13 @@ public class ExcelImport {
                                     case FORMULA:
                                         rowData.add(cell.getCellFormula());
                                         break;
+                                    case BLANK:
+                                        break;
                                     case BOOLEAN:
                                         rowData.add(String.valueOf(cell.getBooleanCellValue()));
+                                        break;
+                                    case ERROR:
+                                        rowData.add("");
                                         break;
                                     default:
                                         rowData.add("");
