@@ -1,48 +1,50 @@
-﻿body{font-size:12px;}
+﻿body {
+    font-size: 12px;
+}
 
-#page1_jContainer1{
+#page1_jContainer1 {
     left: 0px;
     top: 0px;
     width: 100%;
     height: 100%;
 }
 
-#page1_jRegion1{
-    border:none;
-    overflow:hidden;
+#page1_jRegion1 {
+    border: none;
+    overflow: hidden;
 }
 
-#page1_jRegion2{
-    border:none;
-    overflow:hidden;
+#page1_jRegion2 {
+    border: none;
+    overflow: hidden;
 }
 
-#page1_jRegion3{
-    border:none;
-    overflow:hidden;
+#page1_jRegion3 {
+    border: none;
+    overflow: hidden;
 }
 
-#page1_jExtPanel1{
+#page1_jExtPanel1 {
     left: 0px;
     top: 0px;
     bottom: 0px;
     right: 0px;
 }
 
-#page1_jExtPanel1 .PanelBarCaption{
+#page1_jExtPanel1 .PanelBarCaption {
 }
 
-#page1_jExtPanel1 .PanelContent{
+#page1_jExtPanel1 .PanelContent {
 }
 
-#page1_jExtPanel1 .cumicon{
-    background:url(../images/) no-repeat;
+#page1_jExtPanel1 .cumicon {
+    background: url(../images/) no-repeat;
     right: 0px;
     bottom: 0px;
     margin: 2px 5px 0 2px;
 }
 
-#page1_jPanel1{
+#page1_jPanel1 {
     left: 0px;
     top: 0px;
     height: 94px;
@@ -50,7 +52,7 @@
     background: url(../images/jTitle001.jpg) repeat;
 }
 
-#page1_jLabel1{
+#page1_jLabel1 {
     left: 15px;
     top: 9px;
     font-size: 36px;
@@ -59,223 +61,230 @@
     line-height: 38px;
 }
 
-#page1_jExtPanel2{
+#page1_jExtPanel2 {
     left: 0px;
     top: 0px;
     bottom: 0px;
     right: 0px;
 }
 
-#page1_jExtPanel2 .PanelBarCaption{
+#page1_jExtPanel2 .PanelBarCaption {
 }
 
-#page1_jExtPanel2 .PanelContent{
+#page1_jExtPanel2 .PanelContent {
 }
 
-#page1_jExtPanel2 .cumicon{
-    background:url(../images/) no-repeat;
+#page1_jExtPanel2 .cumicon {
+    background: url(../images/) no-repeat;
     right: 0px;
     bottom: 0px;
     margin: 2px 5px 0 2px;
 }
 
-#page1_jContainer2{
+#page1_jContainer2 {
     left: 0px;
     top: 0px;
     width: 100%;
     height: 100%;
 }
 
-#page1_jRegion4{
-    border:none;
-    overflow:hidden;
+#page1_jRegion4 {
+    border: none;
+    overflow: hidden;
 }
 
-#page1_jRegion5{
-    border:none;
-    overflow:hidden;
+#page1_jRegion5 {
+    border: none;
+    overflow: hidden;
 }
 
-#page1_jDataGrid1{
+#page1_jDataGrid1 {
     left: 0px;
     top: 0px;
     right: 0px;
     bottom: 0px;
 }
 
-#page1_jToolbar1{
+#page1_jToolbar1 {
     left: 0px;
     top: 0px;
     bottom: 0px;
     right: 0px;
-    border-left:none;
-    border-right:none;
+    border-left: none;
+    border-right: none;
 }
 
-#page1_jButton1{
+#page1_jButton1 {
     left: 4px;
     top: 3px;
-    width:56px;
+    width: 56px;
     height: 22px;
 }
 
-#page1_jButton2{
+#page1_jButton2 {
     left: 70px;
     top: 3px;
-    width:56px;
+    width: 56px;
     height: 22px;
 }
 
-#label1{
+#label1 {
     left: 160px;
     top: 6px;
     line-height: 14px;
 }
 
-#search_number{
+#search_number {
     left: 220px;
     top: 4px;
-    width:80px;
-    height:14px;
+    width: 80px;
+    height: 14px;
 }
 
-#label2{
+#label2 {
     left: 320px;
     top: 6px;
     line-height: 14px;
 }
 
-#search_name{
+#search_name {
     left: 380px;
     top: 4px;
-    width:80px;
-    height:14px;
+    width: 80px;
+    height: 14px;
 }
 
-#label3{
+#label3 {
     left: 480px;
     top: 6px;
     line-height: 14px;
 }
 
-#search_status_div{
+#search_status_div {
     left: 540px;
     top: 4px;
-    width:80px;
-    height:14px;
-    position:absolute;
+    width: 80px;
+    height: 14px;
+    position: absolute;
 }
 
-#label4{
+#label4 {
     left: 635px;
     top: 6px;
     line-height: 14px;
 }
 
-#search_classification_div{
+#search_classification_div {
     left: 670px;
     top: 4px;
-    width:80px;
-    height:14px;
-    position:absolute;
+    width: 80px;
+    height: 14px;
+    position: absolute;
 }
 
-#label5{
+#label5 {
     left: 160px;
     top: 42px;
     line-height: 14px;
 }
 
-#search_leader{
+#search_leader {
     left: 220px;
     top: 38px;
-    width:80px;
-    height:14px;
+    width: 80px;
+    height: 14px;
 }
 
-#label6{
+#label6 {
     left: 320px;
     top: 40px;
     line-height: 14px;
 }
 
-#search_start_date{
+#search_start_date {
     left: 380px;
     top: 38px;
-    width:80px;
-    height:14px;
+    width: 80px;
+    height: 14px;
     position: absolute;
 }
 
-#label7{
+#label7 {
     left: 480px;
     top: 40px;
     line-height: 14px;
 }
 
-#search_end_date{
+#search_end_date {
     left: 540px;
     top: 38px;
-    width:80px;
-    height:14px;
+    width: 80px;
+    height: 14px;
     position: absolute;
 }
 
-#label8{
+#label8 {
     left: 635px;
     top: 40px;
     line-height: 14px;
 }
 
-#search_isDelay_div{
+#search_isDelay_div {
     left: 670px;
     top: 38px;
-    width:80px;
-    height:14px;
-    position:absolute;
+    width: 80px;
+    height: 14px;
+    position: absolute;
 }
 
-.search_select{
+.search_select {
     font-size: 12px;
     height: 20px;
 }
 
-#page1_jSeparator2{
+#page1_jSeparator2 {
     left: 150px;
     top: 0px;
     height: 62px;
     width: 8px;
 }
 
-#page1_jContainer3{
+#page1_jContainer3 {
     left: 0px;
     top: 0px;
     width: 100%;
     height: 100%;
 }
 
-#page1_jRegion7{
-    border:none;
-    overflow:hidden;
+#page1_jRegion7 {
+    border: none;
+    overflow: hidden;
 }
 
-#page1_jTreeView1{
+#page1_jTreeView1 {
     left: 8px;
     top: 0px;
     height: 100%;
     width: 100%;
 }
 
-#page1_jButton5{
+#page1_jButton5 {
     left: 70px;
     top: 36px;
-    width:56px;
+    width: 56px;
     height: 22px;
 }
 
-#page1_jButton6{
+#page1_jButton6 {
     left: 730px;
     top: 4px;
-    width:56px;
+    width: 56px;
+    height: 22px;
+}
+
+#page1_jButton7 {
+    left: 730px;
+    top: 36px;
+    width: 56px;
     height: 22px;
 }

@@ -32,7 +32,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 var msgBoxImagePath = "images/";
 
 jQuery.msgBox = msg;
-function msg (options) {
+
+function msg(options) {
     var isShown = false;
     var typeOfValue = typeof options;
     var defaults = {
@@ -43,13 +44,22 @@ function msg (options) {
         timeOut: 0,
         modal: false,
         showButtons: true,
-        buttons: [{ value: "Ok"}],
-        inputs: [{ type: "text", name:"userName", header: "User Name" }, { type: "password",name:"password", header: "Password"}],
-        success: function (result) { },
-        beforeShow: function () { },
-        afterShow: function () { },
-        beforeClose: function () { },
-        afterClose: function () { },
+        buttons: [{value: "Ok"}],
+        inputs: [{type: "text", name: "userName", header: "User Name"}, {
+            type: "password",
+            name: "password",
+            header: "Password"
+        }],
+        success: function (result) {
+        },
+        beforeShow: function () {
+        },
+        afterShow: function () {
+        },
+        beforeClose: function () {
+        },
+        afterClose: function () {
+        },
         opacity: 0.1
     };
     options = typeOfValue == "string" ? defaults : options;
@@ -66,11 +76,11 @@ function msg (options) {
                 break;
             case "confirm":
                 options.title = options.title == null ? "Confirmation" : options.title;
-                options.buttons = options.buttons == null ? [{ value: "Yes" }, { value: "No" }, { value: "Cancel"}] : options.buttons;
+                options.buttons = options.buttons == null ? [{value: "Yes"}, {value: "No"}, {value: "Cancel"}] : options.buttons;
                 break;
             case "prompt":
                 options.title = options.title == null ? "Log In" : options.title;
-                options.buttons = options.buttons == null ? [{ value: "Login" }, { value: "Cancel"}] : options.buttons;
+                options.buttons = options.buttons == null ? [{value: "Login"}, {value: "Cancel"}] : options.buttons;
                 break;
             default:
                 image = "alert.png";
@@ -98,21 +108,25 @@ function msg (options) {
         default:
             image = "alert.png";
     }
-    
+
     var divId = "msgBox" + new Date().getTime();
-    
+
     /* i was testing with ($.browser.msie  && parseInt($.browser.version, 10) === 7) but $.browser.msie is not working with jQuery 1.9.0 :S. Alternative method: */
-    if ( navigator.userAgent.match(/msie 7/i) !== null) { var divMsgBoxContentClass = "msgBoxContentIEOld"; } else { var divMsgBoxContentClass = "msgBoxContent";}
-    
-    var divMsgBoxId = divId; 
-    var divMsgBoxContentId = divId+"Content"; 
-    var divMsgBoxImageId = divId+"Image";
-    var divMsgBoxButtonsId = divId+"Buttons";
-    var divMsgBoxBackGroundId = divId+"BackGround";
-	var firstButtonId = divId+"FirstButton";
-    
+    if (navigator.userAgent.match(/msie 7/i) !== null) {
+        var divMsgBoxContentClass = "msgBoxContentIEOld";
+    } else {
+        var divMsgBoxContentClass = "msgBoxContent";
+    }
+
+    var divMsgBoxId = divId;
+    var divMsgBoxContentId = divId + "Content";
+    var divMsgBoxImageId = divId + "Image";
+    var divMsgBoxButtonsId = divId + "Buttons";
+    var divMsgBoxBackGroundId = divId + "BackGround";
+    var firstButtonId = divId + "FirstButton";
+
     var buttons = "";
-	var isFirstButton = true;
+    var isFirstButton = true;
     $(options.buttons).each(function (index, button) {
         var add = "";
         if (isFirstButton) {
@@ -125,20 +139,20 @@ function msg (options) {
     var inputs = "";
     $(options.inputs).each(function (index, input) {
         var type = input.type;
-        if (type=="checkbox" || type =="radiobutton") {
+        if (type == "checkbox" || type == "radiobutton") {
             inputs += "<div class=\"msgInput\">" +
-            "<input type=\"" + input.type + "\" name=\"" + input.name + "\" "+(input.checked == null ? "" : "checked ='"+input.checked+"'")+" value=\"" + (typeof input.value == "undefined" ? "" : input.value) + "\" />" +
-            "<text>"+input.header +"</text>"+
-            "</div>";
+                "<input type=\"" + input.type + "\" name=\"" + input.name + "\" " + (input.checked == null ? "" : "checked ='" + input.checked + "'") + " value=\"" + (typeof input.value == "undefined" ? "" : input.value) + "\" />" +
+                "<text>" + input.header + "</text>" +
+                "</div>";
         }
         else {
             inputs += "<div class=\"msgInput\">" +
-            "<span class=\"msgInputHeader\">" + input.header + "</span>" +
-            "<input type=\"" + input.type + "\" name=\"" + input.name + "\" value=\"" + (typeof input.value == "undefined" ? "" : input.value) + "\" "+
-            (typeof input.size!==undefined?" size='"+input.size+"' ":"")+
-            (typeof input.maxlength!==undefined?" maxlength='"+input.maxlength+"' ":"")+
-            " />" +
-            "</div>";
+                "<span class=\"msgInputHeader\">" + input.header + "</span>" +
+                "<input type=\"" + input.type + "\" name=\"" + input.name + "\" value=\"" + (typeof input.value == "undefined" ? "" : input.value) + "\" " +
+                (typeof input.size !== undefined ? " size='" + input.size + "' " : "") +
+                (typeof input.maxlength !== undefined ? " maxlength='" + input.maxlength + "' " : "") +
+                " />" +
+                "</div>";
         }
     });
 
@@ -148,32 +162,32 @@ function msg (options) {
     var divButtons = "<div id=\"" + divMsgBoxButtonsId + "\" class=\"msgBoxButtons\">" + buttons + "</div>";
     var divInputs = "<div class=\"msgBoxInputs\">" + inputs + "</div>";
 
-    var divMsgBox; 
-    var divMsgBoxContent; 
+    var divMsgBox;
+    var divMsgBoxContent;
     var divMsgBoxImage;
     var divMsgBoxButtons;
     var divMsgBoxBackGround;
-    
+
     if (options.type == "prompt") {
         $("body").append(divBackGround + "<div id=\"" + divMsgBoxId + "\" class=\"msgBox\">" + divTitle + "<div>" + divContainer + (options.showButtons ? divButtons + "</div>" : "</div>") + "</div>");
-        divMsgBox = $("#"+divMsgBoxId); 
-        divMsgBoxContent = $("#"+divMsgBoxContentId); 
-        divMsgBoxImage = $("#"+divMsgBoxImageId);
-        divMsgBoxButtons = $("#"+divMsgBoxButtonsId);
-        divMsgBoxBackGround = $("#"+divMsgBoxBackGroundId);
+        divMsgBox = $("#" + divMsgBoxId);
+        divMsgBoxContent = $("#" + divMsgBoxContentId);
+        divMsgBoxImage = $("#" + divMsgBoxImageId);
+        divMsgBoxButtons = $("#" + divMsgBoxButtonsId);
+        divMsgBoxBackGround = $("#" + divMsgBoxBackGroundId);
 
         divMsgBoxImage.remove();
-        divMsgBoxButtons.css({"text-align":"center","margin-top":"5px"});
-        divMsgBoxContent.css({"width":"100%","height":"100%"});
+        divMsgBoxButtons.css({"text-align": "center", "margin-top": "5px"});
+        divMsgBoxContent.css({"width": "100%", "height": "100%"});
         divMsgBoxContent.html(divInputs);
     }
     else {
         $("body").append(divBackGround + "<div id=\"" + divMsgBoxId + "\" class=\"msgBox\">" + divTitle + "<div>" + divContainer + (options.showButtons ? divButtons + "</div>" : "</div>") + "</div>");
-        divMsgBox= $("#"+divMsgBoxId); 
-        divMsgBoxContent = $("#"+divMsgBoxContentId); 
-        divMsgBoxImage = $("#"+divMsgBoxImageId);
-        divMsgBoxButtons = $("#"+divMsgBoxButtonsId);
-        divMsgBoxBackGround = $("#"+divMsgBoxBackGroundId);
+        divMsgBox = $("#" + divMsgBoxId);
+        divMsgBoxContent = $("#" + divMsgBoxContentId);
+        divMsgBoxImage = $("#" + divMsgBoxImageId);
+        divMsgBoxButtons = $("#" + divMsgBoxButtonsId);
+        divMsgBoxBackGround = $("#" + divMsgBoxBackGroundId);
     }
     divMsgBoxContent.height('auto');
 
@@ -191,13 +205,13 @@ function msg (options) {
         if (isShown) {
             return;
         }
-        divMsgBox.css({ opacity: 0, top: top - 50, left: left });
-        divMsgBox.css("background-image", "url('"+msgBoxImagePath+"msgBoxBackGround.png')");
-        divMsgBoxBackGround.css({ opacity: options.opacity });
+        divMsgBox.css({opacity: 0, top: top - 50, left: left});
+        divMsgBox.css("background-image", "url('" + msgBoxImagePath + "msgBoxBackGround.png')");
+        divMsgBoxBackGround.css({opacity: options.opacity});
         options.beforeShow();
-        divMsgBoxBackGround.css({ "width": $(document).width(), "height": getDocHeight() });
-        $(divMsgBoxId+","+divMsgBoxBackGroundId).fadeIn(0);
-        divMsgBox.animate({ opacity: 1, "top": top, "left": left }, 200);
+        divMsgBoxBackGround.css({"width": $(document).width(), "height": getDocHeight()});
+        $(divMsgBoxId + "," + divMsgBoxBackGroundId).fadeIn(0);
+        divMsgBox.animate({opacity: 1, "top": top, "left": left}, 200);
         setTimeout(options.afterShow, 200);
         $("#" + firstButtonId).focus();
         isShown = true;
@@ -210,7 +224,7 @@ function msg (options) {
             var top = windowHeight / 2 - height / 2;
             var left = windowWidth / 2 - width / 2;
 
-            divMsgBox.css({ "top": top, "left": left });
+            divMsgBox.css({"top": top, "left": left});
             divMsgBoxBackGround.css({"width": "100%", "height": "100%"});
         });
     }
@@ -220,9 +234,12 @@ function msg (options) {
             return;
         }
         options.beforeClose();
-        divMsgBox.animate({ opacity: 0, "top": top - 50, "left": left }, 200);
+        divMsgBox.animate({opacity: 0, "top": top - 50, "left": left}, 200);
         divMsgBoxBackGround.fadeOut(300);
-        setTimeout(function () { divMsgBox.remove(); divMsgBoxBackGround.remove(); }, 300);
+        setTimeout(function () {
+            divMsgBox.remove();
+            divMsgBoxBackGround.remove();
+        }, 300);
         setTimeout(options.afterClose, 300);
         $(window).unbind("resize");
         isShown = false;
@@ -231,13 +248,13 @@ function msg (options) {
     function getDocHeight() {
         var D = document;
         return Math.max(
-        Math.max(D.body.scrollHeight, D.documentElement.scrollHeight),
-        Math.max(D.body.offsetHeight, D.documentElement.offsetHeight),
-        Math.max(D.body.clientHeight, D.documentElement.clientHeight));
+            Math.max(D.body.scrollHeight, D.documentElement.scrollHeight),
+            Math.max(D.body.offsetHeight, D.documentElement.offsetHeight),
+            Math.max(D.body.clientHeight, D.documentElement.clientHeight));
     }
 
     function getFocus() {
-    	divMsgBox.fadeOut(200).fadeIn(200);
+        divMsgBox.fadeOut(200).fadeIn(200);
     }
 
     $("input.msgButton").click(function (e) {
@@ -253,21 +270,21 @@ function msg (options) {
                 var value = $(this).val();
                 var type = $(this).attr("type");
                 if (type == "checkbox" || type == "radiobutton") {
-                    inputValues.push({ name: name, value: value,checked: $(this).attr("checked")});
+                    inputValues.push({name: name, value: value, checked: $(this).attr("checked")});
                 }
                 else {
-                    inputValues.push({ name: name, value: value });
+                    inputValues.push({name: name, value: value});
                 }
             });
-            options.success(value,inputValues);
+            options.success(value, inputValues);
         }
         hide();
     });
 
     divMsgBoxBackGround.click(function (e) {
-        if ( options.modal )
+        if (options.modal)
             return;
-        if (!options.showButtons || (options.showButtons && options.buttons.length<2) || options.autoClose) {
+        if (!options.showButtons || (options.showButtons && options.buttons.length < 2) || options.autoClose) {
             hide();
         }
         else {

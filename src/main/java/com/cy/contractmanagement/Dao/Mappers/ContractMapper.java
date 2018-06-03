@@ -41,6 +41,21 @@ public interface ContractMapper {
                        @Param("acceptanceTimeReal") Date acceptanceTimeReal,
                        @Param("acceptancePayMoney") float acceptancePayMoney, @Param("isDelay") int isDelay);
 
+    @Insert("insert into contract_info(number, name, status, classification, leader," +
+            "money, needInvoice, filingTime, cdNumber, requirementTimePlan, requirementTimeReal," +
+            "requirementPayMoney, designTimePlan, designTimeReal, designPayMoney, testTimePlan," +
+            "testTimeReal, testPayMoney, acceptanceTimePlan, acceptanceTimeReal, acceptancePayMoney," +
+            "isDelay) values(#{contractInfo.number}, #{contractInfo.name}, #{contractInfo.status}, " +
+            "#{contractInfo.classification}, #{contractInfo.leader}," +
+            "#{contractInfo.money}, #{contractInfo.needInvoice}, #{contractInfo.filingTime}, #{contractInfo.cdNumber}," +
+            "#{contractInfo.requirementTimePlan}, #{contractInfo.requirementTimeReal}," +
+            "#{contractInfo.requirementPayMoney}, #{contractInfo.designTimePlan}, #{contractInfo.designTimeReal}, " +
+            "#{contractInfo.designPayMoney}, #{contractInfo.testTimePlan}," +
+            "#{contractInfo.testTimeReal}, #{contractInfo.testPayMoney}, #{contractInfo.acceptanceTimePlan}," +
+            "#{contractInfo.acceptanceTimeReal}, #{contractInfo.acceptancePayMoney}," +
+            "#{contractInfo.isDelay})")
+    int insertContractByClass(@Param("contractInfo") ContractInfo contractInfo);
+
     @Select("select * from contract_info where id = #{id}")
     ContractInfo getSingleCOntract(@Param("id") int id);
 
@@ -52,16 +67,16 @@ public interface ContractMapper {
             "acceptanceTimePlan=#{acceptanceTimePlan}, acceptanceTimeReal=#{acceptanceTimeReal}, acceptancePayMoney=#{acceptancePayMoney}," +
             "isDelay=#{isDelay} where id=#{id}")
     void modifyContract(@Param("id") int id, @Param("number") String number, @Param("name") String name,
-                       @Param("status") int status, @Param("classification") int classification,
-                       @Param("leader") String leader, @Param("money") float money,
-                       @Param("needInvoice") int needInvoice, @Param("filingTime") Date filingTime,
-                       @Param("cdNumber") String cdNumber, @Param("requirementTimePlan") Date requirementTimePlan,
-                       @Param("requirementTimeReal") Date requirementTimeReal,
-                       @Param("requirementPayMoney") float requirementPayMoney,
-                       @Param("designTimePlan") Date designTimePlan, @Param("designTimeReal") Date designTimeReal,
-                       @Param("designPayMoney") float designPayMoney, @Param("testTimePlan") Date testTimePlan,
-                       @Param("testTimeReal") Date testTimeReal, @Param("testPayMoney") float testPayMoney,
-                       @Param("acceptanceTimePlan") Date acceptanceTimePlan,
-                       @Param("acceptanceTimeReal") Date acceptanceTimeReal,
-                       @Param("acceptancePayMoney") float acceptancePayMoney, @Param("isDelay") int isDelay);
+                        @Param("status") int status, @Param("classification") int classification,
+                        @Param("leader") String leader, @Param("money") float money,
+                        @Param("needInvoice") int needInvoice, @Param("filingTime") Date filingTime,
+                        @Param("cdNumber") String cdNumber, @Param("requirementTimePlan") Date requirementTimePlan,
+                        @Param("requirementTimeReal") Date requirementTimeReal,
+                        @Param("requirementPayMoney") float requirementPayMoney,
+                        @Param("designTimePlan") Date designTimePlan, @Param("designTimeReal") Date designTimeReal,
+                        @Param("designPayMoney") float designPayMoney, @Param("testTimePlan") Date testTimePlan,
+                        @Param("testTimeReal") Date testTimeReal, @Param("testPayMoney") float testPayMoney,
+                        @Param("acceptanceTimePlan") Date acceptanceTimePlan,
+                        @Param("acceptanceTimeReal") Date acceptanceTimeReal,
+                        @Param("acceptancePayMoney") float acceptancePayMoney, @Param("isDelay") int isDelay);
 }
