@@ -1,0 +1,244 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>合同管理系统</title>
+    <link href="css/jqueryui.css" rel="stylesheet" type="text/css"/>
+    <link href="css/layout-default.css" rel="stylesheet" type="text/css"/>
+    <link href="css/tlayout.css" rel="stylesheet" type="text/css"/>
+    <link href="css/vjpublic.css" rel="stylesheet" type="text/css"/>
+    <link href="css/ui.jqgrid.css" rel="stylesheet" type="text/css"/>
+    <link href="css/cum.css" rel="stylesheet" type="text/css"/>
+    <link href="css/zTreeStyle.css" rel="stylesheet" type="text/css"/>
+    <link href="css/treeview.css" rel="stylesheet" type="text/css"/>
+    <link href="css/vjpage.css" rel="stylesheet" type="text/css"/>
+    <link href="css/contract.config.css" rel="stylesheet" type="text/css"/>
+    <link href="css/popDialog.css" rel="stylesheet" type="text/css"/>
+    <link href="css/msgBoxLight.css" rel="stylesheet" , type="text/css"/>
+    <script type="text/javascript" src="thridpart-js/public.js"></script>
+    <script type="text/javascript" src="thridpart-js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="thridpart-js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="thridpart-js/resizeComponents.js"></script>
+    <script type="text/javascript" src="layout/jquery.layout.js"></script>
+    <script type="text/javascript" src="thridpart-js/grid.locale-cn.js"></script>
+    <script type="text/javascript" src="thridpart-js/jquery.jqGrid.min.js"></script>
+    <script type="text/javascript" src="thridpart-js/jquery.ztree.all-3.5.min.js"></script>
+    <script type="text/javascript" src="thridpart-js/tree.init.js"></script>
+    <script type="text/javascript" src="thridpart-js/jquery.msgBox.js"></script>
+    <script type="text/javascript" src="thridpart-js/date-format.js"></script>
+    <script type="text/javascript" src="contract.js"></script>
+    <script type="text/javascript" src="msg-box.js"></script>
+</head>
+<body data-curpagename="page1" class="body_style1">
+<div id="page1_jContainer1" class="tlayout_style2">
+    <div id="page1_jContainer1_container" class="container">
+        <div id="page1_jRegion1" class="page1_jContainer1_north">
+            <div id="page1_jPanel1" class="Panel Panel_Null">
+                <div id="page1_jLabel1" class="text">合同管理系统</div>
+            </div>
+        </div>
+        <div id="page1_jRegion2" class="page1_jContainer1_center">
+            <div id="page1_jExtPanel2" class="Panelbar Panelbar_grain Panelbar_TT14">
+                <div class="PanelBarCaptionbox colorp_grain2">
+                    <div class="PanelBarCaption border_grain01"><span>合同管理</span></div>
+                </div>
+                <div class="PanelContent colorp_grain5 ">
+                    <div id="page1_jContainer2" class="tlayout_style2 tlayout_noborder">
+                        <div id="page1_jContainer2_container" class="container">
+                            <div id="page1_jRegion4" class="page1_jContainer2_north">
+                                <div id="page1_jToolbar1" class="TJToolbar">
+                                    <div onclick="add_item()" id="page1_jButton1"
+                                         class="vjbutton vjbutton_c_style2 border_radius_3">
+                                        <div class="vjbutton_txtR"><span class="btniconcum1"><img src="images/jadd.png"
+                                                                                                  width="16"
+                                                                                                  height="16"/></span><span
+                                                class="btniconcum2"><img src="images/jadd.png" width="16" height="16"/></span><span
+                                                class="btntxt"></span>增加
+                                        </div>
+                                    </div>
+                                    <div onclick="modify_item()" id="page1_jButton2"
+                                         class="vjbutton vjbutton_c_style2 border_radius_3">
+                                        <div class="vjbutton_txtR"><span class="btniconcum1"><img src="images/jedit.png"
+                                                                                                  width="16"
+                                                                                                  height="16"/></span><span
+                                                class="btniconcum2"><img src="images/jedit.png" width="16" height="16"/></span><span
+                                                class="btntxt"></span>修改
+                                        </div>
+                                    </div>
+                                    <div class="text search_label" id="label1">合同编号:</div>
+                                    <input type="text" class="Edit Edit_style1" value="" id="search_number"/>
+                                    <div class="text search_label" id="label2">合同名称:</div>
+                                    <input type="text" class="Edit Edit_style1" value="" id="search_name"/>
+                                    <div class="text search_label" id="label3">合同状态:</div>
+                                    <div id="search_status_div">
+                                        <select class="search_select" id="search_status">
+                                            <option value="0">正常</option>
+                                            <option value="1">超期</option>
+                                            <option value="2">已验收</option>
+                                            <option value="999" selected="selected">全部</option>
+                                        </select>
+                                    </div>
+                                    <div class="text search_label" id="label4">密级:</div>
+                                    <div id="search_classification_div">
+                                        <select class="search_select" id="search_classification">
+                                            <option value="0">非密</option>
+                                            <option value="1">秘密</option>
+                                            <option value="999" selected="selected">全部</option>
+                                        </select>
+                                    </div>
+                                    <div class="text search_label" id="label5">负责人:</div>
+                                    <input type="text" class="Edit Edit_style1" value="" id="search_leader"/>
+                                    <div class="text search_label" id="label6">开始时间:</div>
+                                    <input type="text" id="search_start_date">
+                                    <div class="text search_label" id="label7">结束时间:</div>
+                                    <input type="text" id="search_end_date">
+                                    <div class="text search_label" id="label8">延期:</div>
+                                    <div id="search_isDelay_div">
+                                        <select class="search_select" id="search_isDelay">
+                                            <option value="0">否</option>
+                                            <option value="1">是</option>
+                                            <option value="999" selected="selected">全部</option>
+                                        </select>
+                                    </div>
+                                    <img class="TSeparator TSeparator_style1" id="page1_jSeparator2"
+                                         src="images/jToolsSeparator.png"/>
+                                    <div id="page1_jButton5" class="vjbutton vjbutton_c_style2 border_radius_3"
+                                         onclick="search_item()">
+                                        <div class="vjbutton_txtR"><span class="btniconcum1"><img src="images/jzoom.png"
+                                                                                                  width="16"
+                                                                                                  height="16"/></span><span
+                                                class="btniconcum2"><img src="images/jzoom.png" width="16" height="16"/></span><span
+                                                class="btntxt"></span>查询
+                                        </div>
+                                    </div>
+                                    <div id="page1_jButton6" class="vjbutton vjbutton_c_style2 border_radius_3"
+                                         onclick="export_excel()">
+                                        <div class="vjbutton_txtR"><span class="btniconcum1"><img
+                                                src="images/export-excel.ico" width="16" height="16"/></span><span
+                                                class="btniconcum2"><img src="images/export-excel.ico" width="16"
+                                                                         height="16"/></span><span
+                                                class="btntxt"></span>导出
+                                        </div>
+                                    </div>
+                                    <div id="page1_jButton7" class="vjbutton vjbutton_c_style2 border_radius_3"
+                                         onclick="import_excel()">
+                                        <div class="vjbutton_txtR"><span class="btniconcum1"><img
+                                                src="images/export-excel.ico" width="16" height="16"/></span><span
+                                                class="btniconcum2"><img src="images/export-excel.ico" width="16"
+                                                                         height="16"/></span><span
+                                                class="btntxt"></span>导入
+                                        </div>
+                                    </div>
+                                    <input type="file" name="file1" id="file" style="display: none;" accept=".xls"/>
+                                </div>
+                            </div>
+                            <div id="page1_jRegion5" class="page1_jContainer2_center">
+                                <div id="page1_jDataGrid1_pager"></div>
+                                <div class="TDataGrid" id="page1_jDataGrid1" style="overflow-x: hidden">
+                                    <table id="page1_jDataGrid1_table"></table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="page1_jRegion3" class="page1_jContainer1_west">
+            <div id="page1_jExtPanel1" class="Panelbar Panelbar_grain Panelbar_TT14">
+                <div class="PanelBarCaptionbox colorp_grain2">
+                    <div class="PanelBarCaption border_grain01"><span></span></div>
+                </div>
+                <div class="PanelContent colorp_grain5 ">
+                    <div id="page1_jContainer3" class="tlayout_style2">
+                        <div id="page1_jContainer3_container" class="container">
+                            <div id="page1_jRegion7" class="page1_jContainer3_center">
+                                <div id="page1_jTreeView1" class="TJtree">
+                                    <ul id="page1_jTreeView1_ztree" class="ztree"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="item_dialog" style="display: none;">
+    <div class="item_title"><h1>合同信息</h1></div>
+    <div class="item_info">
+        <div class="row">
+            <a class="item_label">合同编号:</a><input class="item_input" type="text" id="number_input"/>
+            <a class="item_label">合同名称:</a><input class="item_input" type="text" id="name_input"/>
+            <a class="item_label">合同状态:</a>
+            <select class="item_input" id="status_select">
+                <option value="0" selected="selected">正常</option>
+                <option value="1">超期</option>
+                <option value="2">已验收</option>
+            </select>
+        </div>
+        <div class="row">
+            <a class="item_label">合同金额(万元):</a><input class="item_input" type="text" id="money_input"/>
+            <a class="item_label">负责人:</a><input class="item_input" type="text" id="leader_input"/>
+            <a class="item_label">合同密级:</a>
+            <select class="item_input" id="classification_select">
+                <option value="0" selected="selected">非密</option>
+                <option value="1">秘密</option>
+            </select>
+        </div>
+        <div class="row">
+            <a class="item_label">刻盘编号:</a><input class="item_input" type="text" id="cdNumber_input"/>
+            <a class="item_label">归档交付时间:</a><input class="item_input" type="text" id="filingTime_input"/>
+            <a class="item_label">是否提供发票:</a>
+            <select class="item_input" id="needInvoice_select">
+                <option value="0">否</option>
+                <option value="1" selected="selected">是</option>
+            </select>
+        </div>
+        <div class="row sub_item">
+            <div class="sub_title">需求阶段:</div>
+            <div class="row">
+                <a class="item_label">计划评审时间:</a><input class="item_input" type="text" id="requirementTimePlan_input"/>
+                <a class="item_label">实际评审时间:</a><input class="item_input" type="text" id="requirementTimeReal_input"/>
+                <a class="item_label">付款(万元):</a><input class="item_input" type="text" id="requirementPayMoney_input"/>
+            </div>
+        </div>
+        <div class="row sub_item">
+            <div class="sub_title">设计阶段:</div>
+            <div class="row">
+                <a class="item_label">计划评审时间:</a><input class="item_input" type="text" id="designTimePlan_input"/>
+                <a class="item_label">实际评审时间:</a><input class="item_input" type="text" id="designTimeReal_input"/>
+                <a class="item_label">付款(万元):</a><input class="item_input" type="text" id="designPayMoney_input"/>
+            </div>
+        </div>
+        <div class="row sub_item">
+            <div class="sub_title">测试阶段:</div>
+            <div class="row">
+                <a class="item_label">计划评审时间:</a><input class="item_input" type="text" id="testTimePlan_input"/>
+                <a class="item_label">实际评审时间:</a><input class="item_input" type="text" id="testTimeReal_input"/>
+                <a class="item_label">付款(万元):</a><input class="item_input" type="text" id="testPayMoney_input"/>
+            </div>
+        </div>
+        <div class="row sub_item">
+            <div class="sub_title">验收阶段:</div>
+            <div class="row">
+                <a class="item_label">计划评审时间:</a><input class="item_input" type="text" id="acceptanceTimePlan_input"/>
+                <a class="item_label">实际评审时间:</a><input class="item_input" type="text" id="acceptanceTimeReal_input"/>
+                <a class="item_label">付款(万元):</a><input class="item_input" type="text" id="acceptancePayMoney_input"/>
+            </div>
+        </div>
+        <div class="row">
+            <a class="item_label">是否延期:</a>
+            <select class="item_input" id="isDelay_select">
+                <option value="0">否</option>
+                <option value="1">是</option>
+            </select>
+        </div>
+    </div>
+    <div class="buttons">
+        <button id="btn_ok" onclick="pop_okClick()">确定</button>
+        <button id="btn_cancel" onclick="pop_cancelClick()">取消</button>
+    </div>
+</div>
+</body>
+</html>
