@@ -2,7 +2,7 @@ package com.cy.contractmanagement.Excel;
 
 import com.cy.contractmanagement.Dao.Contract.ContractInfo;
 import com.cy.contractmanagement.Dao.Mappers.ContractMapper;
-import com.cy.contractmanagement.Utiliy.TempFileNameBuilder;
+import com.cy.contractmanagement.Utiliy.FileUtility;
 import org.apache.poi.ss.util.CellRangeAddress;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -34,7 +34,7 @@ public class ContractExcelOperator {
     ExcelImport excelImport;
 
     public String exportExcelFile() throws Exception {
-        String filename = TempFileNameBuilder.getTempXlsFileName();
+        String filename = FileUtility.getTempFileName(".xls");
         //ExcelExport exp = new ExcelExport();
         excelExport.addTitle(title1);
         excelExport.addTitle(title2);
