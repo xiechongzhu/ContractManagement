@@ -10,6 +10,6 @@ import java.io.IOException;
 public class IndexController {
     @GetMapping("")
     public void handle(HttpServletResponse response) throws IOException {
-        response.sendRedirect("/contract");
+        response.sendRedirect("contract");
     }
 }
