@@ -33,7 +33,7 @@ public class ContractInfo {
         isDelayDescMap = needInvoiceDescMap;
     }
 
-    private int id;                     //数据库id,自增长
+    private long id;                     //数据库id,自增长
     private String number;              //合同编号
     private String name;                //合同名称
     private int status;                 //合同状态
@@ -66,7 +66,7 @@ public class ContractInfo {
     private float acceptancePayMoney;   //验收阶段结束付款(万元)
     private int isDelay;                //是否延期
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 

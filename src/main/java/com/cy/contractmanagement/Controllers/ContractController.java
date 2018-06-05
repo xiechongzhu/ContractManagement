@@ -3,8 +3,8 @@ package com.cy.contractmanagement.Controllers;
 import com.cy.contractmanagement.Dao.Contract.ContractInfo;
 import com.cy.contractmanagement.Dao.Mappers.ContractMapper;
 import com.cy.contractmanagement.Excel.ContractExcelOperator;
+import com.cy.contractmanagement.Utiliy.FileUtility;
 import com.cy.contractmanagement.Utiliy.JqGridResultBuilder;
-import com.cy.contractmanagement.Utiliy.TempFileNameBuilder;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -82,7 +82,7 @@ public class ContractController {
                 dateAcceptanceTimeReal, acceptancePayMoney, isDelay);
     }
 
-    /* 获取所有合同信息 */
+    /* 获取符合查询条件的所有合同信息 */
     @GetMapping("/get")
     @ResponseBody
     public Map<String, Object> findContract(@RequestParam("rows") int rows,
@@ -99,6 +99,12 @@ public class ContractController {
         List<ContractInfo> contractList = contractMapper.findContract(number, name, status, classification,
                 leader, startDate, endDate, isDelay);
         return JqGridResultBuilder.builde(rows, page, pageInfo.getTotal(), contractList);
+    }
+
+    @GetMapping("/get-all")
+    @ResponseBody
+    public List<ContractInfo> getAllContract() {
+        return contractMapper.getAllContracts();
     }
 
     /* 获取单个合同信息 */
@@ -174,7 +180,7 @@ public class ContractController {
     @PostMapping("/import")
     @ResponseBody
     public void importFromExcel(@RequestParam("file") MultipartFile file) throws Exception {
-        String tempXlsFile = TempFileNameBuilder.getTempXlsFileName();
+        String tempXlsFile = FileUtility.getTempFileName(".xls");
         File f = new File(tempXlsFile);
         f.createNewFile();
         FileOutputStream stream = new FileOutputStream(f);

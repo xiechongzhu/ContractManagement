@@ -3,8 +3,8 @@ package com.cy.contractmanagement.Utiliy;
 import java.io.File;
 import java.util.UUID;
 
-public class FileUtiliy {
-    private static String getUuidString() {
+public class FileUtility {
+    public static String getUuidString() {
         UUID uuid = UUID.randomUUID();
         return uuid.toString().replace("-", "");
     }

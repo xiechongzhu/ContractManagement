@@ -121,37 +121,45 @@
     height: 22px;
 }
 
-#page1_jButton2 {
+#page1_jButton3 {
     left: 70px;
     top: 3px;
     width: 56px;
     height: 22px;
 }
 
+#page1_jButton5 {
+    left: 136px;
+    top: 3px;
+    width: 56px;
+    height: 22px;
+}
+
 #label1 {
-    left: 160px;
+    left: 210px;
     top: 6px;
     line-height: 14px;
 }
 
-#search_number {
-    left: 220px;
+#search_project {
+    left: 265px;
     top: 4px;
     width: 80px;
     height: 14px;
 }
 
 #label2 {
-    left: 320px;
+    left: 360px;
     top: 6px;
     line-height: 14px;
 }
 
-#search_name {
-    left: 380px;
+#search_alert_div {
+    left: 415px;
     top: 4px;
     width: 80px;
     height: 14px;
+    position: absolute;
 }
 
 #label3 {
@@ -160,7 +168,7 @@
     line-height: 14px;
 }
 
-#search_status_div {
+#search_confirm_div {
     left: 540px;
     top: 4px;
     width: 80px;
@@ -243,9 +251,9 @@
 }
 
 #page1_jSeparator2 {
-    left: 150px;
+    left: 200px;
     top: 0px;
-    height: 62px;
+    height: 26px;
     width: 8px;
 }
 
@@ -266,25 +274,4 @@
     top: 0px;
     height: 100%;
     width: 100%;
-}
-
-#page1_jButton5 {
-    left: 70px;
-    top: 36px;
-    width: 56px;
-    height: 22px;
-}
-
-#page1_jButton6 {
-    left: 730px;
-    top: 4px;
-    width: 56px;
-    height: 22px;
-}
-
-#page1_jButton7 {
-    left: 730px;
-    top: 36px;
-    width: 56px;
-    height: 22px;
 }
