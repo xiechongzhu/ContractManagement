@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.springframework.org/schema/jdbc">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        html, body, div{
+            height: 100%;
+        }
+    </style>
+    <script type="text/javascript" src="/thridpart-js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="/thridpart-js/pdfobject.js"></script>
+    <script th:inline="javascript" type="text/javascript">
+        $(document).ready(function () {
+            var filePath = '/download-project-alert/' + [[${name}]];
+            console.log(filePath);
+            PDFObject.embed(filePath, "#pdfDiv");
+        })
+    </script>
+</head>
+<body>
+<div id="pdfDiv"></div>
+</body>
+</html>

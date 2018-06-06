@@ -52,3 +52,17 @@ CREATE TABLE `project_info` (
   `project_realendtime` date DEFAULT NULL COMMENT '项目结项时间',
   PRIMARY KEY (`project_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `project_alerts`;
+CREATE TABLE `project_alerts` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `contractId` bigint(20) DEFAULT NULL,
+  `alertNumber` varchar(200) DEFAULT NULL,
+  `confirmNumber` varchar(200) DEFAULT NULL,
+  `alertDate` date DEFAULT NULL,
+  `confirmDate` date DEFAULT NULL,
+  `alertFile` varchar(100) DEFAULT NULL,
+  `confirmFile` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+

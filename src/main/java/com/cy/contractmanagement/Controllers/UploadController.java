@@ -1,5 +1,6 @@
 package com.cy.contractmanagement.Controllers;
 
+import com.cy.contractmanagement.Utiliy.FileConvert;
 import com.cy.contractmanagement.Utiliy.FileUtility;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -12,20 +13,13 @@ import java.io.FileOutputStream;
 
 @Controller
 public class UploadController {
-    protected String makeProjectAlertDirectory() throws Exception {
-        File f = new File("");
-        File dir = new File(f.getAbsolutePath(), "ProjectAlertFile");
-        if(!dir.exists()) {
-            dir.mkdirs();
-        }
-        return  dir.getAbsolutePath();
-    }
 
     @PostMapping("/upload-project-alert")
     public ResponseEntity uploadProjectAlertFile(@RequestParam("file") MultipartFile multipartFile) throws Exception {
         String fileExt = FileUtility.getFileExtension(multipartFile.getOriginalFilename());
-        String fileName = FileUtility.getUuidString() + "." + fileExt;
-        String absFileName = makeProjectAlertDirectory() + "/" + fileName;
+        String uuid = FileUtility.getUuidString();
+        String fileName = uuid + "." + fileExt;
+        String absFileName = FileUtility.makeProjectAlertDirectory() + "/" + fileName;
         File f = new File(absFileName);
         if(!f.createNewFile()) {
             return ResponseEntity.badRequest().body(null);
@@ -33,11 +27,16 @@ public class UploadController {
         FileOutputStream fileOutputStream = new FileOutputStream(f);
         try {
             fileOutputStream.write(multipartFile.getBytes());
+            fileOutputStream.close();
+            if(fileExt.equals("doc") || fileExt.equals("docx")) {
+                String pdfFileName = FileUtility.makeProjectAlertDirectory() + "/" + uuid + ".pdf";
+                FileConvert.wordToPdf(absFileName, pdfFileName);
+            }
             return  ResponseEntity.ok().body(fileName);
         }catch (Exception ex) {
-            return ResponseEntity.badRequest().body(null);
-        }finally {
+            ex.printStackTrace();
             fileOutputStream.close();
+            return ResponseEntity.badRequest().body(null);
         }
     }
 }

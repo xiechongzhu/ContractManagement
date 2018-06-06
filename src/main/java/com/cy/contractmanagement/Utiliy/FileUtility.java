@@ -18,4 +18,13 @@ public class FileUtility {
         String tempDir = System.getProperty("java.io.tmpdir");
         return tempDir + "/" + getUuidString() + fileExt;
     }
+
+    public static String makeProjectAlertDirectory() throws Exception {
+        File f = new File("");
+        File dir = new File(f.getAbsolutePath(), "ProjectAlertFile");
+        if(!dir.exists()) {
+            dir.mkdirs();
+        }
+        return  dir.getAbsolutePath();
+    }
 }

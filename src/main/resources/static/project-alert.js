@@ -5,11 +5,37 @@
         colModel: [
             {label: '项目名称', name: 'contractName', index: 'contractName', width: 150, sortable: false},
             {label: '技术通知单号', name: 'alertNumber', index: 'alertNumber', width: 120, sortable: false},
+            {label: '技术通知单文件', name: 'alertFile', index: 'alertFile', width: 120, sortable: false,
+            formatter: function (x, v, r) {
+                var wordName = r['alertFile'];
+                if(wordName != '') {
+                    var wordLink = '\'/download-project-alert/'+wordName+'\'';
+                    var pdfLink= create_pdflink(wordName);
+                    console.log(pdfLink);
+                    return '<a href='+wordLink+' style=\'color:blue\'>下载</a><span>  </span><a href='
+                        +pdfLink+' style=\'color:blue\'>预览</a>';
+                } else {
+                    return '<a style=\'color:red\'>未上传</a>';
+                }
+            }},
             {
                 label: '变更日期', name: 'alertDate', index: 'alertDate', width: 80, sortable: false,
                 formatter: "date", formatoptions: {srcformat: 'ISO8601Long', newformat: 'Y-m-d'}
             },
             {label: '确认分析单号', name: 'confirmNumber', index: 'confirmNumber', width: 120, sortable: false},
+            {label: '确认分析单文件', name: 'confirmFile', index: 'confirmFile', width: 120, sortable: false,
+                formatter: function (x, v, r) {
+                    var wordName = r['confirmFile'];
+                    if(wordName != '') {
+                        var wordLink = '\'/download-project-alert/'+wordName+'\'';
+                        var pdfLink= create_pdflink(wordName);
+                        console.log(pdfLink);
+                        return '<a href='+wordLink+' style=\'color:blue\'>下载</a><span>  </span><a href='
+                            +pdfLink+' style=\'color:blue\'>预览</a>';
+                    } else {
+                        return '<a style=\'color:red\'>未上传</a>';
+                    }
+                }},
             {
                 label: '确认日期', name: 'confirmDate', index: 'confirmDate', width: 80, sortable: false,
                 formatter: "date", formatoptions: {srcformat: 'ISO8601Long', newformat: 'Y-m-d'}
@@ -114,7 +140,7 @@ function modify_item() {
         return;
     }
     $.ajax({
-        url: '/contract/get/' + id,
+        url: '/project/alert/get/' + id,
         type: 'get',
         processData: false,
         contentType: false,
@@ -122,11 +148,11 @@ function modify_item() {
         success: function (data) {
             set_pop_dialog_value(data);
             $('#item_dialog').attr('method', 'modify');
-            $('#item_dialog').attr('contract_id', id);
+            $('#item_dialog').attr('project_alert_id', id);
             $('#item_dialog').dialog({
                 modal: true,
                 resizable: false,
-                title: '修改合同',
+                title: '修改变更',
                 width: 810
             });
         },
@@ -142,7 +168,7 @@ function search_item() {
 
 function pop_okClick() {
     var method = $('#item_dialog').attr('method');
-    var id = $('#item_dialog').attr('contract_id');
+    var id = $('#item_dialog').attr('project_alert_id');
     if (method == 'add') {
         ajax_add_project_alert();
     } else {
@@ -186,22 +212,23 @@ function ajax_add_project_alert() {
 
 function ajax_modify_project_alert(id) {
     var newValue = get_pop_dialog_value();
+    console.log(newValue);
     var formData = build_form_data(newValue);
     $.ajax({
-        url: "/contract/modify/" + id,
+        url: "/project/alert/modify/" + id,
         type: "post",
         data: formData,
         processData: false,
         contentType: false,
         async: false,
         success: function () {
-            messagebox('信息', '合同信息修改成功', 'info', function () {
+            messagebox('信息', '变更信息修改成功', 'info', function () {
                 $('#page1_jDataGrid1_table').trigger('reloadGrid');
                 $('#item_dialog').dialog('close');
             })
         },
         error: function () {
-            messagebox('信息', '合同信息修改失败', 'error');
+            messagebox('信息', '变更信息修改失败', 'error');
         }
     });
 }
@@ -234,7 +261,15 @@ function pop_cancelClick() {
 }
 
 function set_pop_dialog_value(value) {
-    console.log(value);
+    var count=$('#project_select option').length;
+    for(var i=0;i<count;i++)
+    {
+        if($('#project_select').get(0).options[i].text == value.contractName)
+        {
+            $('#project_select').get(0).options[i].selected = true;
+            break;
+        }
+    }
     $('#alert_number_input').val(value.alertNumber);
     $('#alert_file_input').val(value.alertFile);
     $('#alert_date_input').val(value.alertDate);
@@ -264,6 +299,9 @@ function upload_confirm_file() {
 }
 
 function alert_upload_file_change() {
+    if($("#file_alert_upload").val() == '') {
+        return;
+    }
     var formData = new FormData;
     formData.append("file", $("#file_alert_upload")[0].files[0]);
     $.ajax({
@@ -283,6 +321,9 @@ function alert_upload_file_change() {
 }
 
 function confirm_upload_file_change() {
+    if($("#confirm_upload_file_change").val() == '') {
+        return;
+    }
     var formData = new FormData;
     formData.append("file", $("#file_confirm_upload")[0].files[0]);
     $.ajax({
@@ -299,4 +340,9 @@ function confirm_upload_file_change() {
             messagebox('信息', '上传文件失败!', 'error');
         }
     });
+}
+
+function create_pdflink(wordlink) {
+    var filename = wordlink.split('.')[0] + '.pdf';
+    return '/view-pdf/' + filename;
 }
