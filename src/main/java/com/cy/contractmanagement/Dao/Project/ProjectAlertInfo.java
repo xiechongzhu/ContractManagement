@@ -9,6 +9,12 @@ public class ProjectAlertInfo {
     private String contractName;
     private String alertNumber;
     private String confirmNumber;
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
+    private Date alertDate;
+    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
+    private Date confirmDate;
+    private String alertFile;
+    private String confirmFile;
 
     public String getAlertFile() {
         return alertFile;
@@ -25,13 +31,6 @@ public class ProjectAlertInfo {
     public void setConfirmFile(String confirmFile) {
         this.confirmFile = confirmFile;
     }
-
-    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
-    private Date alertDate;
-    @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
-    private Date confirmDate;
-    private String alertFile;
-    private String confirmFile;
 
     public String getContractName() {
         return contractName;

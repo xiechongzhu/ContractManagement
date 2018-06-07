@@ -6,13 +6,10 @@ import com.cy.contractmanagement.Dao.Project.ProjectAlertInfo;
 import com.cy.contractmanagement.Utiliy.JqGridResultBuilder;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -33,9 +30,11 @@ public class ProjectAlertController {
     @ResponseBody
     public Map<String, Object> getAllAlerts(@RequestParam("rows") int rows,
                                             @RequestParam("page") int page,
-                                            @RequestParam(value = "contractId", required = false, defaultValue = "-1") long contractId) {
+                                            @RequestParam(value = "contractName", required = false, defaultValue = "") String contractName,
+                                            @RequestParam(value = "alertType", required = false, defaultValue = "999") int alertType,
+                                            @RequestParam(value = "confirmType", required = false, defaultValue = "999") int confirmType) {
         Page<ContractInfo> pageInfo = PageHelper.startPage(page, rows, true);
-        List<ProjectAlertInfo> alertInfoList = projectAlertMapper.findAlert(contractId);
+        List<ProjectAlertInfo> alertInfoList = projectAlertMapper.findAlert(contractName, alertType, confirmType);
         return JqGridResultBuilder.builde(rows, page, pageInfo.getTotal(), alertInfoList);
     }
 

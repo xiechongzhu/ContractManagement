@@ -22,9 +22,9 @@ public class FileUtility {
     public static String makeProjectAlertDirectory() throws Exception {
         File f = new File("");
         File dir = new File(f.getAbsolutePath(), "ProjectAlertFile");
-        if(!dir.exists()) {
+        if (!dir.exists()) {
             dir.mkdirs();
         }
-        return  dir.getAbsolutePath();
+        return dir.getAbsolutePath();
     }
 }

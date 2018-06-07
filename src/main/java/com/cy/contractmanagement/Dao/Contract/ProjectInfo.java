@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import java.util.Date;
 
 /**
- *  项目管理实体类
+ * 项目管理实体类
  */
 public class ProjectInfo {
 

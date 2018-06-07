@@ -12,8 +12,10 @@ public interface ProjectAlertMapper {
     @Select("select * from project_alerts")
     List<ProjectAlertInfo> getAllAlerts();
 
-    @SelectProvider(type = ProjectAlertProvider.class, method = "findProjectAlertByContractId")
-    List<ProjectAlertInfo> findAlert(@Param("contractId") long contractId);
+    @SelectProvider(type = ProjectAlertProvider.class, method = "findProjectAlertByContractName")
+    List<ProjectAlertInfo> findAlert(@Param("contractName") String contractName,
+                                     @Param("alertType") int alertType,
+                                     @Param("confirmType") int confirmType);
 
     @Insert("insert into project_alerts(contractId, alertNumber, confirmNumber," +
             "alertDate, confirmDate, alertFile, confirmFile) values(#{contractId}, #{alertNumber}," +
@@ -32,8 +34,8 @@ public interface ProjectAlertMapper {
             " where id = #{id}")
     void modifyProductAlert(@Param("id") long id, @Param("contractId") long contractId,
                             @Param("alertNumber") String alertNumber, @Param("alertFile") String alertFile,
-                            @Param("alertDate") Date alertDate,@Param("confirmNumber") String confirmNumber,
-                            @Param("confirmFile") String confirmFile,@Param("confirmDate") Date confirmDate);
+                            @Param("alertDate") Date alertDate, @Param("confirmNumber") String confirmNumber,
+                            @Param("confirmFile") String confirmFile, @Param("confirmDate") Date confirmDate);
 }
 
 

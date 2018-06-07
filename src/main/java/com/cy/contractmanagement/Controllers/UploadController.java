@@ -21,19 +21,19 @@ public class UploadController {
         String fileName = uuid + "." + fileExt;
         String absFileName = FileUtility.makeProjectAlertDirectory() + "/" + fileName;
         File f = new File(absFileName);
-        if(!f.createNewFile()) {
+        if (!f.createNewFile()) {
             return ResponseEntity.badRequest().body(null);
         }
         FileOutputStream fileOutputStream = new FileOutputStream(f);
         try {
             fileOutputStream.write(multipartFile.getBytes());
             fileOutputStream.close();
-            if(fileExt.equals("doc") || fileExt.equals("docx")) {
+            if (fileExt.equals("doc") || fileExt.equals("docx")) {
                 String pdfFileName = FileUtility.makeProjectAlertDirectory() + "/" + uuid + ".pdf";
                 FileConvert.wordToPdf(absFileName, pdfFileName);
             }
-            return  ResponseEntity.ok().body(fileName);
-        }catch (Exception ex) {
+            return ResponseEntity.ok().body(fileName);
+        } catch (Exception ex) {
             ex.printStackTrace();
             fileOutputStream.close();
             return ResponseEntity.badRequest().body(null);

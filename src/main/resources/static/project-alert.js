@@ -5,37 +5,41 @@
         colModel: [
             {label: '项目名称', name: 'contractName', index: 'contractName', width: 150, sortable: false},
             {label: '技术通知单号', name: 'alertNumber', index: 'alertNumber', width: 120, sortable: false},
-            {label: '技术通知单文件', name: 'alertFile', index: 'alertFile', width: 120, sortable: false,
-            formatter: function (x, v, r) {
-                var wordName = r['alertFile'];
-                if(wordName != '') {
-                    var wordLink = '\'/download-project-alert/'+wordName+'\'';
-                    var pdfLink= create_pdflink(wordName);
-                    console.log(pdfLink);
-                    return '<a href='+wordLink+' style=\'color:blue\'>下载</a><span>  </span><a href='
-                        +pdfLink+' style=\'color:blue\'>预览</a>';
-                } else {
-                    return '<a style=\'color:red\'>未上传</a>';
+            {
+                label: '技术通知单文件', name: 'alertFile', index: 'alertFile', width: 120, sortable: false,
+                formatter: function (x, v, r) {
+                    var wordName = r['alertFile'];
+                    if (wordName != '') {
+                        var wordLink = '\'/download-project-alert/' + wordName + '\'';
+                        var pdfLink = '\'/pdf.js/web/viewer.html?file=/view-project-alert/' + wordName.split('.')[0] + '.pdf\'';
+                        console.log(pdfLink);
+                        return '<a href=' + wordLink + ' style=\'color:blue\'>下载</a><span>  </span><a href='
+                            + pdfLink + ' style=\'color:blue\'  target=\'_blank\'>预览</a>';
+                    } else {
+                        return '<a style=\'color:red\'>未上传</a>';
+                    }
                 }
-            }},
+            },
             {
                 label: '变更日期', name: 'alertDate', index: 'alertDate', width: 80, sortable: false,
                 formatter: "date", formatoptions: {srcformat: 'ISO8601Long', newformat: 'Y-m-d'}
             },
             {label: '确认分析单号', name: 'confirmNumber', index: 'confirmNumber', width: 120, sortable: false},
-            {label: '确认分析单文件', name: 'confirmFile', index: 'confirmFile', width: 120, sortable: false,
+            {
+                label: '确认分析单文件', name: 'confirmFile', index: 'confirmFile', width: 120, sortable: false,
                 formatter: function (x, v, r) {
                     var wordName = r['confirmFile'];
-                    if(wordName != '') {
-                        var wordLink = '\'/download-project-alert/'+wordName+'\'';
-                        var pdfLink= create_pdflink(wordName);
+                    if (wordName != '') {
+                        var wordLink = '\'/download-project-alert/' + wordName + '\'';
+                        var pdfLink = '\'/pdf.js/web/viewer.html?file=/view-project-alert/' + wordName.split('.')[0] + '.pdf\'';
                         console.log(pdfLink);
-                        return '<a href='+wordLink+' style=\'color:blue\'>下载</a><span>  </span><a href='
-                            +pdfLink+' style=\'color:blue\'>预览</a>';
+                        return '<a href=' + wordLink + ' style=\'color:blue\'>下载</a><span>  </span><a href='
+                            + pdfLink + ' style=\'color:blue\'  target=\'_blank\'>预览</a>';
                     } else {
                         return '<a style=\'color:red\'>未上传</a>';
                     }
-                }},
+                }
+            },
             {
                 label: '确认日期', name: 'confirmDate', index: 'confirmDate', width: 80, sortable: false,
                 formatter: "date", formatoptions: {srcformat: 'ISO8601Long', newformat: 'Y-m-d'}
@@ -65,13 +69,13 @@
     jQuery('#file_confirm_upload').change(confirm_upload_file_change);
 
     $.ajax({
-        url:'/contract/get-all',
+        url: '/contract/get-all',
         type: 'get',
         processData: false,
         contentType: false,
         async: false,
         success: function (data) {
-            for(var i = 0; i < data.length; ++i) {
+            for (var i = 0; i < data.length; ++i) {
                 var item = data[i];
                 var option = $('<option>').val(item.id).text(item.name);
                 $('#project_select').append(option);
@@ -163,7 +167,7 @@ function modify_item() {
 }
 
 function search_item() {
-    findContracts();
+    findProjectAlert();
 }
 
 function pop_okClick() {
@@ -233,25 +237,16 @@ function ajax_modify_project_alert(id) {
     });
 }
 
-function findContracts() {
-    var search_number = $('#search_number').val();
-    var search_name = $('#search_name').val();
-    var search_status = $('#search_status').val();
-    var search_classification = $('#search_classification').val();
-    var search_leader = $('#search_leader').val();
-    var search_startDate = $('#search_start_date').val();
-    var search_endDate = $('#search_end_date').val();
-    var search_isDelay = $('#search_isDelay').val();
+function findProjectAlert() {
+    var contractName = $('#search_project').val();
+    var alertType = $('#search_alert').val();
+    var confirmType = $('#search_confirm').val();
+
     $('#page1_jDataGrid1_table').jqGrid('setGridParam', {
         postData: {
-            number: search_number,
-            name: search_name,
-            status: search_status,
-            classification: search_classification,
-            leader: search_leader,
-            startDate: search_startDate,
-            endDate: search_endDate,
-            isDelay: search_isDelay
+            contractName: contractName,
+            alertType: alertType,
+            confirmType: confirmType
         }
     }).trigger("reloadGrid");
 }
@@ -261,11 +256,9 @@ function pop_cancelClick() {
 }
 
 function set_pop_dialog_value(value) {
-    var count=$('#project_select option').length;
-    for(var i=0;i<count;i++)
-    {
-        if($('#project_select').get(0).options[i].text == value.contractName)
-        {
+    var count = $('#project_select option').length;
+    for (var i = 0; i < count; i++) {
+        if ($('#project_select').get(0).options[i].text == value.contractName) {
             $('#project_select').get(0).options[i].selected = true;
             break;
         }
@@ -299,7 +292,7 @@ function upload_confirm_file() {
 }
 
 function alert_upload_file_change() {
-    if($("#file_alert_upload").val() == '') {
+    if ($("#file_alert_upload").val() == '') {
         return;
     }
     var formData = new FormData;
@@ -321,7 +314,7 @@ function alert_upload_file_change() {
 }
 
 function confirm_upload_file_change() {
-    if($("#confirm_upload_file_change").val() == '') {
+    if ($("#confirm_upload_file_change").val() == '') {
         return;
     }
     var formData = new FormData;
@@ -340,9 +333,4 @@ function confirm_upload_file_change() {
             messagebox('信息', '上传文件失败!', 'error');
         }
     });
-}
-
-function create_pdflink(wordlink) {
-    var filename = wordlink.split('.')[0] + '.pdf';
-    return '/view-pdf/' + filename;
 }

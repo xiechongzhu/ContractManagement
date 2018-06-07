@@ -58,28 +58,30 @@
                                     </div>
                                     <div onclick="modify_item()" id="page1_jButton3"
                                          class="vjbutton vjbutton_c_style2 border_radius_3">
-                                        <div class="vjbutton_txtR"><span class="btniconcum1"><img src="/images/jedit.png"
-                                                                                                  width="16"
-                                                                                                  height="16"/></span><span
-                                                class="btniconcum2"><img src="/images/jedit.png" width="16" height="16"/></span><span
+                                        <div class="vjbutton_txtR"><span class="btniconcum1"><img
+                                                src="/images/jedit.png"
+                                                width="16"
+                                                height="16"/></span><span
+                                                class="btniconcum2"><img src="/images/jedit.png" width="16"
+                                                                         height="16"/></span><span
                                                 class="btntxt"></span>修改
                                         </div>
                                     </div>
                                     <div class="text search_label" id="label1">项目名称:</div>
                                     <input type="text" class="Edit Edit_style1" value="" id="search_project"/>
-                                    <div class="text search_label" id="label2">提交变更:</div>
+                                    <div class="text search_label" id="label2">通知单:</div>
                                     <div id="search_alert_div">
                                         <select class="search_select" id="search_alert">
-                                            <option value="0">否</option>
-                                            <option value="1">是</option>
+                                            <option value="0">无</option>
+                                            <option value="1">有</option>
                                             <option value="999" selected="selected">全部</option>
                                         </select>
                                     </div>
-                                    <div class="text search_label" id="label3">提交确认:</div>
+                                    <div class="text search_label" id="label3">确认单:</div>
                                     <div id="search_confirm_div">
                                         <select class="search_select" id="search_confirm">
-                                            <option value="0">否</option>
-                                            <option value="1">是</option>
+                                            <option value="0">无</option>
+                                            <option value="1">有</option>
                                             <option value="999" selected="selected">全部</option>
                                         </select>
                                     </div>
@@ -88,10 +90,12 @@
                                          src="/images/jToolsSeparator.png"/>
                                     <div id="page1_jButton5" class="vjbutton vjbutton_c_style2 border_radius_3"
                                          onclick="search_item()">
-                                        <div class="vjbutton_txtR"><span class="btniconcum1"><img src="/images/jzoom.png"
-                                                                                                  width="16"
-                                                                                                  height="16"/></span><span
-                                                class="btniconcum2"><img src="/images/jzoom.png" width="16" height="16"/></span><span
+                                        <div class="vjbutton_txtR"><span class="btniconcum1"><img
+                                                src="/images/jzoom.png"
+                                                width="16"
+                                                height="16"/></span><span
+                                                class="btniconcum2"><img src="/images/jzoom.png" width="16"
+                                                                         height="16"/></span><span
                                                 class="btntxt"></span>查询
                                         </div>
                                     </div>
@@ -142,22 +146,24 @@
             <div class="sub_title">技术通知单:</div>
             <div class="row">
                 <a class="item_label">单号:</a><input class="item_input" type="text" id="alert_number_input"/>
-                <a class="item_label">文件:</a><input class="item_input" type="text" id="alert_file_input" readonly="readonly"/>
+                <a class="item_label">文件:</a><input class="item_input" type="text" id="alert_file_input"
+                                                    readonly="readonly"/>
                 <button id="upload_alert_file" onclick="upload_alert_file()">上传</button>
                 <a class="item_label">日期:</a><input class="item_input" type="text" id="alert_date_input"/>
             </div>
             <div class="sub_title">分析确认单:</div>
             <div class="row">
                 <a class="item_label">单号:</a><input class="item_input" type="text" id="confirm_number_input"/>
-                <a class="item_label">文件:</a><input class="item_input" type="text" id="confirm_file_input" readonly="readonly"/>
+                <a class="item_label">文件:</a><input class="item_input" type="text" id="confirm_file_input"
+                                                    readonly="readonly"/>
                 <button id="upload_confirm_file" onclick="upload_confirm_file()">上传</button>
                 <a class="item_label">日期:</a><input class="item_input" type="text" id="confirm_date_input"/>
             </div>
         </div>
-    <div class="buttons">
-        <button id="btn_ok" onclick="pop_okClick()">确定</button>
-        <button id="btn_cancel" onclick="pop_cancelClick()">取消</button>
+        <div class="buttons">
+            <button id="btn_ok" onclick="pop_okClick()">确定</button>
+            <button id="btn_cancel" onclick="pop_cancelClick()">取消</button>
+        </div>
     </div>
-</div>
 </body>
 </html>
