@@ -55,4 +55,15 @@ public class DownloadController {
                 new String(fileName.getBytes("gb2312"), "ISO8859-1"));
         return ResponseEntity.ok().headers(headers).body(buffer);
     }
+
+    @GetMapping("/download-fusion/{fileName}")
+    public  ResponseEntity getFusion(@PathVariable("fileName") String fileName) throws Exception {
+        String absFileName = FileUtility.makeFusionDirectory() + "/" + fileName;
+        FileInputStream stream = new FileInputStream(new File(absFileName));
+        byte[] buffer = new byte[stream.available()];
+        stream.read(buffer);
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Disposition", "attachment;filename=" + fileName);
+        return ResponseEntity.ok().headers(headers).body(buffer);
+    }
 }

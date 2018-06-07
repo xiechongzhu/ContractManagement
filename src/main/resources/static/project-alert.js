@@ -81,7 +81,7 @@
                 $('#project_select').append(option);
             }
         }
-    })
+    });
 
     page1_jContainer1_obj = $('#page1_jContainer1_container').layout({
         onresize: function () {
@@ -305,16 +305,18 @@ function alert_upload_file_change() {
         contentType: false,
         async: false,
         success: function (data) {
+            $("#file_alert_upload").val('');
             $('#alert_file_input').val(data);
         },
         error: function () {
+            $("#file_alert_upload").val('');
             messagebox('信息', '上传文件失败!', 'error');
         }
     });
 }
 
 function confirm_upload_file_change() {
-    if ($("#confirm_upload_file_change").val() == '') {
+    if ($('#file_confirm_upload').val() == '') {
         return;
     }
     var formData = new FormData;
@@ -327,9 +329,11 @@ function confirm_upload_file_change() {
         contentType: false,
         async: false,
         success: function (data) {
+            $('#file_confirm_upload').val('');
             $('#confirm_file_input').val(data);
         },
         error: function () {
+            $('#file_confirm_upload').val('');
             messagebox('信息', '上传文件失败!', 'error');
         }
     });

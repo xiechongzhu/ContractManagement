@@ -1,0 +1,270 @@
+﻿body {
+    font-size: 12px;
+}
+
+#page1_jContainer1 {
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#page1_jRegion1 {
+    border: none;
+    overflow: hidden;
+}
+
+#page1_jRegion2 {
+    border: none;
+    overflow: hidden;
+}
+
+#page1_jRegion3 {
+    border: none;
+    overflow: hidden;
+}
+
+#page1_jExtPanel1 {
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+
+#page1_jExtPanel1 .PanelBarCaption {
+}
+
+#page1_jExtPanel1 .PanelContent {
+}
+
+#page1_jExtPanel1 .cumicon {
+    background: url(/images/) no-repeat;
+    right: 0px;
+    bottom: 0px;
+    margin: 2px 5px 0 2px;
+}
+
+#page1_jPanel1 {
+    left: 0px;
+    top: 0px;
+    height: 94px;
+    width: 100%;
+    background: url(/images/jTitle001.jpg) repeat;
+}
+
+#page1_jLabel1 {
+    left: 15px;
+    top: 9px;
+    font-size: 36px;
+    font-family: "隶书";
+    color: #FFFFFF;
+    line-height: 38px;
+}
+
+#page1_jExtPanel2 {
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+
+#page1_jExtPanel2 .PanelBarCaption {
+}
+
+#page1_jExtPanel2 .PanelContent {
+}
+
+#page1_jExtPanel2 .cumicon {
+    background: url(/images/) no-repeat;
+    right: 0px;
+    bottom: 0px;
+    margin: 2px 5px 0 2px;
+}
+
+#page1_jContainer2 {
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#page1_jRegion4 {
+    border: none;
+    overflow: hidden;
+}
+
+#page1_jRegion5 {
+    border: none;
+    overflow: hidden;
+}
+
+#page1_jDataGrid1 {
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+#page1_jToolbar1 {
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    border-left: none;
+    border-right: none;
+}
+
+#page1_jButton1 {
+    left: 4px;
+    top: 3px;
+    width: 56px;
+    height: 22px;
+}
+
+#page1_jButton5 {
+    left: 70px;
+    top: 3px;
+    width: 56px;
+    height: 22px;
+}
+
+#label1 {
+    left: 150px;
+    top: 6px;
+    line-height: 14px;
+}
+
+#search_version {
+    left: 180px;
+    top: 4px;
+    width: 80px;
+    height: 14px;
+}
+
+#label2 {
+    left: 280px;
+    top: 6px;
+    line-height: 14px;
+}
+
+#search_alert_div {
+    left: 310px;
+    top: 4px;
+    width: 80px;
+    height: 14px;
+    position: absolute;
+}
+
+#label3 {
+    left: 480px;
+    top: 6px;
+    line-height: 14px;
+}
+
+#search_confirm_div {
+    left: 540px;
+    top: 4px;
+    width: 80px;
+    height: 14px;
+    position: absolute;
+}
+
+#label4 {
+    left: 635px;
+    top: 6px;
+    line-height: 14px;
+}
+
+#search_classification_div {
+    left: 670px;
+    top: 4px;
+    width: 80px;
+    height: 14px;
+    position: absolute;
+}
+
+#label5 {
+    left: 160px;
+    top: 42px;
+    line-height: 14px;
+}
+
+#search_leader {
+    left: 220px;
+    top: 38px;
+    width: 80px;
+    height: 14px;
+}
+
+#label6 {
+    left: 320px;
+    top: 40px;
+    line-height: 14px;
+}
+
+#search_start_date {
+    left: 380px;
+    top: 38px;
+    width: 80px;
+    height: 14px;
+    position: absolute;
+}
+
+#label7 {
+    left: 480px;
+    top: 40px;
+    line-height: 14px;
+}
+
+#search_end_date {
+    left: 540px;
+    top: 38px;
+    width: 80px;
+    height: 14px;
+    position: absolute;
+}
+
+#label8 {
+    left: 635px;
+    top: 40px;
+    line-height: 14px;
+}
+
+#search_isDelay_div {
+    left: 670px;
+    top: 38px;
+    width: 80px;
+    height: 14px;
+    position: absolute;
+}
+
+.search_select {
+    font-size: 12px;
+    height: 20px;
+}
+
+#page1_jSeparator2 {
+    left: 130px;
+    top: 0px;
+    height: 26px;
+    width: 8px;
+}
+
+#page1_jContainer3 {
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#page1_jRegion7 {
+    border: none;
+    overflow: hidden;
+}
+
+#page1_jTreeView1 {
+    left: 8px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+}

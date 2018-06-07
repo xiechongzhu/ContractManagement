@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1d3c15d-9dc6-4b83-97f6-190a37162bff" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/FusionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Asset/FusionInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/FusionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/FusionProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbScript/createDatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/dbScript/createDatabase.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/DownloadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/DownloadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/UploadController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Utiliy/FileUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Utiliy/FileUtility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/project-alert.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/project-alert.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/thridpart-js/tree.init.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/thridpart-js/tree.init.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/project-alert.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/project-alert.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/thridpart-js/tree.init.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/thridpart-js/tree.init.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,20 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="project-alert.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/project-alert.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4216">
-              <caret line="248" column="36" selection-start-line="248" selection-start-column="25" selection-end-line="248" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ProjectAlertController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/ProjectAlertController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
+            <state relative-caret-position="340">
+              <caret line="37" column="90" selection-start-line="35" selection-start-column="8" selection-end-line="37" selection-end-column="90" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -53,44 +52,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProjectAlertMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/ProjectAlertMapper.java">
+      <file leaf-file-name="FusionController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/FusionController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+            <state relative-caret-position="279">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#413#414#0" expanded="true" />
+                <element signature="e#437#438#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProjectAlertProvider.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/ProjectAlertProvider.java">
+      <file leaf-file-name="FusionMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/FusionMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+            <state relative-caret-position="257">
+              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContractProvider.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/ContractProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="23" column="64" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contract.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/contract.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="44" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -98,8 +81,8 @@
       <file leaf-file-name="project-alert.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/project-alert.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="141" column="68" lean-forward="true" selection-start-line="141" selection-start-column="68" selection-end-line="141" selection-end-column="68" />
+            <state relative-caret-position="132">
+              <caret line="136" column="44" selection-start-line="136" selection-start-column="27" selection-end-line="136" selection-end-column="44" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -109,11 +92,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tree.init.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/thridpart-js/tree.init.js">
+      <file leaf-file-name="fusion.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fusion.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="70" lean-forward="true" selection-start-line="13" selection-start-column="70" selection-end-line="13" selection-end-column="70" />
+            <state relative-caret-position="79">
+              <caret line="62" column="89" selection-start-line="62" selection-start-column="74" selection-end-line="62" selection-end-column="89" />
+              <folding>
+                <element signature="n#style#0;n#input#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fusion.config.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/fusion.config.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="393">
+              <caret line="269" column="1" selection-start-line="269" selection-start-column="1" selection-end-line="269" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fusion.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/fusion.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="32" column="64" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FileUtility.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Utiliy/FileUtility.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -121,11 +137,20 @@
       <file leaf-file-name="DownloadController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/DownloadController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-17">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+            <state relative-caret-position="359">
+              <caret line="65" column="77" selection-start-line="65" selection-start-column="77" selection-end-line="65" selection-end-column="77" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UploadController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/UploadController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="47" column="62" selection-start-line="47" selection-start-column="62" selection-end-line="47" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -136,30 +161,13 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>alert_file_input</find>
-      <find>UUID</find>
-      <find>getTempXlsFileName</find>
-      <find>getTempFileName</find>
-      <find>error.png</find>
-      <find>build_form_data</find>
-      <find>ContractProvider</find>
-      <find>ON</find>
-      <find>search_number</find>
-      <find>提交确认</find>
-      <find>search_alert_div</find>
-      <find>项目名称:</find>
-      <find>合同管理</find>
-      <find>修改合同</find>
-      <find>set_pop_dialog_value</find>
-      <find>ok</find>
-      <find>contract_id</find>
       <find>project_alert_id</find>
       <find>max</find>
       <find>file-size</find>
@@ -173,6 +181,23 @@
       <find>提交变更</find>
       <find>accept=</find>
       <find>file</find>
+      <find>modify_item</find>
+      <find>$(&quot;#confirm_upload_file_change&quot;).val() == ''</find>
+      <find>dialog</find>
+      <find>set_pop_dialog_value</find>
+      <find>#file_input</find>
+      <find>change</find>
+      <find>file_alert_upload</find>
+      <find>alert_upload_file_change</find>
+      <find>upload_file_change</find>
+      <find>.append</find>
+      <find>accept</find>
+      <find>ajax_add_project_alert</find>
+      <find>ajax_modify_project_alert</find>
+      <find>get_pop_dialog_value</find>
+      <find>search</find>
+      <find>中标麒麟</find>
+      <find>findFusion</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -203,18 +228,25 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Utiliy/FileConvert.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/UploadController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/viewer.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/pdfView.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/PdfViewController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/ProjectAlertMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/ProjectAlertProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/project-alert.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/ProjectAlertController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Utiliy/FileUtility.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/DownloadController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/project-alert.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/thridpart-js/tree.init.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Utiliy/FileUtility.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Asset/FusionInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/ProjectAlertProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/FusionProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/project-alert.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/UploadController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/FusionMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/FusionController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/DownloadController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/css/fusion.config.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/fusion.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/fusion.js" />
       </list>
     </option>
   </component>
@@ -264,8 +296,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -356,6 +388,18 @@
               <item name="cy" type="462c0819:PsiDirectoryNode" />
               <item name="contractmanagement" type="462c0819:PsiDirectoryNode" />
               <item name="Dao" type="462c0819:PsiDirectoryNode" />
+              <item name="Asset" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="contract-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ContractManagement" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cy" type="462c0819:PsiDirectoryNode" />
+              <item name="contractmanagement" type="462c0819:PsiDirectoryNode" />
+              <item name="Dao" type="462c0819:PsiDirectoryNode" />
               <item name="Contract" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -382,18 +426,6 @@
               <item name="Dao" type="462c0819:PsiDirectoryNode" />
               <item name="Mappers" type="462c0819:PsiDirectoryNode" />
               <item name="SqlProvider" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contract-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ContractManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="cy" type="462c0819:PsiDirectoryNode" />
-              <item name="contractmanagement" type="462c0819:PsiDirectoryNode" />
-              <item name="Dao" type="462c0819:PsiDirectoryNode" />
-              <item name="Project" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="contract-management" type="b2602c69:ProjectViewProjectNode" />
@@ -555,11 +587,12 @@
       <workItem from="1528333058226" duration="14905000" />
       <workItem from="1528356026624" duration="41000" />
       <workItem from="1528359975000" duration="4248000" />
+      <workItem from="1528365868814" duration="12944000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64498000" />
+    <option name="totallyTimeSpent" value="77442000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -627,79 +660,10 @@
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="12" />
+      <option name="time" value="15" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/ContractController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2448">
-          <caret line="170" lean-forward="true" selection-start-line="170" selection-end-line="170" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/main.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="34" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/contract.config.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="270" column="1" selection-start-line="270" selection-start-column="1" selection-end-line="270" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/vjpage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-612" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Contract/ContractInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="68" column="19" lean-forward="true" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/popDialog-project-alert.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="31" column="26" lean-forward="true" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/contract.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/popDialog-contract.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Utiliy/TempFileNameBuilder.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Excel/ContractExcelOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/io/FileSystem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
@@ -798,27 +762,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/jdbc/AbstractSQL.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="150" column="29" selection-start-line="150" selection-start-column="27" selection-end-line="150" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/ContractController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="103" column="27" selection-start-line="103" selection-start-column="27" selection-end-line="103" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/ContractMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-663">
-          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/project-alert.config.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
@@ -854,53 +797,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/UploadController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="31" column="89" selection-start-line="31" selection-start-column="89" selection-end-line="31" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/thridpart-js/jquery-1.10.2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="3766" column="23" selection-start-line="3766" selection-start-column="23" selection-end-line="3766" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/viewer.html" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/thridpart-js/jquery.media.js" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/thridpart-js/pdfobject.js" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/contract.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="44" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pdfView.html" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/PdfViewController.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/ContractProvider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="23" column="64" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/ProjectAlertProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -914,34 +819,137 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/project-alert.js">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/thridpart-js/tree.init.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4216">
-          <caret line="248" column="36" selection-start-line="248" selection-start-column="25" selection-end-line="248" selection-end-column="36" />
+        <state relative-caret-position="204">
+          <caret line="24" column="66" lean-forward="true" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/ProjectAlertController.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-codec/commons-codec/1.11/commons-codec-1.11.jar!/org/apache/commons/codec/digest/DigestUtils.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
+        <state relative-caret-position="150">
+          <caret line="125" column="25" selection-start-line="125" selection-start-column="25" selection-end-line="125" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="44" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Asset/FusionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/projectmanagement.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Contract/ContractInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="63" column="59" lean-forward="true" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/ContractController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="103" column="27" selection-start-line="103" selection-start-column="27" selection-end-line="103" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Asset/FusionInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="15" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#337#338#0" expanded="true" />
+            <element signature="e#367#368#0" expanded="true" />
+            <element signature="e#413#414#0" expanded="true" />
+            <element signature="e#451#452#0" expanded="true" />
+            <element signature="e#483#484#0" expanded="true" />
+            <element signature="e#514#515#0" expanded="true" />
+            <element signature="e#559#560#0" expanded="true" />
+            <element signature="e#599#600#0" expanded="true" />
+            <element signature="e#634#635#0" expanded="true" />
+            <element signature="e#667#668#0" expanded="true" />
+            <element signature="e#717#718#0" expanded="true" />
+            <element signature="e#761#762#0" expanded="true" />
+            <element signature="e#796#797#0" expanded="true" />
+            <element signature="e#827#828#0" expanded="true" />
+            <element signature="e#875#876#0" expanded="true" />
+            <element signature="e#915#916#0" expanded="true" />
+            <element signature="e#945#946#0" expanded="true" />
+            <element signature="e#971#972#0" expanded="true" />
+            <element signature="e#1009#1010#0" expanded="true" />
+            <element signature="e#1039#1040#0" expanded="true" />
+            <element signature="e#1073#1074#0" expanded="true" />
+            <element signature="e#1103#1104#0" expanded="true" />
+            <element signature="e#1149#1150#0" expanded="true" />
+            <element signature="e#1187#1188#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/jdbc/AbstractSQL.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/ProjectAlertProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" column="86" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="86" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/FusionProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/ContractMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Utiliy/FileUtility.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+        <state relative-caret-position="142">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/thridpart-js/jquery-1.10.2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="7573" column="4" selection-start-line="7573" selection-start-column="4" selection-end-line="7573" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/project-alert.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="141" column="68" lean-forward="true" selection-start-line="141" selection-start-column="68" selection-end-line="141" selection-end-column="68" />
+        <state relative-caret-position="132">
+          <caret line="136" column="44" selection-start-line="136" selection-start-column="27" selection-end-line="136" selection-end-column="44" />
           <folding>
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -950,20 +958,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/DownloadController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/project-alert.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-17">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        <state relative-caret-position="319">
+          <caret line="335" column="46" selection-start-line="335" selection-start-column="46" selection-end-line="335" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/ProjectAlertController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="37" column="90" selection-start-line="35" selection-start-column="8" selection-end-line="37" selection-end-column="90" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/thridpart-js/tree.init.js">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/contract.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="70" lean-forward="true" selection-start-line="13" selection-start-column="70" selection-end-line="13" selection-end-column="70" />
+        <state relative-caret-position="132">
+          <caret line="412" column="19" selection-start-line="412" selection-start-column="12" selection-end-line="412" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/UploadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="47" column="62" selection-start-line="47" selection-start-column="62" selection-end-line="47" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/FusionMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/DownloadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="65" column="77" selection-start-line="65" selection-start-column="77" selection-end-line="65" selection-end-column="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/fusion.config.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="269" column="1" selection-start-line="269" selection-start-column="1" selection-end-line="269" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fusion.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="62" column="89" selection-start-line="62" selection-start-column="74" selection-end-line="62" selection-end-column="89" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/FusionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#413#414#0" expanded="true" />
+            <element signature="e#437#438#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/fusion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="32" column="64" selection-start-line="32" selection-start-column="64" selection-end-line="32" selection-end-column="64" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

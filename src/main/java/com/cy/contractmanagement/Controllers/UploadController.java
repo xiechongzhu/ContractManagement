@@ -39,4 +39,26 @@ public class UploadController {
             return ResponseEntity.badRequest().body(null);
         }
     }
+
+    @PostMapping("/upload-fusion")
+    public ResponseEntity uploadFusion(@RequestParam("file") MultipartFile multipartFile) throws Exception {
+        String fileExt = FileUtility.getFileExtension(multipartFile.getOriginalFilename());
+        String uuid = FileUtility.getUuidString();
+        String fileName = uuid + "." + fileExt;
+        String absFileName = FileUtility.makeFusionDirectory() + "/" + fileName;
+        File f = new File(absFileName);
+        if (!f.createNewFile()) {
+            return ResponseEntity.badRequest().body(null);
+        }
+        FileOutputStream fileOutputStream = new FileOutputStream(f);
+        try {
+            fileOutputStream.write(multipartFile.getBytes());
+            return ResponseEntity.ok().body(fileName);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return ResponseEntity.badRequest().body(null);
+        } finally {
+            fileOutputStream.close();
+        }
+    }
 }

@@ -66,3 +66,17 @@ CREATE TABLE `project_alerts` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
+DROP TABLE IF EXISTS `fusion_info`;
+CREATE TABLE `fusion_info` (
+  `id` int(20) NOT NULL AUTO_INCREMENT,
+  `version` varchar(200) NOT NULL,
+  `platform` int(11) NOT NULL,
+  `uploadDate` date NOT NULL,
+  `fileName` varchar(200) NOT NULL,
+  `md5` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`),
+  KEY `FK_t_praise_version` (`version`),
+  KEY `FK_t_praise_platform` (`platform`),
+  UNIQUE KEY `UK_praise` (`version`,`platform`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
