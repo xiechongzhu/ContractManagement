@@ -20,7 +20,6 @@ public class DownloadController {
         stream.read(buffer);
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Disposition", "attachment;filename=" + fileName);
-        //headers.add("content-type", "application/pdf");
         return ResponseEntity.ok().headers(headers).body(buffer);
     }
 
@@ -31,8 +30,29 @@ public class DownloadController {
         byte[] buffer = new byte[stream.available()];
         stream.read(buffer);
         HttpHeaders headers = new HttpHeaders();
-        //headers.add("Content-Disposition", "attachment;filename="+fileName);
         headers.add("content-type", "application/pdf");
+        return ResponseEntity.ok().headers(headers).body(buffer);
+    }
+
+    @GetMapping("/word-template/{templateName}")
+    public ResponseEntity getWordTemplate(@PathVariable("templateName") String templateName) throws Exception {
+        String fileName = null;
+        switch(templateName) {
+            case "requisition":
+                fileName = "技术通知单.doc";
+                break;
+            case "confirm":
+                fileName = "变更申请分析及确认单.doc";
+                break;
+            default:
+        }
+        String absFileName = FileUtility.getWordTemplateDirectory() + "/" + fileName;
+        FileInputStream stream = new FileInputStream(new File(absFileName));
+        byte[] buffer = new byte[stream.available()];
+        stream.read(buffer);
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Disposition", "attachment;filename=" +
+                new String(fileName.getBytes("gb2312"), "ISO8859-1"));
         return ResponseEntity.ok().headers(headers).body(buffer);
     }
 }

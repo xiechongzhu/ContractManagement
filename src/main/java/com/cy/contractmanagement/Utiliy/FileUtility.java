@@ -27,4 +27,13 @@ public class FileUtility {
         }
         return dir.getAbsolutePath();
     }
+
+    public static String getWordTemplateDirectory() {
+        File f = new File("");
+        File dir = new File(f.getAbsolutePath(), "wordTemplate");
+        if (!dir.exists()) {
+            dir.mkdirs();
+        }
+        return dir.getAbsolutePath();
+    }
 }
