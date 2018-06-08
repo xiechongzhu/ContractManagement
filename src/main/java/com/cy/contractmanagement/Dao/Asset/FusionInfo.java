@@ -51,14 +51,4 @@ public class FusionInfo {
     public void setMd5(String md5) {
         this.md5 = md5;
     }
-
-    public String getComment() {
-        return comment;
-    }
-
-    public void setComment(String comment) {
-        this.comment = comment;
-    }
-
-    String comment;
 }

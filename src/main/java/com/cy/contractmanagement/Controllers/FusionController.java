@@ -35,10 +35,16 @@ public class FusionController {
                                              @RequestParam(value = "version", required = false, defaultValue = "") String version,
                                              @RequestParam(value = "platform", required = false, defaultValue = "999") int platform
                                           ) {
-        Page<ContractInfo> pageInfo = PageHelper.startPage(page, rows, true);
+        Page pageInfo = PageHelper.startPage(page, rows, true);
         List<FusionInfo> fusionInfoList = fusionMapper.getFusionList(version, platform);
         return JqGridResultBuilder.builde(rows, page, pageInfo.getTotal(), fusionInfoList);
 
+    }
+
+    @GetMapping("get-by-platform/{platform}")
+    @ResponseBody
+    public List<FusionInfo> getAllFusionInfo(@PathVariable("platform") int platform) {
+        return fusionMapper.getFusionList("", platform);
     }
 
     @PostMapping("/add")

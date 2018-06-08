@@ -66,4 +66,15 @@ public class DownloadController {
         headers.add("Content-Disposition", "attachment;filename=" + fileName);
         return ResponseEntity.ok().headers(headers).body(buffer);
     }
+
+    @GetMapping("/download-plugin/{fileName}")
+    public ResponseEntity getPlugin(@PathVariable("fileName") String fileName) throws Exception {
+        String absFileName = FileUtility.makePluginsDirectory() + "/" + fileName;
+        FileInputStream stream = new FileInputStream(new File(absFileName));
+        byte[] buffer = new byte[stream.available()];
+        stream.read(buffer);
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Disposition", "attachment;filename=" + fileName);
+        return ResponseEntity.ok().headers(headers).body(buffer);
+    }
 }

@@ -80,3 +80,17 @@ CREATE TABLE `fusion_info` (
   KEY `FK_t_praise_platform` (`platform`),
   UNIQUE KEY `UK_praise` (`version`,`platform`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `plugin_info`;
+CREATE TABLE `plugin_info` (
+  `id` int(20) NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) DEFAULT NULL,
+  `version` varchar(45) DEFAULT NULL,
+  `platform` int(11) DEFAULT NULL,
+  `fusionVersion` varchar(45) DEFAULT NULL,
+  `uploadDate` date DEFAULT NULL,
+  `fileName` varchar(45) DEFAULT NULL,
+  `md5` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

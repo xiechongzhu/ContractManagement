@@ -186,7 +186,7 @@ function upload_file_change() {
     var formData = new FormData;
     formData.append('file', $('#file_upload')[0].files[0]);
     $.ajax({
-        url: "/upload-fusion",
+        url: "/upload-fusion-or-plugin/fusion",
         type: "post",
         data: formData,
         processData: false,
