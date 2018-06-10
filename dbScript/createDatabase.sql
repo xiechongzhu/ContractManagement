@@ -63,6 +63,7 @@ CREATE TABLE `project_alerts` (
   `confirmDate` date DEFAULT NULL,
   `alertFile` varchar(100) DEFAULT NULL,
   `confirmFile` varchar(100) DEFAULT NULL,
+  `effort` DOUBLE DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 

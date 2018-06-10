@@ -18,24 +18,26 @@ public interface ProjectAlertMapper {
                                      @Param("confirmType") int confirmType);
 
     @Insert("insert into project_alerts(contractId, alertNumber, confirmNumber," +
-            "alertDate, confirmDate, alertFile, confirmFile) values(#{contractId}, #{alertNumber}," +
-            "#{confirmNumber}, #{alertDate}, #{confirmDate}, #{alertFile}, #{confirmFile})")
+            "alertDate, confirmDate, alertFile, confirmFile, effort) values(#{contractId}, #{alertNumber}," +
+            "#{confirmNumber}, #{alertDate}, #{confirmDate}, #{alertFile}, #{confirmFile}, #{effort})")
     int insertAlert(@Param("contractId") long contractId, @Param("alertNumber") String alertNumber,
                     @Param("confirmNumber") String confirmNumber,
                     @Param("alertDate") Date alertDate, @Param("confirmDate") Date confirmDate,
-                    @Param("alertFile") String alertFile, @Param("confirmFile") String confirmFile);
+                    @Param("alertFile") String alertFile, @Param("confirmFile") String confirmFile,
+                    @Param("effort") double effort);
 
     @SelectProvider(type = ProjectAlertProvider.class, method = "findProjectAlertById")
     ProjectAlertInfo getSingleAlert(@Param("id") long id);
 
     @Update("update project_alerts set contractId=#{contractId}, alertNumber=#{alertNumber}," +
             "alertFile=#{alertFile}, alertDate=#{alertDate}, confirmNumber=#{confirmNumber}," +
-            "confirmFile=#{confirmFile}, confirmDate=#{confirmDate}" +
+            "confirmFile=#{confirmFile}, confirmDate=#{confirmDate}, effort=#{effort}" +
             " where id = #{id}")
     void modifyProductAlert(@Param("id") long id, @Param("contractId") long contractId,
                             @Param("alertNumber") String alertNumber, @Param("alertFile") String alertFile,
                             @Param("alertDate") Date alertDate, @Param("confirmNumber") String confirmNumber,
-                            @Param("confirmFile") String confirmFile, @Param("confirmDate") Date confirmDate);
+                            @Param("confirmFile") String confirmFile, @Param("confirmDate") Date confirmDate,
+                            @Param("effort") double effort);
 }
 
 

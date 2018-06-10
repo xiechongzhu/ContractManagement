@@ -46,12 +46,13 @@ public class ProjectAlertController {
                                 @RequestParam("alertDate") String alertDate,
                                 @RequestParam("confirmNumber") String confirmNumber,
                                 @RequestParam("confirmFile") String confirmFile,
-                                @RequestParam("confirmDate") String confirmDate) throws Exception {
+                                @RequestParam("confirmDate") String confirmDate,
+                                @RequestParam("effort") String effort) throws Exception {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         Date dateAlert = alertDate.isEmpty() ? null : sdf.parse(alertDate);
         Date dateConfirm = confirmDate.isEmpty() ? null : sdf.parse(confirmDate);
         projectAlertMapper.insertAlert(contractId, alertNumber, confirmNumber, dateAlert,
-                dateConfirm, alertFile, confirmFile);
+                dateConfirm, alertFile, confirmFile, effort.isEmpty() ? 0 : Double.parseDouble(effort));
     }
 
     @GetMapping("/alert/get/{id}")
@@ -66,11 +67,12 @@ public class ProjectAlertController {
                                    @RequestParam("alertNumber") String alertNumber,
                                    @RequestParam("alertFile") String alertFile, @RequestParam("alertDate") String alertDate,
                                    @RequestParam("confirmNumber") String confirmNumber, @RequestParam("confirmFile") String confirmFile,
-                                   @RequestParam("confirmDate") String confirmDate) throws Exception {
+                                   @RequestParam("confirmDate") String confirmDate,
+                                   @RequestParam("effort") String effort) throws Exception {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         Date dateAlert = alertDate.isEmpty() ? null : sdf.parse(alertDate);
         Date dateConfirm = confirmDate.isEmpty() ? null : sdf.parse(confirmDate);
         projectAlertMapper.modifyProductAlert(id, contractId, alertNumber, alertFile, dateAlert,
-                confirmNumber, confirmFile, dateConfirm);
+                confirmNumber, confirmFile, dateConfirm, effort.isEmpty() ? 0 : Double.parseDouble(effort));
     }
 }

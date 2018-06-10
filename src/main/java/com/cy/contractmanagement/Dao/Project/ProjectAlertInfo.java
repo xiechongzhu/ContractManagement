@@ -15,6 +15,15 @@ public class ProjectAlertInfo {
     private Date confirmDate;
     private String alertFile;
     private String confirmFile;
+    private double effort;
+
+    public double getEffort() {
+        return effort;
+    }
+
+    public void setEffort(double effort) {
+        this.effort = effort;
+    }
 
     public String getAlertFile() {
         return alertFile;

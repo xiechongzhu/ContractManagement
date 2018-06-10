@@ -44,6 +44,7 @@
                 label: '确认日期', name: 'confirmDate', index: 'confirmDate', width: 80, sortable: false,
                 formatter: "date", formatoptions: {srcformat: 'ISO8601Long', newformat: 'Y-m-d'}
             },
+            {label: '工作量(人天)', name: 'effort', index: 'effort', width: 80, sortable: false}
         ],
         height: 'auto',
         shrinkToFit: false,
@@ -126,7 +127,8 @@ function add_item() {
         alertDate: '',
         confirmNumber: '',
         confirmFile: '',
-        confirmDate: ''
+        confirmDate: '',
+        effort: ''
 
     });
     $('#item_dialog').attr('method', 'add');
@@ -189,11 +191,13 @@ function build_form_data(addItemInfo) {
     formData.append('confirmNumber', addItemInfo.confirmNumber);
     formData.append('confirmFile', addItemInfo.confirmFile);
     formData.append('confirmDate', addItemInfo.confirmDate);
+    formData.append('effort', addItemInfo.effort);
     return formData;
 }
 
 function ajax_add_project_alert() {
     var addItemInfo = get_pop_dialog_value();
+    console.log(addItemInfo);
     var formData = build_form_data(addItemInfo);
     $.ajax({
         url: '/project/alert/add',
@@ -269,6 +273,7 @@ function set_pop_dialog_value(value) {
     $('#confirm_number_input').val(value.confirmNumber);
     $('#confirm_file_input').val(value.confirmFile);
     $('#confirm_date_input').val(value.confirmDate);
+    $('#alert_effort_input').val(value.effort);
 }
 
 function get_pop_dialog_value() {
@@ -279,7 +284,8 @@ function get_pop_dialog_value() {
         alertDate: $('#alert_date_input').val(),
         confirmNumber: $('#confirm_number_input').val(),
         confirmFile: $('#confirm_file_input').val(),
-        confirmDate: $('#confirm_date_input').val()
+        confirmDate: $('#confirm_date_input').val(),
+        effort: $('#alert_effort_input').val()
     };
 }
 
