@@ -2,22 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1d3c15d-9dc6-4b83-97f6-190a37162bff" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Excel/ProjectExcelOperator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/project.config.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/project.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbScript/createDatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/dbScript/createDatabase.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/ContractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/ContractController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/ProjectController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Contract/ProjectInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Contract/ProjectInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/ProjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/ProjectMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/ProjectProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/ProjectProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/projectmanagement.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/project.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cy/contractmanagement/Controllers/ContractController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cy/contractmanagement/Controllers/ContractController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cy/contractmanagement/Controllers/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cy/contractmanagement/Controllers/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/thridpart-js/tree.init.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/thridpart-js/tree.init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/contract.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/contract.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/fusion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/fusion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/export-excel.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/plugins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/project-alert.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/project-alert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contract.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/contract.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,52 +33,109 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ProjectInfo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Contract/ProjectInfo.java">
+      <file leaf-file-name="contract.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/contract.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1230">
-              <caret line="53" column="31" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+            <state relative-caret-position="125">
+              <caret line="109" column="8" selection-start-line="109" selection-start-column="8" selection-end-line="109" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fusion.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/fusion.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="134">
+              <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
               <folding>
-                <element signature="e#1412#1413#0" expanded="true" />
-                <element signature="e#1460#1461#0" expanded="true" />
-                <element signature="e#1502#1503#0" expanded="true" />
-                <element signature="e#1540#1541#0" expanded="true" />
-                <element signature="e#1602#1603#0" expanded="true" />
-                <element signature="e#1656#1657#0" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MapperProxy.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/binding/MapperProxy.class">
+      <file leaf-file-name="plugins.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/plugins.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="43" column="54" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InvocableHandlerMethod.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.6.RELEASE/spring-web-5.0.6.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3270">
-              <caret line="127" selection-start-line="127" selection-end-line="127" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="project.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/project.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="194" column="21" selection-start-line="194" selection-start-column="21" selection-end-line="194" selection-end-column="21" />
+            <state relative-caret-position="221">
+              <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
               <folding>
-                <element signature="n#style#0;n#select#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#0;n#div#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#1;n#div#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#select#1;n#div#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contract.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/contract.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="307">
+              <caret line="130" column="92" selection-start-line="130" selection-start-column="92" selection-end-line="130" selection-end-column="92" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PluginsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/PluginsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="134">
+              <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+              <folding>
+                <element signature="e#2098#2099#0" expanded="true" />
+                <element signature="e#2133#2134#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PluginsMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/PluginsMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FusionMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/FusionMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContractController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/ContractController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="106" column="34" selection-start-line="106" selection-start-column="34" selection-end-line="106" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="project-alert.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/project-alert.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="125">
+              <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FusionController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/FusionController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+              <folding>
+                <element signature="e#1051#1052#0" expanded="true" />
+                <element signature="e#1107#1108#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -100,46 +147,51 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="HTML File" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>import_excel</find>
-      <find>search_name</find>
-      <find>search_status</find>
-      <find>导入</find>
-      <find>all</find>
-      <find>get-all</find>
-      <find>setGridParam</find>
-      <find>search_number</find>
-      <find>search_item</find>
-      <find>id</find>
-      <find>set</find>
-      <find>ale</find>
-      <find>modify_item</find>
-      <find>alert</find>
-      <find>project_name</find>
-      <find>item_dialog</find>
-      <find>contract_id</find>
-      <find>number</find>
-      <find>project_id</find>
-      <find>$.ajax</find>
-      <find>contract</find>
-      <find>number_input</find>
-      <find>item_input</find>
-      <find>item_label</find>
-      <find>party_infpeople</find>
-      <find>search_leader</find>
-      <find>合同</find>
-      <find>正常</find>
-      <find>add_item</find>
-      <find>project_classification</find>
+      <find>#file_input</find>
+      <find>change</find>
+      <find>file_alert_upload</find>
+      <find>alert_upload_file_change</find>
+      <find>upload_file_change</find>
+      <find>.append</find>
+      <find>accept</find>
+      <find>ajax_add_project_alert</find>
+      <find>ajax_modify_project_alert</find>
+      <find>get_pop_dialog_value</find>
+      <find>search</find>
+      <find>中标麒麟</find>
+      <find>ajax</find>
+      <find>initFusionSelect</find>
+      <find>option</find>
+      <find>ajax_add_fusion</find>
+      <find>upload-fusion</find>
+      <find>upload</find>
+      <find>label3</find>
+      <find>findFusion</find>
+      <find>$('#page1_jDataGrid1_table')</find>
+      <find>confirm_date_input</find>
+      <find>confirmDate</find>
+      <find>ajax_add</find>
+      <find>modify</find>
+      <find>set_pop_dialog_value</find>
+      <find>rowNUm:</find>
+      <find>search_project</find>
+      <find>.ico</find>
+      <find>export-excel.ico</find>
     </findStrings>
     <replaceStrings>
       <replace />
     </replaceStrings>
+    <dirStrings>
+      <dir>D:\Git\ContractManagement\src\main\java\com\cy\</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -147,35 +199,49 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/static/thridpart-js/tree.init.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/contract.config.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Contract/ContractInfo.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/popDialog.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/contract.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/popDialog-project-alert.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Utiliy/TempFileNameBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Excel/ContractExcelOperator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Utiliy/FileUtiliy.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Utiliy/FileUtility.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/UploadController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Project/ProjectAlertInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/thridpart-js/jquery.msgBox.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/ProjectAlertMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/ProjectAlertProvider.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/css/project-alert.config.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/project-alert.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/project-alert.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/ContractController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/IndexController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/css/project.config.css" />
-        <option value="$PROJECT_DIR$/dbScript/createDatabase.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Contract/ProjectInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Excel/ProjectExcelOperator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/ProjectProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Utiliy/FileUtiliy.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/thridpart-js/jquery.msgBox.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/ProjectController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/static/project.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/ProjectMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/project.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/css/project-alert.config.css" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Utiliy/FileConvert.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/viewer.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/pdfView.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/PdfViewController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/thridpart-js/tree.init.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Utiliy/FileUtility.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/FusionProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/css/fusion.config.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/fusion.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Asset/PluginInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/PluginsProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Asset/FusionInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/UploadController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/DownloadController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/plugins.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/css/plugins.config.css" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Project/ProjectAlertInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/ProjectAlertMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/project-alert.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/ProjectAlertController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/ProjectAlertProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/FusionController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/FusionMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/PluginsMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/PluginsController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/contract.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/fusion.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/plugins.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/static/project-alert.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/contract.html" />
       </list>
     </option>
   </component>
@@ -185,13 +251,37 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="contract-management" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="contract-management" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="y" value="49" />
-    <option name="width" value="1304" />
-    <option name="height" value="688" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="85" />
+    <option name="y" value="25" />
+    <option name="width" value="1750" />
+    <option name="height" value="970" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -201,91 +291,103 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="contract-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codej2ee" type="462c0819:PsiDirectoryNode" />
+              <item name="ContractManagement" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="contract-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codej2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="dbScript" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contract-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codej2ee" type="462c0819:PsiDirectoryNode" />
+              <item name="ContractManagement" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="contract-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codej2ee" type="462c0819:PsiDirectoryNode" />
+              <item name="ContractManagement" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="contract-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codej2ee" type="462c0819:PsiDirectoryNode" />
+              <item name="ContractManagement" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="contract-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codej2ee" type="462c0819:PsiDirectoryNode" />
+              <item name="ContractManagement" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="contract-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ContractManagement" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="contract-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ContractManagement" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cy" type="462c0819:PsiDirectoryNode" />
               <item name="contractmanagement" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="contract-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codej2ee" type="462c0819:PsiDirectoryNode" />
+              <item name="ContractManagement" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cy" type="462c0819:PsiDirectoryNode" />
               <item name="contractmanagement" type="462c0819:PsiDirectoryNode" />
               <item name="Controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="contract-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codej2ee" type="462c0819:PsiDirectoryNode" />
+              <item name="ContractManagement" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cy" type="462c0819:PsiDirectoryNode" />
               <item name="contractmanagement" type="462c0819:PsiDirectoryNode" />
               <item name="Dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="contract-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codej2ee" type="462c0819:PsiDirectoryNode" />
+              <item name="ContractManagement" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="contractmanagement" type="462c0819:PsiDirectoryNode" />
-              <item name="Dao" type="462c0819:PsiDirectoryNode" />
-              <item name="Contract" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contract-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codej2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cy" type="462c0819:PsiDirectoryNode" />
               <item name="contractmanagement" type="462c0819:PsiDirectoryNode" />
               <item name="Dao" type="462c0819:PsiDirectoryNode" />
               <item name="Mappers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="contract-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codej2ee" type="462c0819:PsiDirectoryNode" />
+              <item name="ContractManagement" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cy" type="462c0819:PsiDirectoryNode" />
               <item name="contractmanagement" type="462c0819:PsiDirectoryNode" />
               <item name="Dao" type="462c0819:PsiDirectoryNode" />
               <item name="Mappers" type="462c0819:PsiDirectoryNode" />
@@ -293,33 +395,48 @@
             </path>
             <path>
               <item name="contract-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codej2ee" type="462c0819:PsiDirectoryNode" />
+              <item name="ContractManagement" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cy" type="462c0819:PsiDirectoryNode" />
               <item name="contractmanagement" type="462c0819:PsiDirectoryNode" />
               <item name="Dao" type="462c0819:PsiDirectoryNode" />
               <item name="Project" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="contract-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codej2ee" type="462c0819:PsiDirectoryNode" />
+              <item name="ContractManagement" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cy" type="462c0819:PsiDirectoryNode" />
               <item name="contractmanagement" type="462c0819:PsiDirectoryNode" />
               <item name="Excel" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="contract-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codej2ee" type="462c0819:PsiDirectoryNode" />
+              <item name="ContractManagement" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="cy" type="462c0819:PsiDirectoryNode" />
+              <item name="contractmanagement" type="462c0819:PsiDirectoryNode" />
+              <item name="Utiliy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="contract-management" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ContractManagement" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="contract-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codej2ee" type="462c0819:PsiDirectoryNode" />
+              <item name="ContractManagement" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
@@ -327,7 +444,7 @@
             </path>
             <path>
               <item name="contract-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codej2ee" type="462c0819:PsiDirectoryNode" />
+              <item name="ContractManagement" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
@@ -336,7 +453,7 @@
             </path>
             <path>
               <item name="contract-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codej2ee" type="462c0819:PsiDirectoryNode" />
+              <item name="ContractManagement" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
@@ -345,16 +462,11 @@
             </path>
             <path>
               <item name="contract-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codej2ee" type="462c0819:PsiDirectoryNode" />
+              <item name="ContractManagement" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contract-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="codej2ee" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -363,6 +475,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -372,20 +485,11 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\codej2ee\src\main\resources\static\css" />
-      <recent name="E:\codej2ee\src\main\resources\static\thridpart-js" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.cy.contractmanagement.Excel" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\codej2ee\src\main\resources\static" />
-    </key>
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -460,57 +564,99 @@
       <workItem from="1528135393476" duration="681000" />
       <workItem from="1528165879390" duration="15116000" />
       <workItem from="1528201857867" duration="10365000" />
-      <workItem from="1528358961886" duration="9089000" />
-      <workItem from="1528378131565" duration="10929000" />
-      <workItem from="1528422006798" duration="20064000" />
-      <workItem from="1528638511473" duration="11163000" />
-      <workItem from="1528681126656" duration="13065000" />
-      <workItem from="1528718505522" duration="329000" />
+      <workItem from="1528215899492" duration="750000" />
+      <workItem from="1528285264167" duration="18150000" />
+      <workItem from="1528333058226" duration="14905000" />
+      <workItem from="1528356026624" duration="41000" />
+      <workItem from="1528359975000" duration="4248000" />
+      <workItem from="1528365868814" duration="12944000" />
+      <workItem from="1528420092302" duration="19883000" />
+      <workItem from="1528449924294" duration="1282000" />
+      <workItem from="1528638583811" duration="2076000" />
+      <workItem from="1528642316697" duration="161000" />
+      <workItem from="1528650586287" duration="175000" />
+      <workItem from="1528679175559" duration="6546000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102704000" />
+    <option name="totallyTimeSpent" value="107565000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="13" sideWeight="0.11875945" side_tool="true" visible="true" weight="0.18137255" />
-      <window_info anchor="right" id="Maven Projects" order="9" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info id="Capture Tool" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50065106" side_tool="true" weight="0.31857142" />
+      <window_info anchor="right" id="Maven Projects" order="3" weight="0.3294271" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info anchor="right" id="Database" order="5" weight="0.3297587" />
+      <window_info anchor="right" id="Database" order="3" weight="0.3297587" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4720121" weight="0.16830066" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info id="Image Layers" order="3" />
-      <window_info anchor="bottom" id="Java Enterprise" order="10" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.88124055" weight="0.48202613" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33509833" />
-      <window_info anchor="right" id="Bean Validation" order="8" />
-      <window_info id="Web" order="6" side_tool="true" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3988183" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3293944" />
+      <window_info anchor="bottom" id="Messages" order="9" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" weight="0.3293944" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.34121123" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49934897" visible="true" weight="0.31757754" />
+      <window_info anchor="bottom" id="Spring" order="12" weight="0.3293944" />
+      <window_info anchor="bottom" id="Terminal" order="13" weight="0.3293944" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27010724" />
+      <window_info anchor="right" id="Bean Validation" order="3" />
+      <window_info id="Web" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3293944" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.32352942" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" visible="true" weight="0.0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32843137" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -519,47 +665,28 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/ProjectController.java</url>
-          <line>120</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/ProjectAlertProvider.java</url>
+          <line>11</line>
           <properties />
-          <option name="timeStamp" value="67" />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/ProjectAlertController.java</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/ProjectAlertController.java</url>
+          <line>50</line>
+          <properties />
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="68" />
+      <option name="time" value="16" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/io/File.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.6.RELEASE/spring-web-5.0.6.RELEASE.jar!/org/springframework/http/ResponseEntity.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="223" column="30" selection-start-line="223" selection-start-column="30" selection-end-line="223" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/io/FileOutputStream.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.6.RELEASE/spring-web-5.0.6.RELEASE.jar!/org/springframework/web/multipart/MultipartFile.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/text/DateFormat.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/thridpart-js/jquery.msgBox.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="43" column="19" lean-forward="true" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.6.RELEASE/spring-webmvc-5.0.6.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="571" selection-start-line="571" selection-end-line="571" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.6.RELEASE/spring-webmvc-5.0.6.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
@@ -567,7 +694,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.6.RELEASE/spring-web-5.0.6.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="127" selection-start-line="127" selection-end-line="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/jre/lib/rt.jar!/sun/reflect/NativeMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/builder/annotation/ProviderSqlSource.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
@@ -575,303 +715,397 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Project/ProjectAlertInfo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/project-alert.config.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="31" />
+        <state relative-caret-position="325">
+          <caret line="276" column="1" selection-start-line="276" selection-start-column="1" selection-end-line="276" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="60" column="21" selection-start-line="60" selection-start-column="21" selection-end-line="60" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="1237" column="15" selection-start-line="1237" selection-start-column="15" selection-end-line="1237" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.0.2.RELEASE/spring-boot-autoconfigure-2.0.2.RELEASE.jar!/META-INF/spring-configuration-metadata.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87448">
+          <caret line="5144" column="56" selection-start-line="5144" selection-start-column="15" selection-end-line="5144" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/viewer.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/thridpart-js/jquery.media.js" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/thridpart-js/pdfobject.js" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/pdfView.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/PdfViewController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/ContractProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="23" column="64" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/thridpart-js/tree.init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="24" column="66" lean-forward="true" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/commons-codec/commons-codec/1.11/commons-codec-1.11.jar!/org/apache/commons/codec/digest/DigestUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="125" column="25" selection-start-line="125" selection-start-column="25" selection-end-line="125" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Asset/FusionController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/projectmanagement.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Contract/ContractInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="63" column="59" lean-forward="true" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/jdbc/AbstractSQL.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
-          <caret line="150" column="29" selection-start-line="150" selection-start-column="27" selection-end-line="150" selection-end-column="29" />
+          <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/ProjectAlertMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/thridpart-js/jquery-1.10.2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        <state relative-caret-position="184">
+          <caret line="7573" column="4" selection-start-line="7573" selection-start-column="4" selection-end-line="7573" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/msg-box.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/thridpart-js/tree.init.js">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/fusion.config.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        <state relative-caret-position="4573">
+          <caret line="269" column="1" selection-start-line="269" selection-start-column="1" selection-end-line="269" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/fusion.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="1054">
+          <caret line="62" column="89" selection-start-line="62" selection-start-column="89" selection-end-line="62" selection-end-column="89" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/project-alert.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Asset/PluginInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-734">
-          <caret line="5" column="66" selection-start-line="5" selection-start-column="66" selection-end-line="5" selection-end-column="66" />
+        <state relative-caret-position="170">
+          <caret line="10" column="21" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Utiliy/JqGridResultBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Contract/ProjectInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
+        <state relative-caret-position="119">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/text/DateFormat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="360" column="16" selection-start-line="360" selection-start-column="16" selection-end-line="360" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.webworker.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="663" column="4" selection-start-line="663" selection-start-column="4" selection-end-line="663" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.0.6.RELEASE/spring-webmvc-5.0.6.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/project-alert.config.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="276" column="1" selection-end-line="276" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Excel/ContractExcelOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Utiliy/FileUtility.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="11" column="41" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/UploadController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/ProjectAlertProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="13" column="64" selection-start-line="13" selection-start-column="64" selection-end-line="13" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/project-alert.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="252" column="26" lean-forward="true" selection-start-line="252" selection-start-column="26" selection-end-line="252" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.6.RELEASE/spring-core-5.0.6.RELEASE.jar!/org/springframework/core/io/FileSystemResource.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Excel/ExcelExport.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="56" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/contract.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="189" column="99" selection-start-line="189" selection-start-column="87" selection-end-line="189" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/contract.config.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7800">
-          <caret line="260" column="21" selection-end-line="289" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/project.config.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3570">
-          <caret line="274" column="17" lean-forward="true" selection-start-line="274" selection-start-column="17" selection-end-line="274" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/thridpart-js/public.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/jdbc/SQL.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dbScript/project_info.sql" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Excel/ProjectExcelOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="67" column="42" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dbScript/createDatabase.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="42" column="25" selection-start-line="42" selection-start-column="3" selection-end-line="42" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Contract/ContractInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="68" column="19" lean-forward="true" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/ContractProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/ContractController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="77" column="30" selection-start-line="77" selection-start-column="30" selection-end-line="77" selection-end-column="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/ContractMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+        <state relative-caret-position="102">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/contract.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/FusionProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-132">
-          <caret line="255" column="44" lean-forward="true" selection-start-line="255" selection-start-column="44" selection-end-line="255" selection-end-column="44" />
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/project.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Asset/FusionInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="101">
-          <caret line="199" column="27" lean-forward="true" selection-start-line="199" selection-start-column="27" selection-end-line="199" selection-end-column="27" />
+        <state relative-caret-position="884">
+          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/ProjectProvider.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/UploadController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="35">
+          <caret line="43" column="32" selection-start-line="43" selection-start-column="19" selection-end-line="43" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis/3.4.6/mybatis-3.4.6.jar!/org/apache/ibatis/binding/MapperProxy.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/DownloadController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="43" column="54" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
+        <state relative-caret-position="327">
+          <caret line="77" column="65" selection-start-line="77" selection-start-column="65" selection-end-line="77" selection-end-column="65" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.6.RELEASE/spring-web-5.0.6.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Utiliy/FileUtility.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3270">
-          <caret line="127" selection-start-line="127" selection-end-line="127" />
+        <state relative-caret-position="249">
+          <caret line="60" column="25" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/ProjectController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Utiliy/FileConvert.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="136" column="29" selection-start-line="136" selection-start-column="29" selection-end-line="136" selection-end-column="29" />
+        <state relative-caret-position="85">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/plugins.config.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="276" column="1" selection-start-line="276" selection-start-column="1" selection-end-line="276" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/plugins.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="63" column="60" selection-start-line="63" selection-start-column="60" selection-end-line="63" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="53" selection-start-column="53" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/PluginsProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/project-alert.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="162" column="29" lean-forward="true" selection-start-line="162" selection-start-column="29" selection-end-line="162" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Project/ProjectAlertInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="31" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/ProjectAlertController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="60" column="46" selection-start-line="60" selection-start-column="46" selection-end-line="60" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/ProjectMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/ProjectAlertMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="23" column="43" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
+        <state relative-caret-position="391">
+          <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Contract/ProjectInfo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/ProjectAlertProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1230">
-          <caret line="53" column="31" selection-start-line="53" selection-start-column="31" selection-end-line="53" selection-end-column="31" />
+        <state relative-caret-position="135">
+          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
           <folding>
-            <element signature="e#1412#1413#0" expanded="true" />
-            <element signature="e#1460#1461#0" expanded="true" />
-            <element signature="e#1502#1503#0" expanded="true" />
-            <element signature="e#1540#1541#0" expanded="true" />
-            <element signature="e#1602#1603#0" expanded="true" />
-            <element signature="e#1656#1657#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/project.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/ContractController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="194" column="21" selection-start-line="194" selection-start-column="21" selection-end-line="194" selection-end-column="21" />
+        <state relative-caret-position="196">
+          <caret line="106" column="34" selection-start-line="106" selection-start-column="34" selection-end-line="106" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/FusionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
           <folding>
-            <element signature="n#style#0;n#select#0;n#div#5;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#0;n#div#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#select#1;n#div#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#1051#1052#0" expanded="true" />
+            <element signature="e#1107#1108#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/FusionMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/PluginsMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/PluginsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+          <folding>
+            <element signature="e#2098#2099#0" expanded="true" />
+            <element signature="e#2133#2134#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/contract.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="109" column="8" selection-start-line="109" selection-start-column="8" selection-end-line="109" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/fusion.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/project-alert.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/plugins.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/contract.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="130" column="92" selection-start-line="130" selection-start-column="92" selection-end-line="130" selection-end-column="92" />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>contract-management</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>10</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>aspose-words-18.5-jdk16</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

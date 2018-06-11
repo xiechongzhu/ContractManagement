@@ -51,5 +51,5 @@ CREATE TABLE `project_info` (
   `project_planstarttime` date DEFAULT NULL COMMENT '项目计划开始时间',
   `project_planendtime` date DEFAULT NULL COMMENT '项目计划结束时间',
   `project_realendtime` date DEFAULT NULL COMMENT '项目结项时间',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`project_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

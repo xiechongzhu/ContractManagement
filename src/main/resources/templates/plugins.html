@@ -1,0 +1,143 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>合同管理系统</title>
+    <link href="/css/jqueryui.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/layout-default.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/tlayout.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/vjpublic.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/ui.jqgrid.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/cum.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/zTreeStyle.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/treeview.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/vjpage.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/plugins.config.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/popDialog-plugins.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/msgBoxLight.css" rel="stylesheet" , type="text/css"/>
+    <script type="text/javascript" src="/thridpart-js/public.js"></script>
+    <script type="text/javascript" src="/thridpart-js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="/thridpart-js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/thridpart-js/resizeComponents.js"></script>
+    <script type="text/javascript" src="/layout/jquery.layout.js"></script>
+    <script type="text/javascript" src="/thridpart-js/grid.locale-cn.js"></script>
+    <script type="text/javascript" src="/thridpart-js/jquery.jqGrid.min.js"></script>
+    <script type="text/javascript" src="/thridpart-js/jquery.ztree.all-3.5.min.js"></script>
+    <script type="text/javascript" src="/thridpart-js/tree.init.js"></script>
+    <script type="text/javascript" src="/thridpart-js/jquery.msgBox.js"></script>
+    <script type="text/javascript" src="/thridpart-js/date-format.js"></script>
+    <script type="text/javascript" src="/plugins.js"></script>
+    <script type="text/javascript" src="/msg-box.js"></script>
+</head>
+<body data-curpagename="page1" class="body_style1">
+<div id="page1_jContainer1" class="tlayout_style2">
+    <div id="page1_jContainer1_container" class="container">
+        <div id="page1_jRegion1" class="page1_jContainer1_north">
+            <div id="page1_jPanel1" class="Panel Panel_Null">
+                <div id="page1_jLabel1" class="text">合同管理系统</div>
+            </div>
+        </div>
+        <div id="page1_jRegion2" class="page1_jContainer1_center">
+            <div id="page1_jExtPanel2" class="Panelbar Panelbar_grain Panelbar_TT14">
+                <div class="PanelBarCaptionbox colorp_grain2">
+                    <div class="PanelBarCaption border_grain01"><span>通用插件管理</span></div>
+                </div>
+                <div class="PanelContent colorp_grain5 ">
+                    <div id="page1_jContainer2" class="tlayout_style2 tlayout_noborder">
+                        <div id="page1_jContainer2_container" class="container">
+                            <div id="page1_jRegion4" class="page1_jContainer2_north">
+                                <div id="page1_jToolbar1" class="TJToolbar">
+                                    <div onclick="add_item()" id="page1_jButton1"
+                                         class="vjbutton vjbutton_c_style2 border_radius_3">
+                                        <div class="vjbutton_txtR"><span class="btniconcum1"><img src="/images/jadd.png"
+                                                                                                  width="16"
+                                                                                                  height="16"/></span><span
+                                                class="btniconcum2"><img src="/images/jadd.png" width="16" height="16"/></span><span
+                                                class="btntxt"></span>增加
+                                        </div>
+                                    </div>
+                                    <div class="text search_label" id="label3">名称:</div>
+                                    <input type="text" class="Edit Edit_style1" value="" id="search_name"/>
+                                    <div class="text search_label" id="label1">版本:</div>
+                                    <input type="text" class="Edit Edit_style1" value="" id="search_version"/>
+                                    <div class="text search_label" id="label2">平台:</div>
+                                    <div id="search_platform_div">
+                                        <select class="search_select" id="search_platform">
+                                            <option value="1">Windows</option>
+                                            <option value="2">中标麒麟</option>
+                                            <option value="999" selected="selected">全部</option>
+                                        </select>
+                                    </div>
+                                    <img class="TSeparator TSeparator_style1" id="page1_jSeparator2"
+                                         src="/images/jToolsSeparator.png"/>
+                                    <div id="page1_jButton5" class="vjbutton vjbutton_c_style2 border_radius_3"
+                                         onclick="search_item()">
+                                        <div class="vjbutton_txtR"><span class="btniconcum1"><img
+                                                src="/images/jzoom.png"
+                                                width="16"
+                                                height="16"/></span><span
+                                                class="btniconcum2"><img src="/images/jzoom.png" width="16"
+                                                                         height="16"/></span><span
+                                                class="btntxt"></span>查询
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="page1_jRegion5" class="page1_jContainer2_center">
+                                <div id="page1_jDataGrid1_pager"></div>
+                                <div class="TDataGrid" id="page1_jDataGrid1" style="overflow-x: hidden">
+                                    <table id="page1_jDataGrid1_table"></table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="page1_jRegion3" class="page1_jContainer1_west">
+            <div id="page1_jExtPanel1" class="Panelbar Panelbar_grain Panelbar_TT14">
+                <div class="PanelBarCaptionbox colorp_grain2">
+                    <div class="PanelBarCaption border_grain01"><span></span></div>
+                </div>
+                <div class="PanelContent colorp_grain5 ">
+                    <div id="page1_jContainer3" class="tlayout_style2">
+                        <div id="page1_jContainer3_container" class="container">
+                            <div id="page1_jRegion7" class="page1_jContainer3_center">
+                                <div id="page1_jTreeView1" class="TJtree">
+                                    <ul id="page1_jTreeView1_ztree" class="ztree"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="item_dialog" style="display: none;">
+    <input type="file" id="file_upload" style="display: none;">
+    <div class="item_info">
+        <div class="row">
+			<a class="item_label">名称:</a><input class="item_input" type="text" id="name_input"/>
+            <a class="item_label">版本:</a><input class="item_input" type="text" id="version_input"/>
+            <select class="item_input" id="platform_select">
+                <option value="1">Windows</option>
+                <option value="2">中标麒麟</option>
+            </select>
+        </div>
+		<div>
+			<a class="item_label">Fusion:</a>
+			<select class="item_input" id="fusion_select">
+            </select>
+			<a class="item_label">文件:</a><input class="item_input" type="text" id="file_input"
+                                                readonly="readonly"/>
+            <button id="upload_file_button" onclick="upload_file()">上传</button>
+		</div>
+        <div class="buttons">
+            <button id="btn_ok" onclick="pop_okClick()">确定</button>
+            <button id="btn_cancel" onclick="pop_cancelClick()">取消</button>
+        </div>
+    </div>
+</body>
+</html>
