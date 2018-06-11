@@ -41,6 +41,7 @@
         autowidth: false,
         autoheight: true,
         rowNum: 20,
+        rowList: [5, 10, 20, 50, 100],
         rownumbers: true,
         viewrecords: true,
         pager: '#page1_jDataGrid1_pager'
