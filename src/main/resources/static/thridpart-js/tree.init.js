@@ -10,7 +10,7 @@ $(document).ready(function () {
         {
             name: '项目', url: '#', target: '_self', open: true,
             children: [
-                {name: '项目管理', url: '/projectmanagement', target: '_self'},
+                {name: '项目管理', url: '/project', target: '_self'},
                 {name: '变更管理', url: '/project/alert', target: '_self'}
             ]
         },
