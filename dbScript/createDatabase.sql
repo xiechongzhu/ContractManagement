@@ -53,3 +53,47 @@ CREATE TABLE `project_info` (
   `project_realendtime` date DEFAULT NULL COMMENT '项目结项时间',
   PRIMARY KEY (`project_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `fusion_info`;
+CREATE TABLE `fusion_info` (
+  `id` int(20) NOT NULL AUTO_INCREMENT,
+  `version` varchar(200) NOT NULL,
+  `platform` int(11) NOT NULL,
+  `uploadDate` date NOT NULL,
+  `fileName` varchar(200) NOT NULL,
+  `md5` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`),
+  UNIQUE KEY `UK_praise` (`version`,`platform`),
+  KEY `FK_t_praise_version` (`version`),
+  KEY `FK_t_praise_platform` (`platform`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `plugin_info`;
+CREATE TABLE `plugin_info` (
+  `id` int(20) NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) DEFAULT NULL,
+  `version` varchar(45) DEFAULT NULL,
+  `platform` int(11) DEFAULT NULL,
+  `fusionVersion` varchar(45) DEFAULT NULL,
+  `uploadDate` date DEFAULT NULL,
+  `fileName` varchar(45) DEFAULT NULL,
+  `md5` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `project_alerts`;
+CREATE TABLE `project_alerts` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `contractId` bigint(20) DEFAULT NULL,
+  `alertNumber` varchar(200) DEFAULT NULL,
+  `confirmNumber` varchar(200) DEFAULT NULL,
+  `alertDate` date DEFAULT NULL,
+  `confirmDate` date DEFAULT NULL,
+  `alertFile` varchar(100) DEFAULT NULL,
+  `confirmFile` varchar(100) DEFAULT NULL,
+  `effort` double DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+

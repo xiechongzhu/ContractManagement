@@ -10,8 +10,8 @@
 .springBeans
 .sts4-cache
 ProjectAlertFile/
-target/
-asset/
+/target/
+/asset/
 
 ### IntelliJ IDEA ###
 .idea
