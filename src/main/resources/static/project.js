@@ -157,7 +157,7 @@ function add_item() {
         modal: true,
         resizable: false,
         title: '添加项目',
-        width: 950
+        width: 920
     });
 }
 
@@ -180,7 +180,7 @@ function modify_item() {
                 modal: true,
                 resizable: false,
                 title: '修改项目',
-                width: 950
+                width: 920
             });
         },
         error: function () {

@@ -1,6 +1,6 @@
 package com.cy.contractmanagement.Controllers;
 
-import com.cy.contractmanagement.Dao.Contract.ContractInfo;
+import com.cy.contractmanagement.Dao.Contract.ProjectInfo;
 import com.cy.contractmanagement.Dao.Mappers.ProjectAlertMapper;
 import com.cy.contractmanagement.Dao.Project.ProjectAlertInfo;
 import com.cy.contractmanagement.Utiliy.JqGridResultBuilder;
@@ -30,17 +30,17 @@ public class ProjectAlertController {
     @ResponseBody
     public Map<String, Object> getAllAlerts(@RequestParam("rows") int rows,
                                             @RequestParam("page") int page,
-                                            @RequestParam(value = "contractName", required = false, defaultValue = "") String contractName,
+                                            @RequestParam(value = "projectName", required = false, defaultValue = "") String projectName,
                                             @RequestParam(value = "alertType", required = false, defaultValue = "999") int alertType,
                                             @RequestParam(value = "confirmType", required = false, defaultValue = "999") int confirmType) {
-        Page<ContractInfo> pageInfo = PageHelper.startPage(page, rows, true);
-        List<ProjectAlertInfo> alertInfoList = projectAlertMapper.findAlert(contractName, alertType, confirmType);
+        Page<ProjectInfo> pageInfo = PageHelper.startPage(page, rows, true);
+        List<ProjectAlertInfo> alertInfoList = projectAlertMapper.findAlert(projectName, alertType, confirmType);
         return JqGridResultBuilder.builde(rows, page, pageInfo.getTotal(), alertInfoList);
     }
 
     @PostMapping("/alert/add")
     @ResponseBody
-    public void addProjectAlert(@RequestParam("contractId") long contractId,
+    public void addProjectAlert(@RequestParam("projectId") long projectId,
                                 @RequestParam("alertNumber") String alertNumber,
                                 @RequestParam("alertFile") String alertFile,
                                 @RequestParam("alertDate") String alertDate,
@@ -51,7 +51,7 @@ public class ProjectAlertController {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         Date dateAlert = alertDate.isEmpty() ? null : sdf.parse(alertDate);
         Date dateConfirm = confirmDate.isEmpty() ? null : sdf.parse(confirmDate);
-        projectAlertMapper.insertAlert(contractId, alertNumber, confirmNumber, dateAlert,
+        projectAlertMapper.insertAlert(projectId, alertNumber, confirmNumber, dateAlert,
                 dateConfirm, alertFile, confirmFile, effort.isEmpty() ? 0 : Double.parseDouble(effort));
     }
 
@@ -63,7 +63,7 @@ public class ProjectAlertController {
 
     @PostMapping("/alert/modify/{id}")
     @ResponseBody
-    public void modifyProjectAlert(@PathVariable("id") long id, @RequestParam("contractId") long contractId,
+    public void modifyProjectAlert(@PathVariable("id") long id, @RequestParam("projectId") long projectId,
                                    @RequestParam("alertNumber") String alertNumber,
                                    @RequestParam("alertFile") String alertFile, @RequestParam("alertDate") String alertDate,
                                    @RequestParam("confirmNumber") String confirmNumber, @RequestParam("confirmFile") String confirmFile,
@@ -72,7 +72,7 @@ public class ProjectAlertController {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         Date dateAlert = alertDate.isEmpty() ? null : sdf.parse(alertDate);
         Date dateConfirm = confirmDate.isEmpty() ? null : sdf.parse(confirmDate);
-        projectAlertMapper.modifyProductAlert(id, contractId, alertNumber, alertFile, dateAlert,
+        projectAlertMapper.modifyProductAlert(id, projectId, alertNumber, alertFile, dateAlert,
                 confirmNumber, confirmFile, dateConfirm, effort.isEmpty() ? 0 : Double.parseDouble(effort));
     }
 }

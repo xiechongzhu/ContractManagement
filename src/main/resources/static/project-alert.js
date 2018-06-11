@@ -3,7 +3,7 @@
         datatype: 'json',
         url: '/project/alert/get',
         colModel: [
-            {label: '项目名称', name: 'contractName', index: 'contractName', width: 150, sortable: false},
+            {label: '项目名称', name: 'projectName', index: 'projectName', width: 150, sortable: false},
             {label: '技术通知单号', name: 'alertNumber', index: 'alertNumber', width: 120, sortable: false},
             {
                 label: '技术通知单文件', name: 'alertFile', index: 'alertFile', width: 120, sortable: false,
@@ -71,7 +71,7 @@
     jQuery('#file_confirm_upload').change(confirm_upload_file_change);
 
     $.ajax({
-        url: '/contract/get-all',
+        url: '/project/get-all',
         type: 'get',
         processData: false,
         contentType: false,
@@ -80,9 +80,9 @@
             var availableTags = new Array();
             for (var i = 0; i < data.length; ++i) {
                 var item = data[i];
-                var option = $('<option>').val(item.id).text(item.name);
+                var option = $('<option>').val(item.id).text(item.project_name);
                 $('#project_select').append(option);
-                availableTags.push(item.name);
+                availableTags.push(item.project_name);
             }
             $('#search_project').autocomplete({
                 source: availableTags
@@ -190,7 +190,7 @@ function pop_okClick() {
 
 function build_form_data(addItemInfo) {
     var formData = new FormData;
-    formData.append('contractId', addItemInfo.contractId);
+    formData.append('projectId', addItemInfo.projectId);
     formData.append('alertNumber', addItemInfo.alertNumber);
     formData.append('alertFile', addItemInfo.alertFile);
     formData.append('alertDate', addItemInfo.alertDate);
@@ -248,13 +248,13 @@ function ajax_modify_project_alert(id) {
 }
 
 function findProjectAlert() {
-    var contractName = $('#search_project').val();
+    var projectName = $('#search_project').val();
     var alertType = $('#search_alert').val();
     var confirmType = $('#search_confirm').val();
 
     $('#page1_jDataGrid1_table').jqGrid('setGridParam', {
         postData: {
-            contractName: contractName,
+            projectName: projectName,
             alertType: alertType,
             confirmType: confirmType
         }
@@ -268,7 +268,7 @@ function pop_cancelClick() {
 function set_pop_dialog_value(value) {
     var count = $('#project_select option').length;
     for (var i = 0; i < count; i++) {
-        if ($('#project_select').get(0).options[i].text == value.contractName) {
+        if ($('#project_select').get(0).options[i].text == value.projectName) {
             $('#project_select').get(0).options[i].selected = true;
             break;
         }
@@ -284,7 +284,7 @@ function set_pop_dialog_value(value) {
 
 function get_pop_dialog_value() {
     return {
-        contractId: $('#project_select').val(),
+        projectId: $('#project_select').val(),
         alertNumber: $('#alert_number_input').val(),
         alertFile: $('#alert_file_input').val(),
         alertDate: $('#alert_date_input').val(),

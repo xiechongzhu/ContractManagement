@@ -5,17 +5,17 @@ import org.apache.ibatis.jdbc.SQL;
 import java.util.Map;
 
 public class ProjectAlertProvider {
-    public String findProjectAlertByContractName(Map<String, Object> map) {
-        String contractName = (String) map.get("contractName");
+    public String findProjectAlertByProjectName(Map<String, Object> map) {
+        String projectName = (String) map.get("projectName");
         int alertType = (int) map.get("alertType");
         int confirmType = (int) map.get("confirmType");
         return new SQL() {{
-            SELECT("project_alerts.id as id, contract_info.name as contractName, " +
+            SELECT("project_alerts.id as id, project_info.project_name as projectName, " +
                     "alertNumber, confirmNumber, alertDate, confirmDate, alertFile, confirmFile, effort");
             FROM("project_alerts");
-            JOIN("contract_info on contractId = contract_info.id");
-            if (!contractName.isEmpty()) {
-                WHERE("contract_info.name like CONCAT(CONCAT('%',#{contractName}),'%')");
+            JOIN("project_info on projectId = project_info.id");
+            if (!projectName.isEmpty()) {
+                WHERE("project_info.project_name like CONCAT(CONCAT('%',#{projectName}),'%')");
             }
             switch (alertType) {
                 case 0:
@@ -41,10 +41,10 @@ public class ProjectAlertProvider {
     public String findProjectAlertById(Map<String, Object> map) {
         long id = (long) map.get("id");
         return new SQL() {{
-            SELECT("project_alerts.id as id, contract_info.name as contractName, " +
+            SELECT("project_alerts.id as id, project_info.project_name as projectName, " +
                     "alertNumber, confirmNumber, alertDate, confirmDate, alertFile, confirmFile, effort");
             FROM("project_alerts");
-            JOIN("contract_info on contractId = contract_info.id");
+            JOIN("project_info on projectId = project_info.id");
             WHERE("project_alerts.id=#{id}");
         }}.toString();
     }

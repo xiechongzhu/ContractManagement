@@ -13,7 +13,7 @@
     <link href="css/treeview.css" rel="stylesheet" type="text/css"/>
     <link href="css/vjpage.css" rel="stylesheet" type="text/css"/>
     <link href="css/project.config.css" rel="stylesheet" type="text/css"/>
-    <link href="css/popDialog.css" rel="stylesheet" type="text/css"/>
+    <link href="css/popDialog-project.css" rel="stylesheet" type="text/css"/>
     <link href="css/msgBoxLight.css" rel="stylesheet" , type="text/css"/>
     <script type="text/javascript" src="thridpart-js/public.js"></script>
     <script type="text/javascript" src="thridpart-js/jquery-1.10.2.js"></script>
@@ -107,8 +107,8 @@
                                     <div id="page1_jButton6" class="vjbutton vjbutton_c_style2 border_radius_3"
                                          onclick="export_excel()">
                                         <div class="vjbutton_txtR"><span class="btniconcum1"><img
-                                                src="images/export-excel.ico" width="16" height="16"/></span><span
-                                                class="btniconcum2"><img src="images/export-excel.ico" width="16"
+                                                src="images/export.png" width="16" height="16"/></span><span
+                                                class="btniconcum2"><img src="images/export.png" width="16"
                                                                          height="16"/></span><span
                                                 class="btntxt"></span>导出
                                         </div>
@@ -116,8 +116,8 @@
                                     <div id="page1_jButton7" class="vjbutton vjbutton_c_style2 border_radius_3"
                                          onclick="import_excel()">
                                         <div class="vjbutton_txtR"><span class="btniconcum1"><img
-                                                src="images/export-excel.ico" width="16" height="16"/></span><span
-                                                class="btniconcum2"><img src="images/export-excel.ico" width="16"
+                                                src="images/import.png" width="16" height="16"/></span><span
+                                                class="btniconcum2"><img src="images/import.png" width="16"
                                                                          height="16"/></span><span
                                                 class="btntxt"></span>导入
                                         </div>
@@ -163,7 +163,7 @@
         <div class="row">
             <a class="item_label">项目名称:</a><input class="item_input" type="text" id="project_name"/>
             <a class="item_label">评审阶段:</a>
-            <select class="item_input" id="project_phases" style="width: 155px">
+            <select class="item_input" id="project_phases" style="width: 80px">
                 <option value="0" selected="selected">需求阶段</option>
                 <option value="1">设计阶段</option>
                 <option value="2">测试阶段</option>
@@ -175,7 +175,7 @@
         <div class="row">
             <a class="item_label">合同名称:</a><input class="item_input" type="text" id="contract_number"/>
             <a class="item_label">阶段状态:</a>
-            <select class="item_input" id="project_phasesstauts" style="width: 155px">
+            <select class="item_input" id="project_phasesstauts" style="width: 80px">
                 <option value="0" selected="selected">未评审</option>
                 <option value="1">评审通过,待修改</option>
                 <option value="2">评审通过,已修改</option>
@@ -187,14 +187,14 @@
         <div class="row">
 
             <a class="item_label">项目状态:</a>
-            <select class="item_input" id="project_status" style="width: 155px">
+            <select class="item_input" id="project_status" style="width: 80px">
                 <option value="0" selected="selected">正常</option>
                 <option value="1">暂停</option>
                 <option value="2">超期</option>
                 <option value="3">结项</option>
             </select>
             <a class="item_label" style="width:40px">密级:</a>
-            <select class="item_input" id="project_classification" style="width: 155px">
+            <select class="item_input" id="project_classification" style="width: 80px">
                 <option value="0" selected="selected">非密</option>
                 <option value="1">秘密</option>
             </select>

@@ -51,7 +51,7 @@ CREATE TABLE `project_info` (
   `project_planstarttime` date DEFAULT NULL COMMENT '项目计划开始时间',
   `project_planendtime` date DEFAULT NULL COMMENT '项目计划结束时间',
   `project_realendtime` date DEFAULT NULL COMMENT '项目结项时间',
-  PRIMARY KEY (`project_id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 DROP TABLE IF EXISTS `fusion_info`;
@@ -86,7 +86,7 @@ CREATE TABLE `plugin_info` (
 DROP TABLE IF EXISTS `project_alerts`;
 CREATE TABLE `project_alerts` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `contractId` bigint(20) DEFAULT NULL,
+  `projectId` bigint(20) DEFAULT NULL,
   `alertNumber` varchar(200) DEFAULT NULL,
   `confirmNumber` varchar(200) DEFAULT NULL,
   `alertDate` date DEFAULT NULL,

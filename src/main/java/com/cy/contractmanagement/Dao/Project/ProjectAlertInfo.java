@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class ProjectAlertInfo {
     private long id;
-    private String contractName;
+    private String projectName;
     private String alertNumber;
     private String confirmNumber;
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
@@ -41,12 +41,12 @@ public class ProjectAlertInfo {
         this.confirmFile = confirmFile;
     }
 
-    public String getContractName() {
-        return contractName;
+    public String getProjectName() {
+        return projectName;
     }
 
-    public void setContractName(String contractName) {
-        this.contractName = contractName;
+    public void setProjectName(String projectName) {
+        this.projectName = projectName;
     }
 
     public long getId() {
