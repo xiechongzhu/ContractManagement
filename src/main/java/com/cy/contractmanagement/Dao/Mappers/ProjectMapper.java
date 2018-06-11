@@ -7,18 +7,30 @@ import org.apache.ibatis.annotations.*;
 import java.util.List;
 @Mapper
 public interface ProjectMapper {
+
     @Select("select * from project_info")
-    List<ProjectInfo> getAllContracts();
+    List<ProjectInfo> getAllProjectInfo();
+
+    @Insert("INSERT INTO project_info(project_name,contract_number,project_status,project_classification,project_phases,project_phasesstauts," +
+            "update_time,partyA_unit,partyA_infpeople,partyB_unit,partyB_infpeople,project_planstarttime,project_planendtime," +
+            "project_realendtime) " +
+            "values (#{info.project_name},#{info.contract_number},#{info.project_status},#{info.project_classification},#{info.project_phases},"+
+            "#{info.project_phasesstauts},#{info.update_time},#{info.partyA_unit},#{info.partyA_infpeople},"+
+            "#{info.partyB_unit},#{info.partyB_infpeople},#{info.project_planstarttime},#{info.project_planendtime},"+
+            "#{info.project_realendtime})")
+    int insertProjectInfo(@Param("info") ProjectInfo info);
+
+    @Update("UPDATE project_info set project_name=#{info.project_name},contract_number=#{info.contract_number},project_status=#{info.project_status}," +
+            "project_classification=#{info.project_classification}, project_phases=#{info.project_phases},project_phasesstauts=#{info.project_phasesstauts},update_time=#{info.update_time}," +
+            "partyA_unit=#{info.partyA_unit},partyA_infpeople=#{info.partyA_infpeople},partyB_unit=#{info.partyB_unit}," +
+            "partyB_infpeople=#{info.partyB_infpeople},project_planstarttime=#{info.project_planstarttime}," +
+            "project_planendtime=#{info.project_planendtime},project_realendtime=#{info.project_realendtime}  where id = #{info.id}")
+    void updateProjectInfo(@Param("info") ProjectInfo info);
 
     @SelectProvider(type = ProjectProvider.class, method = "findProjectInfo")
     List<ProjectInfo> findProjectInfo(ProjectInfo info);
 
-    @Select("SELECT * FROM project_info WHERE project_name = #{project_name}")
-    ProjectInfo findByName(@Param("name") String name);
-    @Insert("INSERT INTO project_info(name, age) VALUES(#{name}, #{age})")
-    int insert(@Param("name") String name, @Param("age") Integer age);
-    @Update("UPDATE project_info SET age=#{age} WHERE name=#{name}")
-    void update(ProjectInfo user);
-
+    @Select("select * from project_info where id = #{id}")
+    ProjectInfo getSingleProject(@Param("id") int id);
 
 }

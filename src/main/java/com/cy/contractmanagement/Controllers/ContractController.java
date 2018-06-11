@@ -39,10 +39,10 @@ public class ContractController {
         return "contract";
     }
 
-    /* 添加新合同 */
+    /* 添加项目信息 */
     @PostMapping("/add")
     @ResponseBody
-    public void addContract(@RequestParam("number") String number,
+    public void addProject(@RequestParam("number") String number,
                             @RequestParam("name") String name,
                             @RequestParam("status") int status,
                             @RequestParam("classification") int classification,

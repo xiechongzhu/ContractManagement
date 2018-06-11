@@ -1,19 +1,24 @@
 package com.cy.contractmanagement.Dao.Contract;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.stereotype.Service;
 
 import java.util.Date;
 
 /**
- *  项目管理实体类
+ * 项目管理实体类
  */
+@Service
 public class ProjectInfo {
 
-    private int project_id;// 自增长ID
+
+    private int id;// 自增长ID
     private String project_name;// 项目名称
     private String contract_number; //合同编号
     private int project_status; //项目状态 0:正常,1暂停 2超期3结项
+    private int project_classification; //项目密级
     private int project_phases; //评审阶段0 需求阶段，1设计阶段,2测试阶段,3验收阶段
+
     private int project_phasesstauts; //阶段状态 0：未评审，1.评审通过，待修改，3.评审通过，已修改
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date update_time; // 更新时间
@@ -28,12 +33,13 @@ public class ProjectInfo {
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date project_realendtime;//项目结项时间
 
-    public int getProject_id() {
-        return project_id;
+
+    public int getId() {
+        return id;
     }
 
-    public void setProject_id(int project_id) {
-        this.project_id = project_id;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getProject_name() {
@@ -58,6 +64,14 @@ public class ProjectInfo {
 
     public void setProject_status(int project_status) {
         this.project_status = project_status;
+    }
+
+    public int getProject_classification() {
+        return project_classification;
+    }
+
+    public void setProject_classification(int project_classification) {
+        this.project_classification = project_classification;
     }
 
     public int getProject_phases() {
