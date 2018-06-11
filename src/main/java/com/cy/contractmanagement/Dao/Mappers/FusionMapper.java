@@ -13,6 +13,9 @@ public interface FusionMapper {
     List<FusionInfo> getFusionList(@Param("version") String version,
                                    @Param("platform") int platform);
 
+    @Select("select version from fusion_info")
+    List<String> getFusionVersions();
+
     @Insert("insert into fusion_info(version, platform, uploadDate, fileName, md5) values (" +
             "#{version}, #{platform}, #{uploadDate}, #{fileName}, #{md5})")
     long insertFusionInfo(@Param("version") String version, @Param("platform") String platform,

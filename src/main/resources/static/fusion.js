@@ -47,6 +47,23 @@
     jQuery('#btn_cancel').button();
     jQuery('#file_upload').change(upload_file_change);
 
+    $.ajax({
+        url: '/asset/fusion/get-versions',
+        type: 'get',
+        processData: false,
+        contentType: false,
+        async: false,
+        success: function (data) {
+            var versionTags = new Array();
+            for (var i = 0; i < data.length; ++i) {
+                versionTags.push(data[i]);
+            }
+            $('#search_version').autocomplete({
+                source: versionTags
+            });
+        }
+    });
+
     page1_jContainer1_obj = $('#page1_jContainer1_container').layout({
         onresize: function () {
             page1_jContainer2_obj.resizeAll();

@@ -28,6 +28,12 @@ public class FusionController {
         return "fusion";
     }
 
+    @GetMapping("get-versions")
+    @ResponseBody
+    public List<String> getFusionVersions() {
+        return  fusionMapper.getFusionVersions();
+    }
+
     @GetMapping("/get")
     @ResponseBody
     public Map<String, Object> getFusionInfo(@RequestParam("rows") int rows,

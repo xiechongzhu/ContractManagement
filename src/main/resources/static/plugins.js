@@ -51,6 +51,29 @@
     jQuery('#platform_select').change(platform_change);
     jQuery('#file_upload').change(upload_file_change);
 
+    $.ajax({
+        url: '/asset/plugins/get-all',
+        type: 'get',
+        processData: false,
+        contentType: false,
+        async: false,
+        success: function (data) {
+            var nameTags = new Array();
+            var versionTags = new Array();
+            for (var i = 0; i < data.length; ++i) {
+                var item = data[i];
+                nameTags.push(item.name);
+                versionTags.push(item.version);
+            }
+            $('#search_name').autocomplete({
+                source: nameTags
+            });
+            $('#search_version').autocomplete({
+                source: versionTags
+            });
+        }
+    });
+
     page1_jContainer1_obj = $('#page1_jContainer1_container').layout({
         onresize: function () {
             page1_jContainer2_obj.resizeAll();

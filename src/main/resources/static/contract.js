@@ -140,6 +140,34 @@
     jQuery('#search_end_date').datepicker();
     jQuery('#file').change(import_file_change);
 
+    $.ajax({
+        url: '/contract/get-all',
+        type: 'get',
+        processData: false,
+        contentType: false,
+        async: false,
+        success: function (data) {
+            var numberTags = new Array();
+            var nameTags = new Array();
+            var leaderTags = new Array();
+            for (var i = 0; i < data.length; ++i) {
+                var item = data[i];
+                numberTags.push(item.number);
+                nameTags.push(item.name);
+                leaderTags.push(item.leader);
+            }
+            $('#search_number').autocomplete({
+                source: numberTags
+            });
+            $('#search_name').autocomplete({
+                source: nameTags
+            });
+            $('#search_leader').autocomplete({
+                source: leaderTags
+            });
+        }
+    });
+
     page1_jContainer1_obj = $('#page1_jContainer1_container').layout({
         onresize: function () {
             page1_jContainer2_obj.resizeAll();

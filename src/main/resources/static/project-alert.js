@@ -76,11 +76,16 @@
         contentType: false,
         async: false,
         success: function (data) {
+            var availableTags = new Array();
             for (var i = 0; i < data.length; ++i) {
                 var item = data[i];
                 var option = $('<option>').val(item.id).text(item.name);
                 $('#project_select').append(option);
+                availableTags.push(item.name);
             }
+            $('#search_project').autocomplete({
+                source: availableTags
+            });
         }
     });
 

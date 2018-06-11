@@ -2,10 +2,7 @@ package com.cy.contractmanagement.Dao.Mappers;
 
 import com.cy.contractmanagement.Dao.Asset.PluginInfo;
 import com.cy.contractmanagement.Dao.Mappers.SqlProvider.PluginsProvider;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.SelectProvider;
+import org.apache.ibatis.annotations.*;
 
 import java.util.Date;
 import java.util.List;
@@ -23,4 +20,7 @@ public interface PluginsMapper {
                       @Param("platform") int platform, @Param("fusionVersion") String fusionVersion,
                       @Param("uploadDate") Date uploadDate, @Param("fileName") String fileName,
                       @Param("md5") String md5);
+
+    @Select("select * from plugin_info")
+    List<PluginInfo> getAllPlugins();
 }

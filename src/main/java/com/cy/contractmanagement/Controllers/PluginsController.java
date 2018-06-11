@@ -42,6 +42,12 @@ public class PluginsController {
         return JqGridResultBuilder.builde(rows, page, pageInfo.getTotal(), fusionInfoList);
     }
 
+    @GetMapping("/get-all")
+    @ResponseBody
+    public List<PluginInfo> getAllPlugins() {
+        return pluginsMapper.getAllPlugins();
+    }
+
     @PostMapping("/add")
     @ResponseBody
     public void insertPlugin(@RequestParam("name") String name,
