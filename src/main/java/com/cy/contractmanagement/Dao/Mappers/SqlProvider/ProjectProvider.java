@@ -1,6 +1,6 @@
 package com.cy.contractmanagement.Dao.Mappers.SqlProvider;
 
-import com.cy.contractmanagement.Dao.Contract.ProjectInfo;
+import com.cy.contractmanagement.Dao.Project.ProjectInfo;
 import org.apache.ibatis.jdbc.SQL;
 
 public class ProjectProvider {

@@ -1,6 +1,6 @@
 package com.cy.contractmanagement.Dao.Mappers;
 
-import com.cy.contractmanagement.Dao.Contract.ProjectInfo;
+import com.cy.contractmanagement.Dao.Project.ProjectInfo;
 import com.cy.contractmanagement.Dao.Mappers.SqlProvider.ProjectProvider;
 import org.apache.ibatis.annotations.*;
 

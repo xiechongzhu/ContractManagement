@@ -1,6 +1,6 @@
 package com.cy.contractmanagement.Controllers;
 
-import com.cy.contractmanagement.Dao.Contract.ProjectInfo;
+import com.cy.contractmanagement.Dao.Project.ProjectInfo;
 import com.cy.contractmanagement.Dao.Mappers.ProjectMapper;
 import com.cy.contractmanagement.Excel.ProjectExcelOperator;
 import com.cy.contractmanagement.Utiliy.FileUtility;

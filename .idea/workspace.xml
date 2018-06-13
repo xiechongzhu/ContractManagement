@@ -3,15 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="e1d3c15d-9dc6-4b83-97f6-190a37162bff" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dbScript/createDatabase.sql" beforeDir="false" afterPath="$PROJECT_DIR$/dbScript/createDatabase.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/ProjectAlertController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/ProjectAlertController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/ProjectAlertMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/ProjectAlertMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/ProjectAlertProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/ProjectAlertProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Project/ProjectAlertInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Project/ProjectAlertInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/project-alert.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/project-alert.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/ProjectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Contract/ProjectInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Project/ProjectInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/ProjectMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/ProjectMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/ProjectProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/ProjectProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Excel/ProjectExcelOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Excel/ProjectExcelOperator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/project.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/project.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/project.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/project.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cy/contractmanagement/Controllers/ContractController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cy/contractmanagement/Controllers/ContractController.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,12 +38,8 @@
       <file leaf-file-name="project-alert.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/project-alert.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1454">
+            <state relative-caret-position="204">
               <caret line="12" column="78" selection-start-line="12" selection-start-column="74" selection-end-line="12" selection-end-column="78" />
-              <folding>
-                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -53,7 +47,7 @@
       <file leaf-file-name="ProjectAlertProvider.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/ProjectAlertProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
+            <state relative-caret-position="697">
               <caret line="43" column="66" selection-start-line="43" selection-start-column="66" selection-end-line="43" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -62,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProjectInfo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Contract/ProjectInfo.java">
+      <file leaf-file-name="ProjectInfo.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Project/ProjectInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="15" column="31" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="31" />
+            <state relative-caret-position="221">
+              <caret line="16" column="34" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -74,8 +68,8 @@
       <file leaf-file-name="project-alert.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/project-alert.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-879">
-              <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+            <state relative-caret-position="68">
+              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -83,7 +77,7 @@
       <file leaf-file-name="project.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/project.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
+            <state relative-caret-position="3332">
               <caret line="196" column="83" selection-start-line="196" selection-start-column="83" selection-end-line="196" selection-end-column="83" />
               <folding>
                 <element signature="n#style#0;n#select#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -92,29 +86,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="project.config.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/project.config.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="239" column="14" selection-start-line="239" selection-start-column="8" selection-end-line="239" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="popDialog-project.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/popDialog-project.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="project.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="project.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/project.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="182" column="26" selection-start-line="182" selection-start-column="26" selection-end-line="182" selection-end-column="26" />
+            <state relative-caret-position="106">
+              <caret line="117" column="53" selection-start-line="117" selection-start-column="53" selection-end-line="117" selection-end-column="53" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="plugins.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/plugins.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="64" column="35" lean-forward="true" selection-start-line="63" selection-start-column="12" selection-end-line="64" selection-end-column="35" />
+              <folding>
+                <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -123,7 +111,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/ProjectController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
-              <caret line="47" column="54" selection-start-line="47" selection-start-column="54" selection-end-line="47" selection-end-column="54" />
+              <caret line="47" column="21" lean-forward="true" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -378,31 +366,6 @@
               <item name="cy" type="462c0819:PsiDirectoryNode" />
               <item name="contractmanagement" type="462c0819:PsiDirectoryNode" />
               <item name="Dao" type="462c0819:PsiDirectoryNode" />
-              <item name="Mappers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contract-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ContractManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="cy" type="462c0819:PsiDirectoryNode" />
-              <item name="contractmanagement" type="462c0819:PsiDirectoryNode" />
-              <item name="Dao" type="462c0819:PsiDirectoryNode" />
-              <item name="Mappers" type="462c0819:PsiDirectoryNode" />
-              <item name="SqlProvider" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="contract-management" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ContractManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="cy" type="462c0819:PsiDirectoryNode" />
-              <item name="contractmanagement" type="462c0819:PsiDirectoryNode" />
-              <item name="Dao" type="462c0819:PsiDirectoryNode" />
               <item name="Project" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -582,11 +545,12 @@
       <workItem from="1528650586287" duration="175000" />
       <workItem from="1528679175559" duration="12030000" />
       <workItem from="1528722160655" duration="3918000" />
+      <workItem from="1528852832361" duration="1900000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116967000" />
+    <option name="totallyTimeSpent" value="118867000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -622,10 +586,9 @@
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49934897" weight="0.31757754" />
       <window_info anchor="bottom" id="Spring" order="12" weight="0.3293944" />
       <window_info anchor="bottom" id="Terminal" order="13" weight="0.3293944" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24128686" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24463807" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info id="Web" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3293944" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -633,6 +596,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3293944" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -865,24 +829,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
           <caret line="304" column="11" selection-start-line="304" selection-start-column="11" selection-end-line="304" selection-end-column="11" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/projectmanagement.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="62" column="53" selection-start-line="62" selection-start-column="53" selection-end-line="62" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/projectmanagement.html" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/zTreeStyle.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-289">
@@ -901,13 +851,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="120" column="73" selection-start-line="120" selection-start-column="73" selection-end-line="120" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/plugins.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -953,27 +896,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/ProjectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="47" column="54" selection-start-line="47" selection-start-column="54" selection-end-line="47" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/project-alert.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1454">
+        <state relative-caret-position="204">
           <caret line="12" column="78" selection-start-line="12" selection-start-column="74" selection-end-line="12" selection-end-column="78" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Mappers/SqlProvider/ProjectAlertProvider.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
+        <state relative-caret-position="697">
           <caret line="43" column="66" selection-start-line="43" selection-start-column="66" selection-end-line="43" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -983,21 +915,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/popDialog-project.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
+        <state relative-caret-position="646">
           <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/project.config.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
+        <state relative-caret-position="4063">
           <caret line="239" column="14" selection-start-line="239" selection-start-column="8" selection-end-line="239" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/project.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
+        <state relative-caret-position="3332">
           <caret line="196" column="83" selection-start-line="196" selection-start-column="83" selection-end-line="196" selection-end-column="83" />
           <folding>
             <element signature="n#style#0;n#select#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1007,22 +939,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/project-alert.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-879">
-          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        <state relative-caret-position="68">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Contract/ProjectInfo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/plugins.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="31" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="31" />
+        <state relative-caret-position="221">
+          <caret line="64" column="35" lean-forward="true" selection-start-line="63" selection-start-column="12" selection-end-line="64" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Controllers/ProjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="47" column="21" lean-forward="true" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/project.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="182" column="26" selection-start-line="182" selection-start-column="26" selection-end-line="182" selection-end-column="26" />
+        <state relative-caret-position="106">
+          <caret line="117" column="53" selection-start-line="117" selection-start-column="53" selection-end-line="117" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/cy/contractmanagement/Dao/Project/ProjectInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="34" />
         </state>
       </provider>
     </entry>
