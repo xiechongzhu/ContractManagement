@@ -119,13 +119,13 @@
                 leaderTags.push(item.partyB_infpeople);
             }
             $('#search_number').autocomplete({
-                source: nameTags
+                source: nameTags.unique()
             });
             $('#search_name').autocomplete({
-                source: contractTags
+                source: contractTags.unique()
             });
             $('#search_leader').autocomplete({
-                source: leaderTags
+                source: leaderTags.unique()
             });
         }
     });

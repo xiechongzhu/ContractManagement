@@ -26,6 +26,7 @@
     <script type="text/javascript" src="/thridpart-js/tree.init.js"></script>
     <script type="text/javascript" src="/thridpart-js/jquery.msgBox.js"></script>
     <script type="text/javascript" src="/thridpart-js/date-format.js"></script>
+    <script type="text/javascript" src="/thridpart-js/array-unique.js"></script>
     <script type="text/javascript" src="/contract.js"></script>
     <script type="text/javascript" src="/msg-box.js"></script>
 </head>
@@ -94,8 +95,8 @@
                                     <input type="text" id="search_start_date">
                                     <div class="text search_label" id="label7">结束时间:</div>
                                     <input type="text" id="search_end_date">
-                                    <div class="text search_label" id="label8">延期:</div>
-                                    <div id="search_isDelay_div">
+                                    <div class="text search_label" id="label8" style="display: none;">延期:</div>
+                                    <div id="search_isDelay_div" style="display: none;">
                                         <select class="search_select" id="search_isDelay">
                                             <option value="0">否</option>
                                             <option value="1">是</option>
@@ -231,7 +232,7 @@
                 <a class="item_label">付款(万元):</a><input class="item_input" type="text" id="acceptancePayMoney_input"/>
             </div>
         </div>
-        <div class="row">
+        <div class="row" style="display: none;">
             <a class="item_label">是否延期:</a>
             <select class="item_input" id="isDelay_select">
                 <option value="0">否</option>

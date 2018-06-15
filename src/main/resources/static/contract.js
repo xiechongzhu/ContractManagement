@@ -16,6 +16,11 @@
                         case 2:
                             return '已验收';
                     }
+                },
+                cellattr: function (rowId, val, rawObject, cm, rdata) {
+                    if(rdata['status'] == 1) {
+                        return "style='color:red'";
+                    }
                 }
             },
             {
@@ -48,39 +53,51 @@
             },
             {label: '刻盘编号', name: 'cdNumber', index: 'cdNumber', width: 80, sortable: false},
             {
-                label: '合同时间', name: 'requirementTimePlan', index: 'requirementTimePlan', width: 80, sortable: false,
-                formatter: "date", formatoptions: {srcformat: 'ISO8601Long', newformat: 'Y-m-d'}
+                label: '合同时间', name: 'requirementTimePlan', index: 'requirementTimePlan', width: 80, sortable: false
             },
             {
                 label: '评审时间', name: 'requirementTimeReal', index: 'requirementTimeReal', width: 80, sortable: false,
-                formatter: "date", formatoptions: {srcformat: 'ISO8601Long', newformat: 'Y-m-d'}
+                cellattr: function (rowId, val, rawObject, cm, rdata) {
+                    if(rdata['requirementTimeReal'] > rdata['requirementTimePlan']) {
+                        return "style='color:red'";
+                    }
+                }
             },
             {label: '付款金额(万元)', name: 'requirementPayMoney', index: 'requirementPayMoney', width: 80, sortable: false},
             {
-                label: '合同时间', name: 'designTimePlan', index: 'designTimePlan', width: 80, sortable: false,
-                formatter: "date", formatoptions: {srcformat: 'ISO8601Long', newformat: 'Y-m-d'}
+                label: '合同时间', name: 'designTimePlan', index: 'designTimePlan', width: 80, sortable: false
             },
             {
                 label: '评审时间', name: 'designTimeReal', index: 'designTimeReal', width: 80, sortable: false,
-                formatter: "date", formatoptions: {srcformat: 'ISO8601Long', newformat: 'Y-m-d'}
+                cellattr: function (rowId, val, rawObject, cm, rdata) {
+                    if(rdata['designTimeReal'] > rdata['designTimePlan']) {
+                        return "style='color:red'";
+                    }
+                }
             },
             {label: '付款金额(万元)', name: 'designPayMoney', index: 'designPayMoney', width: 80, sortable: false},
             {
-                label: '合同时间', name: 'testTimePlan', index: 'testTimePlan', width: 80, sortable: false,
-                formatter: "date", formatoptions: {srcformat: 'ISO8601Long', newformat: 'Y-m-d'}
+                label: '合同时间', name: 'testTimePlan', index: 'testTimePlan', width: 80, sortable: false
             },
             {
                 label: '评审时间', name: 'testTimeReal', index: 'testTimeReal', width: 80, sortable: false,
-                formatter: "date", formatoptions: {srcformat: 'ISO8601Long', newformat: 'Y-m-d'}
+                cellattr: function (rowId, val, rawObject, cm, rdata) {
+                    if(rdata['testTimeReal'] > rdata['testTimePlan']) {
+                        return "style='color:red'";
+                    }
+                }
             },
             {label: '付款金额(万元)', name: 'testPayMoney', index: 'testPayMoney', width: 80, sortable: false},
             {
-                label: '合同时间', name: 'acceptanceTimePlan', index: 'acceptanceTimePlan', width: 80, sortable: false,
-                formatter: "date", formatoptions: {srcformat: 'ISO8601Long', newformat: 'Y-m-d'}
+                label: '合同时间', name: 'acceptanceTimePlan', index: 'acceptanceTimePlan', width: 80, sortable: false
             },
             {
                 label: '评审时间', name: 'acceptanceTimeReal', index: 'acceptanceTimeReal', width: 80, sortable: false,
-                formatter: "date", formatoptions: {srcformat: 'ISO8601Long', newformat: 'Y-m-d'}
+                cellattr: function (rowId, val, rawObject, cm, rdata) {
+                    if(rdata['acceptanceTimeReal'] > rdata['acceptanceTimePlan']) {
+                        return "style='color:red'";
+                    }
+                }
             },
             {label: '付款金额(万元)', name: 'acceptancePayMoney', index: 'acceptancePayMoney', width: 80, sortable: false},
             {
@@ -89,7 +106,7 @@
                     return r['money'] - r['requirementPayMoney'] - r['designPayMoney']
                         - r['testPayMoney'] - r['acceptancePayMoney'];
                 }
-            },
+            }/*,
             {
                 label: '是否延期', name: 'isDelay', index: 'isDelay', width: 80, sortable: false,
                 formatter: function (x, v, r) {
@@ -100,7 +117,7 @@
                             return "是";
                     }
                 }
-            }
+            }*/
         ],
         height: 'auto',
         shrinkToFit: false,
@@ -158,13 +175,13 @@
                 leaderTags.push(item.leader);
             }
             $('#search_number').autocomplete({
-                source: numberTags
+                source: numberTags.unique()
             });
             $('#search_name').autocomplete({
-                source: nameTags
+                source: nameTags.unique()
             });
             $('#search_leader').autocomplete({
-                source: leaderTags
+                source: leaderTags.unique()
             });
         }
     });
@@ -449,7 +466,7 @@ function import_file_change() {
         async: false,
         success: function () {
             messagebox('信息', '导入合同信息成功!', 'info', function () {
-                $('#page1_jDataGrid1_table').jqGrid('reloadGrid');
+                $('#page1_jDataGrid1_table').trigger('reloadGrid');
             });
         },
         error: function (data) {

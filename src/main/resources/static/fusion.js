@@ -60,7 +60,7 @@
                 versionTags.push(data[i]);
             }
             $('#search_version').autocomplete({
-                source: versionTags
+                source: versionTags.unique()
             });
         }
     });

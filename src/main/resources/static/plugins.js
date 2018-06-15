@@ -67,10 +67,10 @@
                 versionTags.push(item.version);
             }
             $('#search_name').autocomplete({
-                source: nameTags
+                source: nameTags.unique()
             });
             $('#search_version').autocomplete({
-                source: versionTags
+                source: versionTags.unique()
             });
         }
     });

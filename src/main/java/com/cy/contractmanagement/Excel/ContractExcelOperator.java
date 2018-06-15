@@ -24,7 +24,7 @@ public class ContractExcelOperator {
             "合同时间", "评审时间", "付款金额(万元)",
             "合同时间", "评审时间", "付款金额(万元)",
             "合同时间", "评审时间", "付款金额(万元)",
-            "未付金额(万元)", "是否延期"
+            "未付金额(万元)"/*, "是否延期"*/
     });
     @Autowired
     ContractMapper contractMapper;
@@ -55,8 +55,8 @@ public class ContractExcelOperator {
                     contractInfo.getAcceptanceTimeReal(), contractInfo.getAcceptancePayMoney(),
                     contractInfo.getMoney() - contractInfo.getRequirementPayMoney() -
                             contractInfo.getDesignPayMoney() - contractInfo.getTestPayMoney() -
-                            contractInfo.getAcceptancePayMoney(),
-                    contractInfo.getIsDelayText()});
+                            contractInfo.getAcceptancePayMoney()/*,
+                    contractInfo.getIsDelayText()*/});
             dataList.add(rowList);
         }
         excelExport.setData(dataList);
@@ -73,7 +73,7 @@ public class ContractExcelOperator {
     }
 
     public void importFromExcel(String fileName) throws Exception {
-        List<ArrayList<String>> resultList = excelImport.parseExcelData(fileName, 2, 22);
+        List<ArrayList<String>> resultList = excelImport.parseExcelData(fileName, 2, /*22*/21);
         //System.out.println(resultList);
         //List<ContractInfo> contractInfoList = new ArrayList<>();
         for (int i = 0; i < resultList.size(); ++i) {
@@ -131,7 +131,7 @@ public class ContractExcelOperator {
             contractInfo.setAcceptanceTimePlan(sdf.parse(result.get(18)));
             contractInfo.setAcceptanceTimeReal(sdf.parse(result.get(19)));
             contractInfo.setAcceptancePayMoney(Float.valueOf(result.get(20)));
-            switch (result.get(21)) {
+            /*switch (result.get(21)) {
                 case "否":
                     contractInfo.setIsDelay(0);
                     break;
@@ -140,7 +140,8 @@ public class ContractExcelOperator {
                     break;
                 default:
                     throw (new Exception(String.format("第%d行数据是否延期字段填写有误", i + 1)));
-            }
+            }*/
+            contractInfo.setIsDelay(0);
             contractMapper.insertContractByClass(contractInfo);
         }
     }

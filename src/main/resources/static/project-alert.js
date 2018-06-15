@@ -85,7 +85,7 @@
                 availableTags.push(item.project_name);
             }
             $('#search_project').autocomplete({
-                source: availableTags
+                source: availableTags.unique()
             });
         }
     });
