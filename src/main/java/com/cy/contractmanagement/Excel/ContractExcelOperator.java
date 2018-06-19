@@ -36,6 +36,7 @@ public class ContractExcelOperator {
     public String exportExcelFile() throws Exception {
         String filename = FileUtility.getTempFileName(".xls");
         //ExcelExport exp = new ExcelExport();
+        excelExport.clearTitle();
         excelExport.addTitle(title1);
         excelExport.addTitle(title2);
 

@@ -31,6 +31,10 @@ public class ExcelExport {
         this.title.add(title);
     }
 
+    public void clearTitle() {
+        this.title.clear();
+    }
+
     public void addData(List<Object> data) {
         this.data.add(data);
     }
