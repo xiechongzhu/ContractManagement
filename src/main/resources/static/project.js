@@ -5,7 +5,7 @@
         colModel: [
             {label: '项目名称', name: 'project_name', index: 'project_name', width: 150, sortable: false},
             {label: '合同名称', name: 'contract_number', index: 'contract_number', width: 150, sortable: false},
-            {label: '项目状态', name: 'project_status', index: 'project_status', width: 150, sortable: false,
+            {label: '项目状态', name: 'project_status', index: 'project_status', width: 80, sortable: false,
                 formatter: function (x, v, r) {
                     switch (r['project_status']) {
                         case 0:
@@ -20,7 +20,7 @@
                 }
             },
             {
-                label: '密级', name: 'project_classification', index: 'project_classification', width: 150, sortable: false,
+                label: '密级', name: 'project_classification', index: 'project_classification', width: 60, sortable: false,
                 formatter: function (x, v, r) {
                     switch (r['project_classification']) {
                         case 0:
@@ -30,7 +30,7 @@
                     }
                 }
             },
-            {label: '评审阶段', name: 'project_phases', index: 'project_phases', width: 150, sortable: false,
+            {label: '评审阶段', name: 'project_phases', index: 'project_phases', width: 80, sortable: false,
                 formatter: function (x, v, r) {
                     switch (r['project_phases']) {
                         case 0:
@@ -44,7 +44,7 @@
                     }
                 }
             },
-            {label: '阶段状态', name: 'project_phasesstauts', index: 'project_phasesstauts', width: 150, sortable: false,
+            {label: '阶段状态', name: 'project_phasesstauts', index: 'project_phasesstauts', width: 80, sortable: false,
                 formatter: function (x, v, r) {
                     switch (r['project_phasesstauts']) {
                         case 0:
@@ -62,19 +62,19 @@
             },
 
             {label: '甲方单位', name: 'partyA_unit', index: 'partyA_unit', width: 150, sortable: false},
-            {label: '甲方接口人', name: 'partyA_infpeople', index: 'partyA_infpeople', width: 150, sortable: false},
+            {label: '甲方接口人', name: 'partyA_infpeople', index: 'partyA_infpeople', width: 80, sortable: false},
             {label: '乙方单位', name: 'partyB_unit', index: 'partyB_unit', width: 150, sortable: false},
-            {label: '乙方接口人', name: 'partyB_infpeople', index: 'partyB_infpeople', width: 150, sortable: false},
+            {label: '乙方接口人', name: 'partyB_infpeople', index: 'partyB_infpeople', width: 80, sortable: false},
             {
-                label: '计划开始时间', name: 'project_planstarttime', index: 'project_planstarttime', width: 150, sortable: false,
+                label: '计划开始时间', name: 'project_planstarttime', index: 'project_planstarttime', width: 80, sortable: false,
                 formatter: "date", formatoptions: {srcformat: 'ISO8601Long', newformat: 'Y-m-d'}
             },
             {
-                label: '计划结束时间', name: 'project_planendtime', index: 'project_planendtime', width: 150, sortable: false,
+                label: '计划结束时间', name: 'project_planendtime', index: 'project_planendtime', width: 80, sortable: false,
                 formatter: "date", formatoptions: {srcformat: 'ISO8601Long', newformat: 'Y-m-d'}
             },
             {
-                label: '结项时间', name: 'project_realendtime', index: 'project_realendtime', width: 150, sortable: false,
+                label: '结项时间', name: 'project_realendtime', index: 'project_realendtime', width: 80, sortable: false,
                 formatter: "date", formatoptions: {srcformat: 'ISO8601Long', newformat: 'Y-m-d'}
             }
         ],
