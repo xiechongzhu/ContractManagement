@@ -164,7 +164,7 @@
         <div class="row">
             <a class="item_label">项目名称:</a><input class="item_input" type="text" id="project_name"/>
             <a class="item_label">评审阶段:</a>
-            <select class="item_input" id="project_phases" style="width: 80px">
+            <select class="item_input" id="project_phases">
                 <option value="0" selected="selected">需求阶段</option>
                 <option value="1">设计阶段</option>
                 <option value="2">测试阶段</option>
@@ -175,32 +175,25 @@
         </div>
         <div class="row">
             <a class="item_label">合同名称:</a><input class="item_input" type="text" id="contract_number"/>
-            <a class="item_label">阶段状态:</a>
-            <select class="item_input" id="project_phasesstauts" style="width: 80px">
-                <option value="0" selected="selected">未评审</option>
-                <option value="1">评审通过,待修改</option>
-                <option value="2">评审通过,已修改</option>
+            <a class="item_label">项目状态:</a>
+            <select class="item_input" id="project_status">
+                <option value="0" selected="selected">正常</option>
+                <option value="1">暂停</option>
+                <option value="2">超期</option>
+                <option value="3">结项</option>
             </select>
 
             <a class="item_label">甲方接口人:</a><input class="item_input" type="text" id="partyA_infpeople"/>
             <a class="item_label">乙方接口人:</a><input class="item_input" type="text" id="partyB_infpeople"/>
         </div>
         <div class="row">
-
-            <a class="item_label">项目状态:</a>
-            <select class="item_input" id="project_status" style="width: 80px">
-                <option value="0" selected="selected">正常</option>
-                <option value="1">暂停</option>
-                <option value="2">超期</option>
-                <option value="3">结项</option>
-            </select>
-            <a class="item_label" style="width:40px">密级:</a>
-            <select class="item_input" id="project_classification" style="width: 80px">
+            <a class="item_label">开始时间:</a><input class="item_input" type="text" id="project_planstarttime"/>
+            <a class="item_label">结束时间:</a><input class="item_input" type="text" id="project_planendtime"/>
+            <a class="item_label">&nbsp;密&nbsp;&nbsp;&nbsp;&nbsp; 级:</a>
+            <select class="item_input" id="project_classification">
                 <option value="0" selected="selected">非密</option>
                 <option value="1">秘密</option>
             </select>
-            <a class="item_label">计划开始时间:</a><input class="item_input" type="text" id="project_planstarttime"/>
-            <a class="item_label">计划结束时间:</a><input class="item_input" type="text" id="project_planendtime"/>
         </div>
     </div>
     <div class="buttons">

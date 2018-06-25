@@ -69,6 +69,7 @@ public class ProjectController {
              sdf.parse(project_planstarttime);
             dateproject_planstarttime = sdf.parse(project_planstarttime);
         }
+
         Date dateproject_planendtime = null;
         if(!project_planendtime.isEmpty()){
             dateproject_planendtime =  sdf.parse(project_planendtime);
@@ -106,7 +107,7 @@ public class ProjectController {
                            @RequestParam("project_status") int project_status,
                            @RequestParam("project_classification") int project_classification,
                            @RequestParam("project_phases") int project_phases,
-                           @RequestParam("project_phasesstauts") int project_phasesstauts,
+                       //    @RequestParam("project_phasesstauts") int project_phasesstauts,
                            @RequestParam("partyA_unit") String partyA_unit,
                            @RequestParam("partyA_infpeople") String partyA_infpeople,
                            @RequestParam("partyB_unit") String partyB_unit,
@@ -124,7 +125,7 @@ public class ProjectController {
         info.setProject_status(project_status);
         info.setProject_classification(project_classification);
         info.setProject_phases(project_phases);
-        info.setProject_phasesstauts(project_phasesstauts);
+      //  info.setProject_phasesstauts(project_phasesstauts);
         info.setUpdate_time(new Date());
         info.setPartyA_unit(partyA_unit);
         info.setPartyA_infpeople(partyA_infpeople);
@@ -132,7 +133,6 @@ public class ProjectController {
         info.setPartyB_infpeople(partyB_infpeople);
         info.setProject_planstarttime(dateproject_planstarttime);
         info.setProject_planendtime(dateproject_planendtime);
-        info.setProject_realendtime(dateproject_planendtime);
 
         projectMapper.insertProjectInfo(info);
     }
@@ -146,7 +146,7 @@ public class ProjectController {
                                @RequestParam("contract_number") String contract_number,
                                @RequestParam("project_status") int project_status,
                                @RequestParam("project_phases") int project_phases,
-                               @RequestParam("project_phasesstauts") int project_phasesstauts,
+                             //  @RequestParam("project_phasesstauts") int project_phasesstauts,
                                @RequestParam("partyA_unit") String partyA_unit,
                                @RequestParam("partyA_infpeople") String partyA_infpeople,
                                @RequestParam("partyB_unit") String partyB_unit,
@@ -165,7 +165,7 @@ public class ProjectController {
         info.setContract_number(contract_number);
         info.setProject_status(project_status);
         info.setProject_phases(project_phases);
-        info.setProject_phasesstauts(project_phasesstauts);
+       // info.setProject_phasesstauts(project_phasesstauts);
         info.setUpdate_time(new Date());
         info.setPartyA_unit(partyA_unit);
         info.setPartyA_infpeople(partyA_infpeople);
@@ -173,7 +173,6 @@ public class ProjectController {
         info.setPartyB_infpeople(partyB_infpeople);
         info.setProject_planstarttime(dateproject_planstarttime);
         info.setProject_planendtime(dateproject_planendtime);
-        info.setProject_realendtime(dateproject_planendtime);
 
         projectMapper.updateProjectInfo(info);
     }
