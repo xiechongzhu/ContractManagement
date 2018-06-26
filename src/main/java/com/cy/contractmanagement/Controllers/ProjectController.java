@@ -145,6 +145,7 @@ public class ProjectController {
                                @RequestParam("project_name") String project_name,
                                @RequestParam("contract_number") String contract_number,
                                @RequestParam("project_status") int project_status,
+                               @RequestParam("project_classification") int project_classification,
                                @RequestParam("project_phases") int project_phases,
                              //  @RequestParam("project_phasesstauts") int project_phasesstauts,
                                @RequestParam("partyA_unit") String partyA_unit,
@@ -164,6 +165,7 @@ public class ProjectController {
         info.setProject_name(project_name);
         info.setContract_number(contract_number);
         info.setProject_status(project_status);
+        info.setProject_classification(project_classification);
         info.setProject_phases(project_phases);
        // info.setProject_phasesstauts(project_phasesstauts);
         info.setUpdate_time(new Date());

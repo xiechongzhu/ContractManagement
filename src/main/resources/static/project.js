@@ -5,7 +5,7 @@
         colModel: [
             {label: '项目名称', name: 'project_name', index: 'project_name', width: 150, sortable: false},
             {label: '合同名称', name: 'contract_number', index: 'contract_number', width: 150, sortable: false},
-            {label: '项目状态', name: 'project_status', index: 'project_status', width: 150, sortable: false,
+            {label: '项目状态', name: 'project_status', index: 'project_status', width: 60, sortable: false,
                 formatter: function (x, v, r) {
                     switch (r['project_status']) {
                         case 0:
@@ -32,7 +32,7 @@
                 }
             },
             {
-                label: '密级', name: 'project_classification', index: 'project_classification', width: 150, sortable: false,
+                label: '密级', name: 'project_classification', index: 'project_classification', width: 40, sortable: false,
                 formatter: function (x, v, r) {
                     switch (r['project_classification']) {
                         case 0:
@@ -42,7 +42,7 @@
                     }
                 }
             },
-            {label: '评审阶段', name: 'project_phases', index: 'project_phases', width: 150, sortable: false,
+            {label: '评审阶段', name: 'project_phases', index: 'project_phases', width: 60, sortable: false,
                 formatter: function (x, v, r) {
                     switch (r['project_phases']) {
                         case 0:
@@ -74,15 +74,15 @@
             },
 
             {label: '甲方单位', name: 'partyA_unit', index: 'partyA_unit', width: 150, sortable: false},
-            {label: '甲方接口人', name: 'partyA_infpeople', index: 'partyA_infpeople', width: 150, sortable: false},
+            {label: '甲方接口人', name: 'partyA_infpeople', index: 'partyA_infpeople', width: 70, sortable: false},
             {label: '乙方单位', name: 'partyB_unit', index: 'partyB_unit', width: 150, sortable: false},
-            {label: '乙方接口人', name: 'partyB_infpeople', index: 'partyB_infpeople', width: 150, sortable: false},
+            {label: '乙方接口人', name: 'partyB_infpeople', index: 'partyB_infpeople', width: 70, sortable: false},
             {
-                label: '开始时间', name: 'project_planstarttime', index: 'project_planstarttime', width: 150, sortable: false,
+                label: '开始时间', name: 'project_planstarttime', index: 'project_planstarttime', width: 120, sortable: false,
                 formatter: "date", formatoptions: {srcformat: 'ISO8601Long', newformat: 'Y-m-d'}
             },
             {
-                label: '结束时间', name: 'project_planendtime', index: 'project_planendtime', width: 150, sortable: false,
+                label: '结束时间', name: 'project_planendtime', index: 'project_planendtime', width: 120, sortable: false,
                 formatter: "date", formatoptions: {srcformat: 'ISO8601Long', newformat: 'Y-m-d'}
             }
         ],
@@ -92,6 +92,7 @@
         autowidth: false,
         autoheight: true,
         rowNum: 20,
+        rowList: [5, 10, 20, 50, 100],
         rownumbers: true,
         viewrecords: true,
         pager: '#page1_jDataGrid1_pager',
