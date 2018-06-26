@@ -5,22 +5,34 @@
         colModel: [
             {label: '项目名称', name: 'project_name', index: 'project_name', width: 150, sortable: false},
             {label: '合同名称', name: 'contract_number', index: 'contract_number', width: 150, sortable: false},
-            {label: '项目状态', name: 'project_status', index: 'project_status', width: 80, sortable: false,
+            {label: '项目状态', name: 'project_status', index: 'project_status', width: 150, sortable: false,
                 formatter: function (x, v, r) {
                     switch (r['project_status']) {
                         case 0:
                             return '正常';
                         case 1:
                             return '暂停';
-                        case 0:
-                            return '已验收';
-                        case 1:
+                        case 2:
+                            return '超期';
+                        case 3:
                             return '结项';
+                    }
+                },
+                cellattr: function (rowId, val, rawObject, cm, rdata) {
+                    if(rdata['project_status'] == 2) {
+                        return "style='color:red'";
+                    }
+                    if(rdata['project_status'] == 0 || rdata['project_status'] == 3) {
+                        return "style='color:green'";
+                    }
+
+                    if(rdata['project_status'] == 1) {
+                        return "style='color:orange'";
                     }
                 }
             },
             {
-                label: '密级', name: 'project_classification', index: 'project_classification', width: 60, sortable: false,
+                label: '密级', name: 'project_classification', index: 'project_classification', width: 150, sortable: false,
                 formatter: function (x, v, r) {
                     switch (r['project_classification']) {
                         case 0:
@@ -30,7 +42,7 @@
                     }
                 }
             },
-            {label: '评审阶段', name: 'project_phases', index: 'project_phases', width: 80, sortable: false,
+            {label: '评审阶段', name: 'project_phases', index: 'project_phases', width: 150, sortable: false,
                 formatter: function (x, v, r) {
                     switch (r['project_phases']) {
                         case 0:
@@ -44,37 +56,33 @@
                     }
                 }
             },
-            {label: '阶段状态', name: 'project_phasesstauts', index: 'project_phasesstauts', width: 80, sortable: false,
-                formatter: function (x, v, r) {
-                    switch (r['project_phasesstauts']) {
-                        case 0:
-                            return '未评审';
-                        case 1:
-                            return '评审通过，待修改';
-                        case 2:
-                            return '评审通过，已修改';
-                    }
-                }
-            },
+            // {label: '阶段状态', name: 'project_phasesstauts', index: 'project_phasesstauts', width: 150, sortable: false,
+            //     formatter: function (x, v, r) {
+            //         switch (r['project_phasesstauts']) {
+            //             case 0:
+            //                 return '未评审';
+            //             case 1:
+            //                 return '评审通过，待修改';
+            //             case 2:
+            //                 return '评审通过，已修改';
+            //         }
+            //     }
+            // },
             {
                 label: '更新时间', name: 'update_time', index: 'update_time', width: 80, sortable: false,
                 formatter: "date", formatoptions: {srcformat: 'ISO8601Long', newformat: 'Y-m-d'}
             },
 
             {label: '甲方单位', name: 'partyA_unit', index: 'partyA_unit', width: 150, sortable: false},
-            {label: '甲方接口人', name: 'partyA_infpeople', index: 'partyA_infpeople', width: 80, sortable: false},
+            {label: '甲方接口人', name: 'partyA_infpeople', index: 'partyA_infpeople', width: 150, sortable: false},
             {label: '乙方单位', name: 'partyB_unit', index: 'partyB_unit', width: 150, sortable: false},
-            {label: '乙方接口人', name: 'partyB_infpeople', index: 'partyB_infpeople', width: 80, sortable: false},
+            {label: '乙方接口人', name: 'partyB_infpeople', index: 'partyB_infpeople', width: 150, sortable: false},
             {
-                label: '计划开始时间', name: 'project_planstarttime', index: 'project_planstarttime', width: 80, sortable: false,
+                label: '开始时间', name: 'project_planstarttime', index: 'project_planstarttime', width: 150, sortable: false,
                 formatter: "date", formatoptions: {srcformat: 'ISO8601Long', newformat: 'Y-m-d'}
             },
             {
-                label: '计划结束时间', name: 'project_planendtime', index: 'project_planendtime', width: 80, sortable: false,
-                formatter: "date", formatoptions: {srcformat: 'ISO8601Long', newformat: 'Y-m-d'}
-            },
-            {
-                label: '结项时间', name: 'project_realendtime', index: 'project_realendtime', width: 80, sortable: false,
+                label: '结束时间', name: 'project_planendtime', index: 'project_planendtime', width: 150, sortable: false,
                 formatter: "date", formatoptions: {srcformat: 'ISO8601Long', newformat: 'Y-m-d'}
             }
         ],
@@ -174,7 +182,7 @@ function add_item() {
         project_status:0,
         project_classification:0,
         project_phases:0,
-        project_phasesstauts:0,
+        // project_phasesstauts:0,
         partyA_unit:'',
         partyA_infpeople:'',
         partyB_unit:'',
@@ -187,7 +195,7 @@ function add_item() {
         modal: true,
         resizable: false,
         title: '添加项目',
-        width: 920
+        width: 1020
     });
 }
 
@@ -210,7 +218,7 @@ function modify_item() {
                 modal: true,
                 resizable: false,
                 title: '修改项目',
-                width: 920
+                width: 1020
             });
         },
         error: function () {
@@ -240,7 +248,7 @@ function build_form_data(addItemInfo) {
     formData.append('project_status', addItemInfo.project_status);
     formData.append('project_classification', addItemInfo.project_classification);
     formData.append('project_phases', addItemInfo.project_phases);
-    formData.append('project_phasesstauts', addItemInfo.project_phasesstauts);
+    //   formData.append('project_phasesstauts', addItemInfo.project_phasesstauts);
     formData.append('update_time', addItemInfo.update_time);
     formData.append('partyA_unit', addItemInfo.partyA_unit);
     formData.append('partyA_infpeople', addItemInfo.partyA_infpeople);
@@ -332,7 +340,7 @@ function set_pop_dialog_value(value) {
     $('#project_status').val(value.project_status);
     $('#project_classification').val(value.project_classification);
     $('#project_phases').val(value.project_phases);
-    $('#project_phasesstauts').val(value.project_phasesstauts);
+    // $('#project_phasesstauts').val(value.project_phasesstauts);
     $('#partyA_unit').val(value.partyA_unit);
     $('#partyA_infpeople').val(value.partyA_infpeople);
     $('#partyB_unit').val(value.partyB_unit);
@@ -348,7 +356,7 @@ function get_pop_dialog_value() {
         project_status: $('#project_status').val(),
         project_classification: $('#project_classification').val(),
         project_phases: $('#project_phases').val(),
-        project_phasesstauts: $('#project_phasesstauts').val(),
+        //   project_phasesstauts: $('#project_phasesstauts').val(),
         partyA_unit: $('#partyA_unit').val(),
         partyA_infpeople: $('#partyA_infpeople').val(),
         partyB_unit: $('#partyB_unit').val(),

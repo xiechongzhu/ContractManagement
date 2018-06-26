@@ -30,13 +30,13 @@ div.buttons {
 
 .item_label {
     display: inline-block;
-    margin-right: 5px;
-    width: 100px;
+    margin-right: 0px;
+    width: 80px;
 }
 
 .item_input {
     margin-right: 20px;
-    width: 90px;
+    width: 120px;
     height: 22px;
     box-sizing: border-box;
 }

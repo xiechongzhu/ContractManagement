@@ -19,7 +19,7 @@ public class ProjectInfo {
     private int project_classification; //项目密级
     private int project_phases; //评审阶段0 需求阶段，1设计阶段,2测试阶段,3验收阶段
 
-    private int project_phasesstauts; //阶段状态 0：未评审，1.评审通过，待修改，3.评审通过，已修改
+ //   private int project_phasesstauts; //阶段状态 0：未评审，1.评审通过，待修改，3.评审通过，已修改
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date update_time; // 更新时间
     private String partyA_unit; //甲方单位
@@ -82,13 +82,13 @@ public class ProjectInfo {
         this.project_phases = project_phases;
     }
 
-    public int getProject_phasesstauts() {
-        return project_phasesstauts;
-    }
-
-    public void setProject_phasesstauts(int project_phasesstauts) {
-        this.project_phasesstauts = project_phasesstauts;
-    }
+//    public int getProject_phasesstauts() {
+//        return project_phasesstauts;
+//    }
+//
+//    public void setProject_phasesstauts(int project_phasesstauts) {
+//        this.project_phasesstauts = project_phasesstauts;
+//    }
 
     public Date getUpdate_time() {
         return update_time;

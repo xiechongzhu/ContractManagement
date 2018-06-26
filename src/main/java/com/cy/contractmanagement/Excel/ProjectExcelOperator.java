@@ -16,8 +16,8 @@ import java.util.List;
 public class ProjectExcelOperator {
 
     private  static List<String> title = Arrays.asList(new String[]{
-            "项目名称", "'合同编号'", "项目状态","密级", "评审阶段", "阶段状态", "更新时间", "甲方单位",
-             "甲方接口人", "乙方单位", "乙方接口人", "计划开始时间", "计划结束时间", "结项时间"
+            "项目名称", "合同编号", "项目状态","密级", "评审阶段", "更新时间", "甲方单位",
+             "甲方接口人", "乙方单位", "乙方接口人", "开始时间", "结束时间"
     });
 
 
@@ -82,18 +82,18 @@ public class ProjectExcelOperator {
                     break;
             }
 
-            String project_phasesstauts ="";
-            switch (info.getProject_phasesstauts()) {
-                case 0:
-                    project_phasesstauts="未评审";
-                    break;
-                case 1:
-                    project_phasesstauts = "已评审";
-                    break;
-                case 2:
-                    project_phasesstauts ="已关闭";
-                    break;
-            }
+//            String project_phasesstauts ="";
+//            switch (info.getProject_phasesstauts()) {
+//                case 0:
+//                    project_phasesstauts="未评审";
+//                    break;
+//                case 1:
+//                    project_phasesstauts = "已评审";
+//                    break;
+//                case 2:
+//                    project_phasesstauts ="已关闭";
+//                    break;
+//            }
 
             List<Object> rowList = Arrays.asList(new Object[]{
                     info.getProject_name(),
@@ -101,15 +101,13 @@ public class ProjectExcelOperator {
                     project_status,
                     project_classification,
                     project_phases,
-                    project_phasesstauts,
                     info.getUpdate_time(),
                     info.getPartyA_unit(),
                     info.getPartyA_infpeople(),
                     info.getPartyB_unit(),
                     info.getPartyB_infpeople(),
                     info.getProject_planstarttime(),
-                    info.getProject_planendtime(),
-                    info.getProject_realendtime()});
+                    info.getProject_planendtime()});
             dataList.add(rowList);
         }
         excelExport.setData(dataList);
@@ -121,7 +119,7 @@ public class ProjectExcelOperator {
     }
 
     public void importFromExcel(String fileName) throws Exception {
-        List<ArrayList<String>> resultList = excelImport.parseExcelData(fileName, 1, 14);
+        List<ArrayList<String>> resultList = excelImport.parseExcelData(fileName, 1, 12);
 
         for (int i = 0; i < resultList.size(); ++i) {
             ArrayList<String> result = resultList.get(i);
@@ -174,28 +172,27 @@ public class ProjectExcelOperator {
                     throw (new Exception(String.format("第%d行数据项目状态字段填写有误", i + 1)));
             }
 
-            switch (result.get(5)) {
-                case "未评审":
-                    info.setProject_phasesstauts(0);
-                    break;
-                case "已评审":
-                    info.setProject_phasesstauts(1);
-                    break;
-                case "已关闭":
-                    info.setProject_phasesstauts(2);
-                    break;
-                default:
-                    throw (new Exception(String.format("第%d行数据项目状态字段填写有误", i + 1)));
-            }
+//            switch (result.get(5)) {
+//                case "未评审":
+//                    info.setProject_phasesstauts(0);
+//                    break;
+//                case "已评审":
+//                    info.setProject_phasesstauts(1);
+//                    break;
+//                case "已关闭":
+//                    info.setProject_phasesstauts(2);
+//                    break;
+//                default:
+//                    throw (new Exception(String.format("第%d行数据项目状态字段填写有误", i + 1)));
+//            }
 
-            info.setUpdate_time(sdf.parse(result.get(6)));
-            info.setPartyA_unit(result.get(7));
-            info.setPartyA_infpeople(result.get(8));
-            info.setPartyB_unit(result.get(9));
-            info.setPartyB_infpeople(result.get(10));
-            info.setProject_planstarttime(sdf.parse(result.get(11)));
-            info.setProject_planendtime(sdf.parse(result.get(12)));
-            info.setProject_realendtime(sdf.parse(result.get(13)));
+            info.setUpdate_time(sdf.parse(result.get(5)));
+            info.setPartyA_unit(result.get(6));
+            info.setPartyA_infpeople(result.get(7));
+            info.setPartyB_unit(result.get(8));
+            info.setPartyB_infpeople(result.get(9));
+            info.setProject_planstarttime(sdf.parse(result.get(10)));
+            info.setProject_planendtime(sdf.parse(result.get(11)));
 
             projectMapper.insertProjectInfo(info);
         }
